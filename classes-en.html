@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga Classes · Xana Dahdal · Barcelona</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPF6KP6H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q0LPF6KP6H');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --sand: #f2ebe0; --sand-dark: #e8dfd0; --dark: #1e1c18; --muted: #6b6560; --gold: #b8945a; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--sand); color: var(--dark); font-family: 'Nunito Sans', sans-serif; font-weight: 300; }
+
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(242,235,224,0.96); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(184,148,90,0.15); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--dark); text-decoration: none; }
+    .nav-cta { padding: 10px 24px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; }
+    .nav-cta:hover { background: var(--dark); }
+
+    .hero { padding: 120px 48px 80px; max-width: 800px; }
+    .hero-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; display: block; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 400; line-height: 1.1; margin-bottom: 24px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { font-size: 16px; line-height: 1.85; color: var(--muted); max-width: 560px; }
+
+    .gold-line { width: 48px; height: 1px; background: var(--gold); margin: 0 48px 80px; }
+    .section-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 400; margin-bottom: 48px; }
+
+    /* CLASES */
+    .clases { padding: 0 48px 80px; }
+    .clases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(184,148,90,0.15); }
+    .clase-card { background: var(--sand); padding: 40px 32px; }
+    .clase-card.dark { background: var(--dark); }
+    .clase-tipo { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .clase-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 12px; }
+    .clase-card.dark h3 { color: #fff; }
+    .clase-horario { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .clase-card.dark .clase-horario { color: rgba(255,255,255,0.45); }
+    .clase-desc { font-size: 13px; color: var(--muted); line-height: 1.75; margin-top: 12px; }
+    .clase-card.dark .clase-desc { color: rgba(255,255,255,0.4); }
+    .badge { display: inline-block; margin-top: 16px; padding: 5px 14px; border: 1px solid rgba(184,148,90,0.4); font-size: 10px; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; }
+
+    /* PRECIOS */
+    .precios { background: var(--dark); padding: 80px 48px; }
+    .precios .section-title { color: #fff; }
+    .tabs { display: flex; gap: 2px; margin-bottom: 40px; flex-wrap: wrap; }
+    .tab { padding: 12px 28px; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; cursor: pointer; background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.4); border: none; transition: all 0.2s; }
+    .tab.active { background: var(--gold); color: #fff; }
+    .precio-grid { display: none; grid-template-columns: repeat(4,1fr); gap: 2px; background: rgba(255,255,255,0.05); }
+    .precio-grid.active { display: grid; }
+    .precio-grid.dos { grid-template-columns: repeat(2,1fr); }
+    .precio-box { background: var(--dark); padding: 36px 28px; }
+    .precio-box.gold { background: rgba(184,148,90,0.1); border: 1px solid rgba(184,148,90,0.3); }
+    .precio-label { font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+    .precio-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #fff; }
+    .precio-box.gold .precio-num { color: var(--gold); }
+    .precio-per { font-size: 11px; color: rgba(255,255,255,0.3); margin-bottom: 12px; }
+    .precio-info { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.65; }
+    .ilimitado-bar { margin-top: 2px; background: rgba(184,148,90,0.12); border: 1px solid rgba(184,148,90,0.3); padding: 32px 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .ilimitado-bar h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; font-weight: 400; }
+    .ilimitado-bar p { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 4px; }
+    .ilimitado-precio { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); white-space: nowrap; }
+
+    /* ESPECIALES */
+    .especiales { padding: 80px 48px; background: var(--sand-dark); }
+    .especiales-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(184,148,90,0.15); }
+    .esp-card { background: var(--sand-dark); padding: 48px 40px; }
+    .esp-card h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 8px; }
+    .esp-precio { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold); margin: 16px 0 10px; }
+    .esp-card p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    /* CTA */
+    .cta { padding: 100px 48px; text-align: center; }
+    .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; margin-bottom: 20px; }
+    .cta h2 em { font-style: italic; color: var(--gold); }
+    .cta p { font-size: 15px; color: var(--muted); margin-bottom: 48px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 16px 40px; font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-dark:hover { background: var(--gold); }
+    .btn-outline { border: 1px solid var(--dark); color: var(--dark); }
+    .btn-outline:hover { background: var(--dark); color: #fff; }
+
+    footer { background: #111; padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .f-logo { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.3); font-size: 1rem; }
+    .f-copy { font-size: 11px; color: rgba(255,255,255,0.18); letter-spacing: 1px; }
+    .f-links { display: flex; gap: 20px; }
+    .f-links a { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); text-decoration: none; }
+    .f-links a:hover { color: var(--gold); }
+
+    @media(max-width:900px) {
+      .clases-grid { grid-template-columns: 1fr; }
+      .precio-grid.active { grid-template-columns: 1fr 1fr; }
+      .especiales-grid { grid-template-columns: 1fr; }
+      nav, .hero, .clases, .precios, .especiales, .cta { padding-left: 24px; padding-right: 24px; }
+      .gold-line { margin-left: 24px; }
+    }
+    @media(max-width:540px) {
+      .precio-grid.active { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+<nav>
+  <a href="classes-en.html" style="font-size:11px;font-weight:600;letter-spacing:2px;color:var(--muted);text-decoration:none;margin-right:16px;">ES</a><a href="classes-en.html" style="font-size:11px;font-weight:600;letter-spacing:2px;color:var(--gold);text-decoration:none;margin-right:16px;border-bottom:1px solid var(--gold);">EN</a><a href="index-en.html" class="nav-logo" style="display:none;"></a><a href="index-en.html" class="nav-logo">Xana Dahdal</a>
+  <a href="#apuntarse" class="nav-cta">Sign up</a>
+</nav>
+
+<section id="main-content" class="hero">
+  <span class="hero-tag">Yoga Classes · Barcelona &amp; Online</span>
+  <h1>Practice yoga<br>wherever <em>you are.</em></h1>
+  <p>In-person classes in Barcelona and online worldwide. Traditional yoga with over 14 years of experience, adapted to your level and your life.</p>
+</section>
+
+<div class="gold-line"></div>
+
+<section class="clases">
+  <p class="section-tag">What I offer</p>
+  <h2 class="section-title">The classes</h2>
+  <div class="clases-grid">
+    <div class="clase-card">
+      <p class="clase-tipo">In-person · Barcelona</p>
+      <h3>Yoga · Tuesdays and Thursdays</h3>
+      <p class="clase-horario">Tuesdays · 18:30<br>Thursdays · 18:30</p>
+      <p class="clase-desc">In-person yoga classes in Barcelona. Hatha, Vinyasa and traditional techniques. All levels welcome.</p>
+      <span class="badge">Barcelona</span>
+    </div>
+    <div class="clase-card dark">
+      <p class="clase-tipo">Online · Worldwide</p>
+      <h3>Online Yoga · Mornings</h3>
+      <p class="clase-horario">Monday to Thursday · 7:00 (Spain)</p>
+      <p class="clase-desc">Start your day with a full practice. Live classes via Google Meet. Open to everyone worldwide.</p>
+      <span class="badge">Live · Online</span>
+    </div>
+    <div class="clase-card">
+      <p class="clase-tipo">Online · Midday</p>
+      <h3>Yoga Online · Midday</h3>
+      <p class="clase-horario">Monday to Thursday · 13:00-14:00 (Spain)<br>Latin America · 7:00-8:00 (local time approx.)</p>
+      <p class="clase-desc">Perfect for those working from home or who prefer to practise at midday. Also ideal for Latin America, where it falls at 7-8am.</p>
+      <span class="badge">Midday · Online</span>
+    </div>
+  </div>
+</section>
+
+<section class="precios" id="precios">
+  <p class="section-tag" style="color:var(--gold)">Pricing</p>
+  <h2 class="section-title">Choose your rhythm</h2>
+  <div class="tabs">
+    <button class="tab active" onclick="showTab(event,'presencial')">In-person</button>
+    <button class="tab" onclick="showTab(event,'online')">Online</button>
+  </div>
+
+  <div class="precio-grid active" id="presencial">
+    <div class="precio-box">
+      <p class="precio-label">Trial class</p>
+      <div class="precio-num">10€</div>
+      <p class="precio-per">First class</p>
+      <p class="precio-info">Come and meet us with a class at a special price.</p>
+    </div>
+    <div class="precio-box">
+      <p class="precio-label">Single class</p>
+      <div class="precio-num">15€</div>
+      <p class="precio-per">per class</p>
+      <p class="precio-info">For when you want to practise without committing to a fixed schedule.</p>
+    </div>
+    <div class="precio-box gold">
+      <p class="precio-label">1 day / week</p>
+      <div class="precio-num">50€</div>
+      <p class="precio-per">per month</p>
+      <p class="precio-info">One fixed day a week. Consistency and gradual progress.</p>
+    </div>
+    <div class="precio-box gold">
+      <p class="precio-label">2 days / week</p>
+      <div class="precio-num">70€</div>
+      <p class="precio-per">per month</p>
+      <p class="precio-info">Two days for a stronger and more sustained practice.</p>
+    </div>
+  </div>
+
+  <div class="ilimitado-bar" id="ilimitado">
+    <div>
+      <h3>Unlimited access, all in-person classes</h3>
+      <p>Practise as many days as you like per month.</p>
+    </div>
+    <div class="ilimitado-precio">85€ <span style="font-size:1rem;color:rgba(255,255,255,0.3);font-family:'Nunito Sans',sans-serif;">/month</span></div>
+  </div>
+
+  <div class="precio-grid dos" id="online" style="display:none;">
+    <div class="precio-box">
+      <p class="precio-label">Trial class</p>
+      <div class="precio-num">10€</div>
+      <p class="precio-per">First class</p>
+      <p class="precio-info">Welcome online class at a special price.</p>
+    </div>
+    <div class="precio-box gold">
+      <p class="precio-label">Online membership</p>
+      <div class="precio-num">50€</div>
+      <p class="precio-per">per month</p>
+      <p class="precio-info">Unlimited access to all live online classes. Monday to Thursday, morning and midday.</p>
+    </div>
+  </div>
+</section>
+
+<section class="especiales">
+  <p class="section-tag">Special classes</p>
+  <h2 class="section-title">Prenatal &amp; Mums and Babies</h2>
+  <div class="especiales-grid">
+    <div class="esp-card">
+      <p class="clase-tipo">In-person · Barcelona</p>
+      <h3>Prenatal Yoga</h3>
+      <div class="esp-precio">50€/mes</div>
+      <p>Yoga adapted to each stage of pregnancy. Movement, breathing and connection with your baby. A safe and conscious space to support your journey.</p>
+    </div>
+    <div class="esp-card">
+      <p class="clase-tipo">In-person · Barcelona</p>
+      <h3>Mums &amp; Babies</h3>
+      <div class="esp-precio">50€/mes</div>
+      <p>Yoga classes for mums with their babies. Recover your body, connect with your baby and share the space with other mums. Once a week.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="apuntarse">
+  <h2>Ready to<br><em>start?</em></h2>
+  <p>First class 10€. Write to me by email or WhatsApp and I will tell you all the details.</p>
+  <div class="cta-btns">
+    <a href="mailto:alexandradahdal@gmail.com?subject=I%20want%20to%20join%20a%20class&body=Hello%20Xana%2C%20I%20am%20interested%20in%20joining%20your%20classes." class="btn btn-dark">Write by email</a>
+    <a href="https://wa.me/34697774602?text=Hello%20Xana%2C%20I%20am%20interested%20in%20joining%20your%20classes." class="btn btn-outline">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <span class="f-logo">Xana Dahdal</span>
+  <span class="f-copy">Barcelona · Yoga · 2026</span>
+  <div class="f-links">
+    <a href="aviso-legal-en.html">Legal Notice</a>
+    <a href="privacy-en.html">Privacy</a>
+    <a href="cookies-en.html">Cookies</a>
+  </div>
+</footer>
+
+<script>
+  function showTab(event, tab) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    event.target.classList.add('active');
+    document.getElementById('presencial').style.display = 'none';
+    document.getElementById('online').style.display = 'none';
+    document.getElementById('presencial').classList.remove('active');
+    document.getElementById('online').classList.remove('active');
+    document.getElementById(tab).style.display = 'grid';
+    document.getElementById('ilimitado').style.display = tab === 'presencial' ? 'flex' : 'none';
+  }
+</script>
+
+<!-- CTA FLOTANTE -->
+<div style="position:fixed;bottom:32px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center;">
+  <a href="https://wa.me/34697774602" target="_blank" style="background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="WhatsApp" aria-label="Contact via WhatsApp">💬</a>
+  <a href="mailto:alexandradahdal@gmail.com" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="Email" aria-label="Contact via Email">✉</a>
+</div>
+
+</body>
+</html>

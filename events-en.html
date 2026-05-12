@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eventos & Festivals · Xana Dahdal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPF6KP6H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q0LPF6KP6H');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --sand: #f2ebe0; --sand-dark: #e8dfd0; --dark: #1e1c18; --muted: #6b6560; --gold: #b8945a; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--sand); color: var(--dark); font-family: 'Nunito Sans', sans-serif; font-weight: 300; }
+
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(242,235,224,0.96); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(184,148,90,0.15); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--dark); text-decoration: none; }
+    .nav-cta { padding: 10px 24px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; }
+    .nav-cta:hover { background: var(--dark); }
+
+    /* HERO */
+    .hero { position: relative; height: 90vh; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: brightness(0.6); }
+    .hero-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 80px 64px; }
+    .hero-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 400; color: #fff; line-height: 1.05; margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { font-size: 16px; color: rgba(255,255,255,0.7); max-width: 560px; line-height: 1.8; }
+
+    /* SECTIONS */
+    .section { padding: 80px 48px; }
+    .section-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; margin-bottom: 48px; }
+    .gold-line { width: 48px; height: 1px; background: var(--gold); margin-bottom: 48px; }
+
+    /* INTRO */
+    .intro { max-width: 820px; margin: 0 auto; padding: 80px 48px; text-align: center; }
+    .intro p { font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2.5vw, 1.45rem); line-height: 1.8; color: var(--dark); font-weight: 400; }
+    .intro p + p { margin-top: 20px; font-family: 'Nunito Sans', sans-serif; font-size: 15px; color: var(--muted); }
+
+    /* STATS */
+    .stats { background: var(--dark); padding: 60px 48px; display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+    .stat { background: var(--dark); padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.06); }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); font-style: italic; margin-bottom: 8px; }
+    .stat-label { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+
+    /* FOTOS FESTIVAL */
+    .fotos-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; }
+    .fotos-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: filter 0.3s; }
+    .fotos-grid img:hover { filter: brightness(0.85); }
+    .fotos-grid .tall { grid-row: span 2; aspect-ratio: auto; height: 100%; }
+
+    /* FESTIVALES */
+    .festivales { background: var(--sand-dark); padding: 80px 48px; }
+    .festivales-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: rgba(184,148,90,0.15); }
+    .festival-card { background: var(--sand-dark); padding: 40px 36px; }
+    .festival-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: rgba(184,148,90,0.3); font-style: italic; margin-bottom: 12px; }
+    .festival-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 10px; }
+    .festival-card p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    /* QUÉ OFREZCO */
+    .ofrezco { padding: 80px 48px; }
+    .ofrezco-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+    .ofrezco-item { border-top: 1px solid rgba(184,148,90,0.3); padding-top: 24px; }
+    .ofrezco-item h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 10px; }
+    .ofrezco-item p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    /* CTA */
+    .cta { background: var(--dark); padding: 100px 48px; text-align: center; }
+    .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; color: #fff; margin-bottom: 20px; }
+    .cta h2 em { font-style: italic; color: var(--gold); }
+    .cta p { font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: 48px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 16px 40px; font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+    .btn-gold { background: var(--gold); color: #fff; }
+    .btn-gold:hover { background: #fff; color: var(--dark); }
+    .btn-outline { border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.6); }
+    .btn-outline:hover { background: #fff; color: var(--dark); }
+
+    footer { background: #111; padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .f-logo { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.3); font-size: 1rem; }
+    .f-copy { font-size: 11px; color: rgba(255,255,255,0.18); letter-spacing: 1px; }
+    .f-links { display: flex; gap: 20px; }
+    .f-links a { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); text-decoration: none; }
+    .f-links a:hover { color: var(--gold); }
+
+    @media(max-width:900px) {
+      .stats { grid-template-columns: 1fr 1fr; }
+      .fotos-grid { grid-template-columns: 1fr 1fr; }
+      .festivales-grid { grid-template-columns: 1fr; }
+      .ofrezco-grid { grid-template-columns: 1fr; }
+      nav, .intro, .section, .festivales, .ofrezco, .cta { padding-left: 24px; padding-right: 24px; }
+      .hero-overlay { padding: 48px 24px; }
+      .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+<nav>
+  <a href="events-en.html" style="font-size:11px;font-weight:600;letter-spacing:2px;color:var(--muted);text-decoration:none;margin-right:16px;">ES</a><a href="events-en.html" style="font-size:11px;font-weight:600;letter-spacing:2px;color:var(--gold);text-decoration:none;margin-right:16px;border-bottom:1px solid var(--gold);">EN</a><a href="index-en.html" class="nav-logo" style="display:none;"></a><a href="index-en.html" class="nav-logo">Xana Dahdal</a>
+  <a href="#contact" class="nav-cta">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="main-content" class="hero">
+  <img src="IMG_3554.jpeg" alt="Xana Dahdal dando clase en festival"/>
+  <div class="hero-overlay">
+    <p class="hero-tag">Events · Festivals · Group Classes</p>
+    <h1>Yoga<br>at <em>scale.</em></h1>
+    <p>With over 14 years of experience as a yoga teacher, I have had the privilege of participating in yoga, meditation and personal growth festivals, bringing my practice to unique spaces and diverse communities.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">+14</div>
+    <p class="stat-label">Years teaching yoga</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100</div>
+    <p class="stat-label">People per class</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">4+</div>
+    <p class="stat-label">International festivals</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">∞</div>
+    <p class="stat-label">Collective energy</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <p>"Teaching at a festival is unlike anything else. People arrive with a different energy, open. And that changes everything."</p>
+  <p>When I teach at a festival I know I have people from different countries in front of me, with different levels, who may have never done yoga before. I teach Hatha, Hatha Vinyasa and Ashtanga, and I can adapt any class if there is a pregnant woman or a postnatal mother in the group. I communicate in Spanish, English, French and Portuguese, and I connect easily with international groups.</p>
+</section>
+
+<!-- FOTOS -->
+<section style="padding: 0 48px 80px;">
+  <div class="fotos-grid">
+    <img src="IMG_3315.jpeg" alt="Clase yoga rooftop Barcelona" class="tall" style="aspect-ratio:3/4;"/>
+    <img src="IMG_3316.jpeg" alt="Yoga terraza con vistas al mar"/>
+    <img src="IMG_3547.jpeg" alt="Clase de yoga en festival"/>
+    <img src="IMG_3557.jpeg" alt="ZNA Gathering yoga"/>
+    <img src="IMG_3558.jpeg" alt="ZNA Gathering savasana"/>
+    <img src="IMG_3546.jpeg" alt="Grupo de yoga en festival"/>
+  </div>
+</section>
+
+<!-- FESTIVALES -->
+<section class="festivales">
+  <p class="section-tag">Where I have been</p>
+  <h2 class="section-title">Festivals</h2>
+  <div class="festivales-grid">
+    <div class="festival-card">
+      <div class="festival-num">01</div>
+      <h3>Sun Sun Love</h3>
+      <p>A yoga, meditation, astrology and personal growth festival with a rich and varied programme. I have taught yoga classes as part of this collective space.</p>
+    </div>
+    <div class="festival-card">
+      <div class="festival-num">02</div>
+      <h3>ZNA Gathering</h3>
+      <p>An international gathering of electronic music and alternative culture. A unique sunrise yoga experience with hundreds of participants.</p>
+    </div>
+    <div class="festival-card">
+      <div class="festival-num">03</div>
+      <h3>Own Spirit</h3>
+      <p>A festival dedicated to wellbeing, music and connection. Yoga classes in natural settings with groups of all levels and backgrounds.</p>
+    </div>
+    <div class="festival-card">
+      <div class="festival-num">04</div>
+      <h3>Kirtan Bhakti Yoga Festival</h3>
+      <p>A festival centred on the devotional practice of yoga. A space of spiritual depth and conscious movement with an international community.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ OFREZCO -->
+<section class="ofrezco">
+  <p class="section-tag">What I offer</p>
+  <h2 class="section-title">What can I bring<br>to your event?</h2>
+  <div class="ofrezco-grid">
+    <div class="ofrezco-item">
+      <h3>Large group yoga classes</h3>
+      <p>Yoga sessions adapted to large groups, from 50 to 100 people or more. Accessible format for all levels, with energy and presence.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Themed sessions</h3>
+      <p>Sunrise yoga, yoga with live music, meditation and movement sessions. Each proposal adapted to the spirit of your festival or event.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Yoga for families and all audiences</h3>
+      <p>I can adapt my classes to any audience, including families, beginners or mixed-level groups. Whatever your festival needs, I make it work.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Workshops</h3>
+      <p>Smaller, deeper workshops for participants who want to go further. Yoga philosophy, pranayama, meditation or chakra work.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Artistic collaboration</h3>
+      <p>Yoga as performance, as an event opening, as a collective experience integrating music, movement and presence.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Flexible format</h3>
+      <p>I adapt to your space, your duration and your audience. Indoors or outdoors, morning or afternoon, with or without live music. Tell me your idea.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contacto">
+  <h2>Want yoga<br>at your <em>festival?</em></h2>
+  <p>If you organise a festival, event or gathering and want to incorporate yoga into the programme, write to me and let us talk.</p>
+  <div class="cta-btns">
+    <a href="mailto:alexandradahdal@gmail.com?subject=Yoga%20en%20mi%20evento&body=Hola%20Xana%2C%20me%20gustaría%20contar%20contigo%20para%20un%20evento." class="btn btn-gold">Write by email</a>
+    <a href="https://wa.me/34697774602?text=Hola%20Xana%2C%20me%20gustaría%20contar%20contigo%20para%20un%20evento." class="btn btn-outline">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <span class="f-logo">Xana Dahdal</span>
+  <span class="f-copy">Barcelona · Yoga · 2026</span>
+  <div class="f-links">
+    <a href="aviso-legal-en.html">Legal Notice</a>
+    <a href="privacy-en.html">Privacy</a>
+    <a href="cookies-en.html">Cookies</a>
+  </div>
+</footer>
+
+<!-- CTA FLOTANTE -->
+<div style="position:fixed;bottom:32px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center;">
+  <a href="https://wa.me/34697774602" target="_blank" style="background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="WhatsApp" aria-label="Contact via WhatsApp">💬</a>
+  <a href="mailto:alexandradahdal@gmail.com" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="Email" aria-label="Contact via Email">✉</a>
+</div>
+
+</body>
+</html>
