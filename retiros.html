@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Retiros de Yoga · Xana Dahdal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPF6KP6H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q0LPF6KP6H');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --sand: #f2ebe0; --sand-dark: #e8dfd0; --dark: #1e1c18; --muted: #6b6560; --gold: #b8945a; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--sand); color: var(--dark); font-family: 'Nunito Sans', sans-serif; font-weight: 300; }
+
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(242,235,224,0.96); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(184,148,90,0.15); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--dark); text-decoration: none; }
+    .nav-cta { padding: 10px 24px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; }
+    .nav-cta:hover { background: var(--dark); }
+
+    /* HERO */
+    .hero { position: relative; height: 90vh; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; filter: brightness(0.55); }
+    .hero-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 80px 64px; }
+    .hero-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 400; color: #fff; line-height: 1.05; margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { font-size: 16px; color: rgba(255,255,255,0.7); max-width: 560px; line-height: 1.8; }
+
+    /* INTRO */
+    .intro { max-width: 860px; margin: 0 auto; padding: 80px 48px; text-align: center; }
+    .intro p { font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2.5vw, 1.45rem); line-height: 1.8; color: var(--dark); font-weight: 400; }
+    .intro p + p { margin-top: 20px; font-family: 'Nunito Sans', sans-serif; font-size: 15px; color: var(--muted); }
+    .gold-line { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 0; }
+
+    /* FOTOS */
+    .fotos { padding: 0 48px 80px; }
+    .fotos-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; }
+    .fotos-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: filter 0.3s; }
+    .fotos-grid img:hover { filter: brightness(0.85); }
+    .fotos-grid .wide { grid-column: span 2; aspect-ratio: 16/9; }
+
+    /* ORGANIZO */
+    .organizo { background: var(--dark); padding: 80px 48px; }
+    .section-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; margin-bottom: 48px; }
+    .organizo .section-title { color: #fff; }
+    .organizo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .organizo-text p { font-size: 15px; line-height: 1.9; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .organizo-features { list-style: none; margin-top: 24px; }
+    .organizo-features li { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.45); padding-left: 20px; position: relative; margin-bottom: 8px; }
+    .organizo-features li::before { content: '·'; position: absolute; left: 0; color: var(--gold); }
+    .proximos { background: rgba(255,255,255,0.04); padding: 36px 32px; border: 1px solid rgba(184,148,90,0.2); }
+    .proximos h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; font-weight: 400; margin-bottom: 16px; }
+    .proximos p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.8; margin-bottom: 20px; }
+    .btn-gold { display: inline-block; padding: 14px 32px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .btn-gold:hover { background: #fff; color: var(--dark); }
+
+    /* PROFESORA INVITADA */
+    .invitada { padding: 80px 48px; }
+    .invitada-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .invitada-img img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
+    .invitada-content h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; margin-bottom: 20px; line-height: 1.3; }
+    .invitada-content h2 em { font-style: italic; color: var(--gold); }
+    .invitada-content p { font-size: 14px; line-height: 1.85; color: var(--muted); margin-bottom: 14px; }
+    .invitada-list { list-style: none; margin-top: 20px; }
+    .invitada-list li { font-size: 13px; line-height: 1.8; color: var(--muted); padding-left: 20px; position: relative; margin-bottom: 8px; }
+    .invitada-list li::before { content: '·'; position: absolute; left: 0; color: var(--gold); }
+
+    /* FOTOS RETIRO 2 */
+    .fotos2 { padding: 0 48px 80px; background: var(--sand-dark); padding-top: 80px; }
+    .fotos2 .section-tag { margin-bottom: 16px; }
+    .fotos2 .section-title { margin-bottom: 40px; }
+    .fotos2-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; }
+    .fotos2-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; transition: filter 0.3s; }
+    .fotos2-grid img:hover { filter: brightness(0.85); }
+    .fotos2-grid .tall2 { grid-row: span 2; aspect-ratio: auto; }
+
+    /* CTA */
+    .cta { padding: 100px 48px; text-align: center; }
+    .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; margin-bottom: 20px; }
+    .cta h2 em { font-style: italic; color: var(--gold); }
+    .cta p { font-size: 15px; color: var(--muted); margin-bottom: 48px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-dark { display: inline-block; padding: 16px 40px; background: var(--dark); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; }
+    .btn-dark:hover { background: var(--gold); }
+    .btn-outline { display: inline-block; padding: 16px 40px; border: 1px solid var(--dark); color: var(--dark); font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; }
+    .btn-outline:hover { background: var(--dark); color: #fff; }
+
+    footer { background: #111; padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .f-logo { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.3); font-size: 1rem; }
+    .f-copy { font-size: 11px; color: rgba(255,255,255,0.18); letter-spacing: 1px; }
+    .f-links { display: flex; gap: 20px; }
+    .f-links a { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); text-decoration: none; }
+    .f-links a:hover { color: var(--gold); }
+
+    @media(max-width:900px) {
+      .fotos-grid { grid-template-columns: 1fr 1fr; }
+      .fotos-grid .wide { grid-column: span 2; }
+      .organizo-grid { grid-template-columns: 1fr; gap: 40px; }
+      .invitada-grid { grid-template-columns: 1fr; gap: 40px; }
+      .fotos2-grid { grid-template-columns: 1fr 1fr; }
+      nav, .intro, .fotos, .organizo, .invitada, .fotos2, .cta { padding-left: 24px; padding-right: 24px; }
+      .hero-overlay { padding: 48px 24px; }
+    }
+  
+/* UNIVERSAL HAMBURGER MENU */
+.site-nav{position:sticky;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 48px;background:rgba(242,235,224,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,148,90,.15)}
+.site-nav .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--dark,#1e1c18);text-decoration:none;white-space:nowrap}.site-nav .nav-logo img{height:38px;width:auto}.site-nav .nav-logo em{color:var(--gold,#b8945a)}
+.site-nav .nav-links{display:flex;align-items:center;gap:20px;list-style:none;margin:0;padding:0}.site-nav .nav-links a{font-size:10px;font-weight:600;letter-spacing:2.2px;text-transform:uppercase;color:var(--muted,#6b6560);text-decoration:none}.site-nav .nav-links a:hover,.site-nav .nav-links a.active-lang{color:var(--gold,#b8945a)}
+.site-nav .nav-cta{padding:10px 22px;background:var(--gold,#b8945a);color:#fff!important;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none}.site-nav .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:0}.site-nav .hamburger span{display:block;width:24px;height:2px;background:var(--dark,#1e1c18);transition:all .25s}.site-nav .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.site-nav .hamburger.open span:nth-child(2){opacity:0}.site-nav .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.site-nav{padding:14px 24px}.site-nav .nav-links{display:none}.site-nav .nav-links.open{display:flex;flex-direction:column;align-items:flex-start;position:fixed;top:64px;left:0;right:0;background:rgba(242,235,224,.98);backdrop-filter:blur(14px);padding:22px 28px;gap:0;border-bottom:1px solid rgba(184,148,90,.2);box-shadow:0 20px 40px rgba(0,0,0,.08)}.site-nav .nav-links.open li{width:100%;border-bottom:1px solid rgba(184,148,90,.12)}.site-nav .nav-links.open li a{display:block;padding:14px 0;font-size:11px;letter-spacing:2.5px}.site-nav .hamburger{display:flex}.site-nav .nav-cta{display:none}}
+
+
+    /* RETREATS GALLERY FIX */
+    .gallery,
+    .retreat-gallery,
+    .gallery-grid,
+    .photos-grid,
+    .image-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 4px !important;
+      width: 100% !important;
+      max-width: 1180px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      align-items: stretch !important;
+    }
+
+    .gallery img,
+    .retreat-gallery img,
+    .gallery-grid img,
+    .photos-grid img,
+    .image-grid img {
+      width: 100% !important;
+      height: 260px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+    }
+
+    .gallery .wide,
+    .retreat-gallery .wide,
+    .gallery-grid .wide,
+    .photos-grid .wide,
+    .image-grid .wide {
+      grid-column: span 2 !important;
+    }
+
+    .gallery .tall,
+    .retreat-gallery .tall,
+    .gallery-grid .tall,
+    .photos-grid .tall,
+    .image-grid .tall {
+      grid-row: span 2 !important;
+    }
+
+    @media (max-width: 900px) {
+      .gallery,
+      .retreat-gallery,
+      .gallery-grid,
+      .photos-grid,
+      .image-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+
+      .gallery img,
+      .retreat-gallery img,
+      .gallery-grid img,
+      .photos-grid img,
+      .image-grid img {
+        height: 220px !important;
+      }
+
+      .gallery .wide,
+      .retreat-gallery .wide,
+      .gallery-grid .wide,
+      .photos-grid .wide,
+      .image-grid .wide {
+        grid-column: span 2 !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery,
+      .retreat-gallery,
+      .gallery-grid,
+      .photos-grid,
+      .image-grid {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+      }
+
+      .gallery img,
+      .retreat-gallery img,
+      .gallery-grid img,
+      .photos-grid img,
+      .image-grid img {
+        height: 260px !important;
+      }
+
+      .gallery .wide,
+      .retreat-gallery .wide,
+      .gallery-grid .wide,
+      .photos-grid .wide,
+      .image-grid .wide,
+      .gallery .tall,
+      .retreat-gallery .tall,
+      .gallery-grid .tall,
+      .photos-grid .tall,
+      .image-grid .tall {
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Ir al contenido principal</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="logo-xana-dahdal.svg" alt="Xana Dahdal logo"><span>Xana <em>Dahdal</em></span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#sobre-mi" onclick="closeMenu()">Sobre mí</a></li>
+    <li><a href="index.html#resultados" onclick="closeMenu()">Resultados</a></li>
+    <li><a href="index.html#formaciones" onclick="closeMenu()">Formaciones</a></li>
+    <li><a href="ttc.html" onclick="closeMenu()">TTC 2026</a></li>
+    <li><a href="index.html#tipos-yoga" onclick="closeMenu()">TIPO DE CLASES</a></li>
+    <li><a href="clases.html" onclick="closeMenu()">Apúntate a clase</a></li>
+    <li><a href="retiros.html" onclick="closeMenu()">Retiros</a></li>
+    <li><a href="corporativo.html" onclick="closeMenu()">Para empresas</a></li>
+    <li><a href="eventos.html" onclick="closeMenu()">Eventos</a></li>
+    <li><a href="index.html#horario" onclick="closeMenu()">Horario</a></li>
+    <li><a href="index.html#contacto" onclick="closeMenu()">Contacto</a></li>
+    <li><a href="index.html" class="active-lang">ES</a></li><li><a href="index-en.html">EN</a></li>
+  </ul>
+  <a href="index.html#contacto" class="nav-cta">Contactar</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<script>
+function toggleMenu(){var n=document.getElementById('nav-links');var h=document.getElementById('hamburger');if(n)n.classList.toggle('open');if(h)h.classList.toggle('open');}
+function closeMenu(){var n=document.getElementById('nav-links');var h=document.getElementById('hamburger');if(n)n.classList.remove('open');if(h)h.classList.remove('open');}
+</script>
+
+<!-- HERO -->
+<section id="main-content" class="hero">
+  <img src="img_0784.jpeg" alt="Retiro de yoga noche bajo los arcos"/>
+  <div class="hero-overlay">
+    <p class="hero-tag">Retiros de Yoga · Organización & Participación</p>
+    <h1>Un espacio<br>para <em>volver<br>a ti.</em></h1>
+    <p>El retiro como pausa necesaria. Un tiempo fuera del ritmo cotidiano para profundizar en la práctica, en el silencio y en uno mismo.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <p>"Un retiro no es unas vacaciones. Es parar de verdad. Y eso, hoy en día, es más difícil y más necesario que nunca."</p>
+  <p>He organizado retiros en masías antiguas, en entornos naturales, en lugares donde el espacio ya te dice algo antes de que empiece la primera clase. Cada retiro tiene su propia energía.</p>
+  <br/><br/>
+  <div class="gold-line"></div>
+</section>
+
+<!-- FOTOS HERO RETIRO -->
+<section class="fotos">
+  <div class="fotos-grid">
+    <img src="IMG_3736.jpeg" alt="Grupo de yoga en retiro jardín" class="wide"/>
+    <img src="IMG_3412.jpeg" alt="Retiro yoga buganvilla"/>
+    <img src="IMG_3773.jpeg" alt="Meditación en retiro al atardecer"/>
+    <img src="IMG_3553.jpeg" alt="Retiro yoga en bosque"/>
+  </div>
+</section>
+
+<!-- ORGANIZO RETIROS -->
+<section class="organizo">
+  <p class="section-tag">Lo que creo</p>
+  <h2 class="section-title">Retiros que organizo</h2>
+  <div class="organizo-grid">
+    <div class="organizo-text">
+      <p>Cuando organizo un retiro elijo el espacio con mucho cuidado. El lugar importa. No es lo mismo practicar en una masía con siglos de historia que en cualquier otro sitio.</p>
+      <p>Cada retiro tiene su propio ritmo, su propia intención y su propia comunidad. Cada retiro tiene su propio tamaño, su propio ritmo y su propia intención. Lo importante es que haya tiempo real para la práctica, el silencio y la conexión.</p>
+      <p>La programación combina práctica de asana, meditación, pranayama, filosofía del yoga y tiempo libre. Un equilibrio cuidado entre estructura y libertad.</p>
+      <ul class="organizo-features">
+        <li>Tamaño adaptado a cada propuesta y espacio</li>
+        <li>Espacios naturales y con historia</li>
+        <li>Práctica diaria de asana, meditación y pranayama</li>
+        <li>Filosofía del yoga aplicada</li>
+        <li>Alimentación consciente incluida</li>
+        <li>Tiempo libre y de integración</li>
+      </ul>
+    </div>
+    <div class="proximos">
+      <h3>Próximos retiros</h3>
+      <p>Los retiros se anuncian con antelación en esta web y en Instagram. Cada edición tiene plazas muy limitadas para preservar la calidad y la intimidad del espacio.</p>
+      <p>Si quieres recibir información sobre los próximos retiros antes de que se anuncien públicamente, escríbeme y te añado a la lista de espera.</p>
+      <a href="mailto:alexandradahdal@gmail.com?subject=Lista%20de%20espera%20retiros&body=Hola%20Xana%2C%20me%20interesa%20apuntarme%20a%20la%20lista%20de%20espera%20para%20tus%20retiros." class="btn-gold">Apuntarme a la lista de espera</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESORA INVITADA -->
+<section class="invitada">
+  <div class="invitada-grid">
+    <div class="invitada-img">
+      <img src="IMG_3773.jpeg" alt="Xana Dahdal profesora en retiro"/>
+    </div>
+    <div class="invitada-content">
+      <p class="section-tag">Lo que comparto</p>
+      <h2>Profesora <em>invitada</em><br>en retiros.</h2>
+      <p>Además de organizar mis propios retiros, colaboro como profesora invitada en retiros organizados por otros. Una oportunidad de llevar mi práctica y mi forma de enseñar a diferentes comunidades y contextos.</p>
+      <p>Si organizas un retiro y buscas presencia docente, puedo contribuir de distintas formas: una clase, un taller temático, una charla de filosofía del yoga, una sesión de meditación o pranayama. Cada colaboración se diseña según las necesidades del retiro y el perfil del grupo.</p>
+      <ul class="invitada-list">
+        <li>Más de 14 años enseñando en contextos diversos</li>
+        <li>Experiencia en retiros nacionales e internacionales</li>
+        <li>Especialización en Hatha, Vinyasa, Ashtanga y Dharma Yoga</li>
+        <li>Clases de yoga prenatal y mamás & bebés</li>
+        <li>Talleres de filosofía del yoga y meditación</li>
+        <li>Idiomas: castellano, inglés, francés y portugués</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA RETIRO -->
+<section class="fotos2">
+  <p class="section-tag">El ambiente</p>
+  <h2 class="section-title">Así son los retiros</h2>
+  <div class="fotos2-grid">
+    <img src="img_0784.jpeg" alt="Círculo nocturno retiro" class="tall2" style="aspect-ratio:auto;grid-row:span 2;"/>
+    <img src="IMG_3412.jpeg" alt="Acrobacia retiro jardín"/>
+    <img src="IMG_3736.jpeg" alt="Grupo invertidas retiro"/>
+    <img src="IMG_3553.jpeg" alt="Yoga en bosque retiro"/>
+    <img src="IMG_3773.jpeg" alt="Meditación exterior retiro"/>
+    <img src="img_4333.jpeg" alt="Yoga en retiro jardín buganvilla"/>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contacto">
+  <h2>¿Hablamos de<br><em>tu retiro?</em></h2>
+  <p>Si organizas un retiro y buscas profesora, o si quieres información sobre los próximos retiros que organizo, escríbeme.</p>
+  <div class="cta-btns">
+    <a href="mailto:alexandradahdal@gmail.com?subject=Retiros%20de%20yoga&body=Hola%20Xana%2C%20me%20interesa%20saber%20más%20sobre%20tus%20retiros." class="btn-dark">Escribir por email</a>
+    <a href="https://wa.me/34697774602?text=Hola%20Xana%2C%20me%20interesa%20saber%20más%20sobre%20tus%20retiros." class="btn-outline">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <span class="f-logo">Xana Dahdal</span>
+  <span class="f-copy">Barcelona · Yoga · 2026</span>
+  <div class="f-links">
+    <a href="aviso-legal.html">Aviso Legal</a>
+    <a href="politica-privacidad.html">Privacidad</a>
+    <a href="politica-cookies.html">Cookies</a>
+  </div>
+</footer>
+
+<!-- CTA FLOTANTE -->
+<div style="position:fixed;bottom:32px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center;">
+  <a href="https://wa.me/34697774602" target="_blank" style="background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="WhatsApp" aria-label="Contact via WhatsApp">💬</a>
+  <a href="mailto:alexandradahdal@gmail.com" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="Email" aria-label="Contact via Email">✉</a>
+</div>
+
+</body>
+</html>

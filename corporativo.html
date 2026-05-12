@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga para Empresas · Xana Dahdal · Barcelona</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPF6KP6H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q0LPF6KP6H');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --sand: #f2ebe0; --sand-dark: #e8dfd0; --dark: #1e1c18; --muted: #6b6560; --gold: #b8945a; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--sand); color: var(--dark); font-family: 'Nunito Sans', sans-serif; font-weight: 300; }
+
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(242,235,224,0.96); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(184,148,90,0.15); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--dark); text-decoration: none; }
+    .nav-cta { padding: 10px 24px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; }
+    .nav-cta:hover { background: var(--dark); }
+
+    /* HERO */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 88vh; }
+    .hero-content { display: flex; flex-direction: column; justify-content: center; padding: 80px 64px; }
+    .hero-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 24px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { font-size: 15px; line-height: 1.85; color: var(--muted); max-width: 440px; margin-bottom: 40px; }
+    .btn { display: inline-block; padding: 16px 40px; font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-dark:hover { background: var(--gold); }
+    .hero-img { position: relative; overflow: hidden; }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+    /* STATS */
+    .stats { background: var(--dark); display: grid; grid-template-columns: repeat(4,1fr); }
+    .stat { padding: 48px 32px; border-right: 1px solid rgba(255,255,255,0.06); }
+    .stat:last-child { border: none; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--gold); font-style: italic; margin-bottom: 8px; }
+    .stat-label { font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+
+    /* INTRO */
+    .intro { padding: 80px 48px; max-width: 900px; }
+    .intro h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; margin-bottom: 24px; line-height: 1.3; }
+    .intro p { font-size: 15px; line-height: 1.9; color: var(--muted); margin-bottom: 16px; }
+
+    /* BENEFICIOS */
+    .beneficios { background: var(--dark); padding: 80px 48px; }
+    .section-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; color: #fff; margin-bottom: 48px; }
+    .beneficios-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(255,255,255,0.05); }
+    .beneficio { background: var(--dark); padding: 40px 32px; }
+    .beneficio-icon { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold); font-style: italic; margin-bottom: 16px; }
+    .beneficio h3 { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; margin-bottom: 12px; }
+    .beneficio p { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.75; }
+
+    /* PRL */
+    .prl { padding: 80px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .prl-content h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; margin-bottom: 20px; line-height: 1.3; }
+    .prl-content h2 em { font-style: italic; color: var(--gold); }
+    .prl-content p { font-size: 14px; line-height: 1.85; color: var(--muted); margin-bottom: 14px; }
+    .prl-list { list-style: none; margin-top: 24px; }
+    .prl-list li { font-size: 13px; line-height: 1.8; color: var(--muted); padding-left: 20px; position: relative; margin-bottom: 8px; }
+    .prl-list li::before { content: '·'; position: absolute; left: 0; color: var(--gold); }
+    .prl-box { background: var(--sand-dark); padding: 48px 40px; }
+    .prl-box h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; margin-bottom: 20px; }
+    .prl-box p { font-size: 13px; color: var(--muted); line-height: 1.8; margin-bottom: 12px; }
+
+    /* FORMATO */
+    .formato { background: var(--sand-dark); padding: 80px 48px; }
+    .formato-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: rgba(184,148,90,0.15); }
+    .formato-item { background: var(--sand-dark); padding: 40px 32px; }
+    .formato-item h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 400; margin-bottom: 12px; }
+    .formato-item p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+    .formato-tag { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+
+    /* CTA */
+    .cta { padding: 100px 48px; text-align: center; }
+    .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; margin-bottom: 20px; }
+    .cta h2 em { font-style: italic; color: var(--gold); }
+    .cta p { font-size: 15px; color: var(--muted); margin-bottom: 48px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border: 1px solid var(--dark); color: var(--dark); }
+    .btn-outline:hover { background: var(--dark); color: #fff; }
+
+    footer { background: #111; padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .f-logo { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.3); font-size: 1rem; }
+    .f-copy { font-size: 11px; color: rgba(255,255,255,0.18); letter-spacing: 1px; }
+    .f-links { display: flex; gap: 20px; }
+    .f-links a { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); text-decoration: none; }
+    .f-links a:hover { color: var(--gold); }
+
+    @media(max-width:900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-img { height: 55vw; }
+      .hero-content { padding: 56px 24px; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .beneficios-grid { grid-template-columns: 1fr; }
+      .prl { grid-template-columns: 1fr; gap: 40px; }
+      .formato-grid { grid-template-columns: 1fr; }
+      nav, .intro, .beneficios, .prl, .formato, .cta { padding-left: 24px; padding-right: 24px; }
+    }
+  
+/* UNIVERSAL HAMBURGER MENU */
+.site-nav{position:sticky;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 48px;background:rgba(242,235,224,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,148,90,.15)}
+.site-nav .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--dark,#1e1c18);text-decoration:none;white-space:nowrap}.site-nav .nav-logo img{height:38px;width:auto}.site-nav .nav-logo em{color:var(--gold,#b8945a)}
+.site-nav .nav-links{display:flex;align-items:center;gap:20px;list-style:none;margin:0;padding:0}.site-nav .nav-links a{font-size:10px;font-weight:600;letter-spacing:2.2px;text-transform:uppercase;color:var(--muted,#6b6560);text-decoration:none}.site-nav .nav-links a:hover,.site-nav .nav-links a.active-lang{color:var(--gold,#b8945a)}
+.site-nav .nav-cta{padding:10px 22px;background:var(--gold,#b8945a);color:#fff!important;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none}.site-nav .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:0}.site-nav .hamburger span{display:block;width:24px;height:2px;background:var(--dark,#1e1c18);transition:all .25s}.site-nav .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.site-nav .hamburger.open span:nth-child(2){opacity:0}.site-nav .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.site-nav{padding:14px 24px}.site-nav .nav-links{display:none}.site-nav .nav-links.open{display:flex;flex-direction:column;align-items:flex-start;position:fixed;top:64px;left:0;right:0;background:rgba(242,235,224,.98);backdrop-filter:blur(14px);padding:22px 28px;gap:0;border-bottom:1px solid rgba(184,148,90,.2);box-shadow:0 20px 40px rgba(0,0,0,.08)}.site-nav .nav-links.open li{width:100%;border-bottom:1px solid rgba(184,148,90,.12)}.site-nav .nav-links.open li a{display:block;padding:14px 0;font-size:11px;letter-spacing:2.5px}.site-nav .hamburger{display:flex}.site-nav .nav-cta{display:none}}
+
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Ir al contenido principal</a>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="logo-xana-dahdal.svg" alt="Xana Dahdal logo"><span>Xana <em>Dahdal</em></span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#sobre-mi" onclick="closeMenu()">Sobre mí</a></li>
+    <li><a href="index.html#resultados" onclick="closeMenu()">Resultados</a></li>
+    <li><a href="index.html#formaciones" onclick="closeMenu()">Formaciones</a></li>
+    <li><a href="ttc.html" onclick="closeMenu()">TTC 2026</a></li>
+    <li><a href="index.html#tipos-yoga" onclick="closeMenu()">TIPO DE CLASES</a></li>
+    <li><a href="clases.html" onclick="closeMenu()">Apúntate a clase</a></li>
+    <li><a href="retiros.html" onclick="closeMenu()">Retiros</a></li>
+    <li><a href="corporativo.html" onclick="closeMenu()">Para empresas</a></li>
+    <li><a href="eventos.html" onclick="closeMenu()">Eventos</a></li>
+    <li><a href="index.html#horario" onclick="closeMenu()">Horario</a></li>
+    <li><a href="index.html#contacto" onclick="closeMenu()">Contacto</a></li>
+    <li><a href="index.html" class="active-lang">ES</a></li><li><a href="index-en.html">EN</a></li>
+  </ul>
+  <a href="index.html#contacto" class="nav-cta">Contactar</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<script>
+function toggleMenu(){var n=document.getElementById('nav-links');var h=document.getElementById('hamburger');if(n)n.classList.toggle('open');if(h)h.classList.toggle('open');}
+function closeMenu(){var n=document.getElementById('nav-links');var h=document.getElementById('hamburger');if(n)n.classList.remove('open');if(h)h.classList.remove('open');}
+</script>
+
+<!-- HERO -->
+<section id="main-content" class="hero">
+  <div class="hero-content">
+    <p class="hero-tag">Yoga para Empresas · Barcelona</p>
+    <h1>El bienestar<br>que <em>transforma</em><br>equipos.</h1>
+    <p>Programas de yoga para empresas que van Llevo años dando clases en empresas y sé lo que necesita alguien que trabaja bajo presión. No vengo con un programa genérico.</p>
+    <a href="#contacto" class="btn btn-dark">Pedir presupuesto</a>
+  </div>
+  <div class="hero-img">
+    <img src="IMG_3773.jpeg" alt="Yoga corporativo grupo"/>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">↓35%</div>
+    <p class="stat-label">Reducción del estrés laboral</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">↓28%</div>
+    <p class="stat-label">Menos bajas por enfermedad</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">↑21%</div>
+    <p class="stat-label">Mayor productividad</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">+14</div>
+    <p class="stat-label">Años de experiencia</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <h2>Conozco el mundo corporativo desde dentro.</h2>
+  <p>El absentismo, la falta de concentración, la tensión en los equipos, el agotamiento mental, todos tienen un coste real y medible. El yoga para empresas no es un lujo ni una moda: es una herramienta eficaz para mejorar el bienestar de las personas a través del movimiento consciente, la corrección postural y la regulación del sistema nervioso.</p>
+  <p>Con más de 14 años de experiencia enseñando yoga y un recorrido propio en el mundo corporativo, entiendo las dinámicas, los ritmos y las necesidades reales de los equipos. No llego con un programa genérico, llego sabiendo qué buscan las personas que trabajan bajo presión, que pasan horas frente a una pantalla, que carggan con responsabilidades y que pocas veces tienen tiempo para parar. Ofrezco programas adaptados a ese contexto real, sin necesidad de experiencia previa ni equipamiento especial.</p>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="beneficios">
+  <p class="section-tag">Por qué funciona</p>
+  <h2 class="section-title">Resultados reales<br>para tu empresa</h2>
+  <div class="beneficios-grid">
+    <div class="beneficio">
+      <div class="beneficio-icon">I</div>
+      <h3>Reducción del estrés</h3>
+      <p>El yoga activa el sistema nervioso parasimpático, reduciendo los niveles de cortisol. Equipos con menos estrés toman mejores decisiones y cometen menos errores.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">II</div>
+      <h3>Menos absentismo</h3>
+      <p>Las lesiones musculoesqueléticas por sedentarismo y la tensión crónica son las principales causas de baja laboral. El yoga las previene y reduce su impacto.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">III</div>
+      <h3>Mayor concentración</h3>
+      <p>Las técnicas de respiración y atención plena mejoran la capacidad de foco y presencia. Una sola sesión semanal tiene efectos medibles en la productividad.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">IV</div>
+      <h3>Cohesión de equipo</h3>
+      <p>Practicar juntos crea vínculos. El yoga es una actividad igualitaria que rompe jerarquías y genera sentido de comunidad dentro de la organización.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">V</div>
+      <h3>Mejor clima laboral</h3>
+      <p>Empresas que cuidan el bienestar de sus empleados tienen mayor retención de talento, más motivación interna y mejor reputación como empleador.</p>
+    </div>
+    <div class="beneficio">
+      <div class="beneficio-icon">VI</div>
+      <h3>Cultura de salud</h3>
+      <p>Más allá de una actividad puntual, el yoga puede convertirse en parte de la cultura de la empresa, un compromiso visible con las personas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRL -->
+<section class="prl">
+  <div class="prl-content">
+    <h2>Yoga como <em>prevención<br>de riesgos laborales.</em></h2>
+    <p>En España, los trastornos musculoesqueléticos representan más del 30% de las enfermedades profesionales reconocidas. El trabajo sedentario, las posturas forzadas y la carga mental sostenida son factores de riesgo reales que el yoga aborda de forma directa.</p>
+    <p>Un programa de yoga en la empresa puede integrarse dentro del Plan de Prevención de Riesgos Laborales como medida preventiva frente a:</p>
+    <ul class="prl-list">
+      <li>Trastornos musculoesqueléticos por sedentarismo</li>
+      <li>Tensión cervical y lumbar por posturas de trabajo</li>
+      <li>Síndrome de burnout y estrés crónico</li>
+      <li>Fatiga mental y falta de concentración</li>
+      <li>Ansiedad y dificultad para desconectar</li>
+    </ul>
+  </div>
+  <div class="prl-box">
+    <h3>¿Cómo se integra en tu empresa?</h3>
+    <p>Las sesiones se realizan en las instalaciones de la empresa, sala de reuniones, comedor, terraza o cualquier espacio disponible. No hace falta equipamiento especial.</p>
+    <p>El programa se adapta a tus horarios y necesidades: sesiones de 45-60 minutos antes de empezar la jornada, en el descanso o al terminar el día.</p>
+    <p>Totalmente adaptado al nivel del grupo, desde personas sin ninguna experiencia hasta practicantes regulares. El objetivo es que todo el mundo pueda participar y beneficiarse.</p>
+  </div>
+</section>
+
+<!-- FORMATO -->
+<section class="formato">
+  <p class="section-tag">Cómo trabajamos</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;margin-bottom:48px;">Formato y modalidades</h2>
+  <div class="formato-grid">
+    <div class="formato-item">
+      <p class="formato-tag">Sesiones regulares</p>
+      <h3>Programa mensual</h3>
+      <p>Una o más sesiones semanales fijas. El formato más efectivo para generar hábito y ver resultados sostenidos en el equipo. Precio personalizado según frecuencia y grupo.</p>
+    </div>
+    <div class="formato-item">
+      <p class="formato-tag">Evento puntual</p>
+      <h3>Sesión única o taller</h3>
+      <p>Para team buildings, jornadas de empresa, celebraciones o eventos especiales. Una experiencia de yoga grupal diseñada para tu ocasión.</p>
+    </div>
+    <div class="formato-item">
+      <p class="formato-tag">A medida</p>
+      <h3>Programa personalizado</h3>
+      <p>Diagnóstico de las necesidades del equipo y diseño de un programa específico. Ideal para empresas que quieren integrar el bienestar de forma estratégica.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CLIENTES -->
+<section style="padding: 80px 48px; text-align: center;">
+  <p class="section-tag" style="text-align:center;">Confían en mí</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;margin-bottom:56px;">Empresas con las que he trabajado</h2>
+  <div style="display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap;max-width:800px;margin:0 auto;">
+    <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#1e1c18;letter-spacing:1px;opacity:0.7;">Glovo</span>
+    <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#1e1c18;letter-spacing:2px;font-weight:500;opacity:0.7;">H&M</span>
+    <span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1e1c18;letter-spacing:1px;opacity:0.7;">Global CAD</span>
+    <span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:#1e1c18;letter-spacing:1px;opacity:0.7;">Synton</span>
+    <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#1e1c18;letter-spacing:1px;opacity:0.7;">WeWork</span>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contacto">
+  <h2>Hablemos de<br>lo que necesita <em>tu equipo.</em></h2>
+  <p>Cada empresa es distinta. Cuéntame el tamaño de tu equipo, tus objetivos y tus posibilidades, y te preparo una propuesta a medida sin compromiso.</p>
+  <div class="cta-btns">
+    <a href="mailto:alexandradahdal@gmail.com?subject=Yoga%20Yoga para Empresas&body=Hola%20Xana%2C%20me%20interesa%20llevar%20yoga%20a%20mi%20empresa." class="btn btn-dark">Pedir presupuesto</a>
+    <a href="https://wa.me/34697774602?text=Hola%20Xana%2C%20me%20interesa%20llevar%20yoga%20a%20mi%20empresa." class="btn btn-outline">WhatsApp</a>
+  </div>
+</section>
+
+
+<footer>
+  <span class="f-logo">Xana Dahdal</span>
+  <span class="f-copy">Barcelona · Yoga · 2026</span>
+  <div class="f-links">
+    <a href="aviso-legal.html">Aviso Legal</a>
+    <a href="politica-privacidad.html">Privacidad</a>
+    <a href="politica-cookies.html">Cookies</a>
+  </div>
+</footer>
+
+<!-- CTA FLOTANTE -->
+<div style="position:fixed;bottom:32px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center;">
+  <a href="https://wa.me/34697774602" target="_blank" style="background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="WhatsApp" aria-label="Contact via WhatsApp">💬</a>
+  <a href="mailto:alexandradahdal@gmail.com" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="Email" aria-label="Contact via Email">✉</a>
+</div>
+
+</body>
+</html>
