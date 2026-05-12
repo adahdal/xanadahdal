@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga Teacher Training 2026 · Xana Dahdal & Benji Frayce</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPF6KP6H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q0LPF6KP6H');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sand: #f2ebe0;
+      --sand-dark: #e8dfd0;
+      --dark: #1e1c18;
+      --muted: #6b6560;
+      --gold: #b8945a;
+      --gold-light: #d4b07a;
+      --white: #faf8f4;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--sand); color: var(--dark); font-family: 'Nunito Sans', sans-serif; font-weight: 300; }
+
+    /* NAV */
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(242,235,224,0.96); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(184,148,90,0.15); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--dark); text-decoration: none; }
+    .nav-cta { padding: 10px 24px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--dark); }
+
+    /* HERO */
+    .hero { min-height: 92vh; display: grid; grid-template-columns: 1fr 1fr; }
+    .hero-img { position: relative; overflow: hidden; }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.88); }
+    .hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, transparent 60%, var(--sand)); }
+    .hero-content { display: flex; flex-direction: column; justify-content: center; padding: 80px 64px 80px 48px; }
+    .hero-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+    .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 400; line-height: 1.1; margin-bottom: 16px; }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-subtitle { font-size: 15px; line-height: 1.8; color: var(--muted); max-width: 420px; margin-bottom: 40px; }
+    .hero-details { display: flex; gap: 32px; margin-bottom: 48px; flex-wrap: wrap; }
+    .hero-detail { }
+    .hero-detail span { display: block; font-size: 9px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .hero-detail strong { font-size: 14px; font-weight: 400; color: var(--dark); }
+    .btn-primary { display: inline-block; padding: 16px 40px; background: var(--dark); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--gold); }
+    .btn-secondary { display: inline-block; padding: 16px 40px; border: 1px solid var(--dark); color: var(--dark); font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; margin-left: 12px; }
+    .btn-secondary:hover { background: var(--dark); color: #fff; }
+
+    /* DIVIDER */
+    .divider { width: 48px; height: 1px; background: var(--gold); margin: 0 auto; }
+
+    /* INTRO */
+    .intro { padding: 100px 48px; max-width: 860px; margin: 0 auto; text-align: center; }
+    .intro p { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 2.5vw, 1.5rem); line-height: 1.75; color: var(--dark); font-weight: 400; }
+    .intro p + p { margin-top: 24px; color: var(--muted); font-family: 'Nunito Sans', sans-serif; font-size: 15px; }
+
+    /* PARA QUIÉN */
+    .para-quien { background: var(--dark); padding: 100px 48px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; text-align: center; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; color: #fff; text-align: center; margin-bottom: 60px; }
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(255,255,255,0.08); }
+    .card { padding: 48px 40px; background: var(--dark); }
+    .card-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: rgba(184,148,90,0.25); font-style: italic; margin-bottom: 16px; }
+    .card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 400; color: #fff; margin-bottom: 12px; }
+    .card p { font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.5); }
+
+    /* CONTENIDO */
+    .contenido { padding: 100px 48px; }
+    .contenido .section-title { color: var(--dark); text-align: left; margin-bottom: 48px; }
+    .contenido .section-tag { text-align: left; }
+    .modulos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .modulo { border-top: 1px solid rgba(184,148,90,0.3); padding-top: 28px; }
+    .modulo-num { font-size: 10px; font-weight: 600; letter-spacing: 3px; color: var(--gold); margin-bottom: 12px; }
+    .modulo h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 14px; }
+    .modulo ul { list-style: none; }
+    .modulo ul li { font-size: 13px; line-height: 1.8; color: var(--muted); padding-left: 14px; position: relative; }
+    .modulo ul li::before { content: '·'; position: absolute; left: 0; color: var(--gold); }
+
+    /* FORMADORES */
+    .formadores { background: var(--sand-dark); padding: 100px 48px; }
+    .formadores .section-title { color: var(--dark); text-align: center; margin-bottom: 64px; }
+    .formadores-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1000px; margin: 0 auto; }
+    .formador { }
+    .formador-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; margin-bottom: 28px; filter: grayscale(20%); }
+    .formador h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 6px; }
+    .formador-role { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+    .formador p { font-size: 14px; line-height: 1.85; color: var(--muted); }
+
+    /* FORMATO */
+    .formato { padding: 100px 48px; }
+    .formato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1000px; margin: 0 auto; align-items: start; }
+    .formato-info h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 400; margin-bottom: 40px; }
+    .formato-list { list-style: none; }
+    .formato-list li { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid rgba(184,148,90,0.2); font-size: 14px; }
+    .formato-list li span:first-child { color: var(--muted); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+    .formato-list li span:last-child { color: var(--dark); font-weight: 400; text-align: right; }
+    .precio-box { background: var(--dark); padding: 48px 40px; }
+    .precio-box h3 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.5); margin-bottom: 8px; letter-spacing: 1px; }
+    .precio-principal { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #fff; margin-bottom: 8px; }
+    .precio-box p { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 36px; line-height: 1.6; }
+    .precio-box .btn-primary { display: block; text-align: center; background: var(--gold); }
+    .precio-box .btn-primary:hover { background: #fff; color: var(--dark); }
+    .precio-nota { font-size: 12px; color: rgba(255,255,255,0.3); text-align: center; margin-top: 16px; }
+
+    /* QUÉ TE LLEVAS */
+    .llevas { background: var(--dark); padding: 100px 48px; text-align: center; }
+    .llevas .section-title { color: #fff; margin-bottom: 60px; }
+    .llevas-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; max-width: 1000px; margin: 0 auto; }
+    .lleva-item { }
+    .lleva-icon { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); font-style: italic; margin-bottom: 16px; }
+    .lleva-item h3 { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; margin-bottom: 10px; }
+    .lleva-item p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.45); }
+
+    /* CTA FINAL */
+    .cta-final { padding: 120px 48px; text-align: center; max-width: 700px; margin: 0 auto; }
+    .cta-final h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; line-height: 1.25; margin-bottom: 24px; }
+    .cta-final h2 em { font-style: italic; color: var(--gold); }
+    .cta-final p { font-size: 15px; line-height: 1.8; color: var(--muted); margin-bottom: 48px; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* FOOTER */
+    footer { background: #111; padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .f-logo { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.3); font-size: 1rem; }
+    .f-copy { font-size: 11px; color: rgba(255,255,255,0.18); letter-spacing: 1px; }
+    .f-links { display: flex; gap: 20px; }
+    .f-links a { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); text-decoration: none; }
+    .f-links a:hover { color: var(--gold); }
+
+    /* RESPONSIVE */
+    @media(max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-img { height: 60vw; }
+      .hero-img::after { background: linear-gradient(to top, var(--sand), transparent); }
+      .hero-content { padding: 48px 28px; }
+      .cards { grid-template-columns: 1fr; }
+      .modulos { grid-template-columns: 1fr; }
+      .formadores-grid { grid-template-columns: 1fr; gap: 48px; }
+      .formato-grid { grid-template-columns: 1fr; gap: 48px; }
+      .llevas-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      nav { padding: 16px 24px; }
+      .contenido, .para-quien, .formadores, .formato, .llevas, .cta-final { padding: 72px 24px; }
+      .intro { padding: 72px 24px; }
+    }
+    @media(max-width: 540px) {
+      .llevas-grid { grid-template-columns: 1fr; }
+      .hero-details { gap: 20px; }
+      .btn-secondary { margin-left: 0; }
+    }
+  
+/* FIX EXACTO: MENU HAMBURGUESA GLOBAL */
+.site-nav {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  display: grid !important;
+  grid-template-columns: auto 1fr auto auto !important;
+  align-items: center !important;
+  gap: 18px !important;
+  padding: 14px 44px !important;
+  background: rgba(242,235,224,0.96) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(184,148,90,0.15) !important;
+}
+.site-nav .nav-logo {
+  justify-self: center !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 1.05rem !important;
+  font-style: italic !important;
+  color: var(--dark, #1e1c18) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+.site-nav .nav-cta {
+  padding: 10px 24px !important;
+  background: var(--gold, #b8945a) !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+.site-nav .lang-switch {
+  display: flex !important;
+  gap: 18px !important;
+  align-items: center !important;
+}
+.site-nav .lang-switch a {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  color: var(--muted, #6b6560) !important;
+  text-decoration: none !important;
+  padding-bottom: 3px !important;
+}
+.site-nav .lang-switch a.active {
+  color: var(--gold, #b8945a) !important;
+  border-bottom: 1px solid var(--gold, #b8945a) !important;
+}
+.site-nav .nav-links {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 24px !important;
+  list-style: none !important;
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+}
+.site-nav .nav-links a {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  color: var(--muted, #6b6560) !important;
+  text-decoration: none !important;
+}
+.site-nav .nav-links a:hover {
+  color: var(--gold, #b8945a) !important;
+}
+.site-nav .hamburger {
+  display: none !important;
+  width: 30px !important;
+  height: 24px !important;
+  border: 0 !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+}
+.site-nav .hamburger span {
+  display: block !important;
+  width: 28px !important;
+  height: 2px !important;
+  background: var(--dark, #1e1c18) !important;
+  margin: 6px 0 !important;
+  transition: transform .25s, opacity .25s !important;
+}
+.site-nav .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg) !important; }
+.site-nav .hamburger.open span:nth-child(2) { opacity: 0 !important; }
+.site-nav .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg) !important; }
+.site-nav .mobile-lang-row { display: none !important; }
+
+@media (max-width: 900px) {
+  .site-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 16px 24px !important;
+  }
+  .site-nav .nav-logo {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-size: 1rem !important;
+  }
+  .site-nav .nav-cta { display: none !important; }
+  .site-nav .hamburger { display: block !important; }
+  .site-nav .lang-switch { display: flex !important; }
+  .site-nav .nav-links {
+    position: fixed !important;
+    top: 57px !important;
+    left: 0 !important;
+    right: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    margin: 0 !important;
+    padding: 0 28px !important;
+    background: rgba(242,235,224,0.98) !important;
+    backdrop-filter: blur(14px) !important;
+    transition: max-height .3s ease !important;
+    border-bottom: 1px solid rgba(184,148,90,0.15) !important;
+  }
+  .site-nav .nav-links.open {
+    max-height: calc(100vh - 57px) !important;
+    overflow-y: auto !important;
+    padding-top: 18px !important;
+    padding-bottom: 28px !important;
+  }
+  .site-nav .nav-links li {
+    border-bottom: 1px solid rgba(184,148,90,0.15) !important;
+  }
+  .site-nav .nav-links a {
+    display: block !important;
+    padding: 15px 0 !important;
+    font-size: 12px !important;
+    letter-spacing: 3px !important;
+  }
+  .site-nav .mobile-lang-row {
+    display: flex !important;
+    gap: 24px !important;
+  }
+  .site-nav .mobile-lang-row a {
+    width: auto !important;
+    color: var(--gold, #b8945a) !important;
+  }
+}
+
+
+/* FIX LOGO + IDIOMAS HEADER */
+.site-nav a,
+.site-nav a:visited,
+.lang-switch a,
+.lang-switch a:visited {
+  text-decoration: none !important;
+}
+
+.site-nav .nav-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: var(--dark, #1e1c18) !important;
+  text-decoration: none !important;
+}
+
+.site-nav .nav-logo img {
+  width: 42px !important;
+  height: 42px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.site-nav .brand-text {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic !important;
+  font-size: 1.05rem !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+.site-nav .brand-text .brand-first {
+  color: var(--dark, #1e1c18) !important;
+}
+
+.site-nav .brand-text .brand-last {
+  color: var(--gold, #b8945a) !important;
+}
+
+.site-nav .lang-switch a {
+  color: var(--muted, #6b6560) !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+.site-nav .lang-switch a.active {
+  color: var(--gold, #b8945a) !important;
+  border-bottom: 1px solid var(--gold, #b8945a) !important;
+}
+
+.site-nav .mobile-lang-row a {
+  color: var(--gold, #b8945a) !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 900px) {
+  .site-nav .nav-logo img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .site-nav .brand-text {
+    font-size: 0.92rem !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+<nav class="site-nav">
+
+  <div class="lang-switch">
+    <a href="ttc.html" class="">ES</a>
+    <a href="ttc-en.html" class="active">EN</a>
+  </div>
+  <a href="index-en.html" class="nav-logo"><img src="logo-xana-dahdal.svg" alt="Xana Dahdal logo"><span class="brand-text"><span class="brand-first">Xana</span> <span class="brand-last">Dahdal</span></span></a>
+  <a href="index-en.html#contact" class="nav-cta">Contact</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li class="mobile-lang-row"><a href="ttc.html" onclick="closeMenu()">ES</a><a href="ttc-en.html" onclick="closeMenu()">EN</a></li>
+    <li><a href="index-en.html#about" onclick="closeMenu()">About</a></li>
+    <li><a href="index-en.html#results" onclick="closeMenu()">Results</a></li>
+    <li><a href="index-en.html#training" onclick="closeMenu()">Training</a></li>
+    <li><a href="ttc-en.html" onclick="closeMenu()">TTC 2026</a></li>
+    <li><a href="index-en.html#clases" onclick="closeMenu()">Class types</a></li>
+    <li><a href="classes-en.html" onclick="closeMenu()">Join a class</a></li>
+    <li><a href="retreats-en.html" onclick="closeMenu()">Retreats</a></li>
+    <li><a href="corporate-en.html" onclick="closeMenu()">Corporate</a></li>
+    <li><a href="events-en.html" onclick="closeMenu()">Events</a></li>
+    <li><a href="index-en.html#schedule" onclick="closeMenu()">Schedule</a></li>
+    <li><a href="index-en.html#testimonials" onclick="closeMenu()">Testimonials</a></li>
+    <li><a href="index-en.html#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('nav-links');
+  const btn = document.getElementById('hamburger');
+  if (menu) menu.classList.toggle('open');
+  if (btn) btn.classList.toggle('open');
+}
+function closeMenu() {
+  const menu = document.getElementById('nav-links');
+  const btn = document.getElementById('hamburger');
+  if (menu) menu.classList.remove('open');
+  if (btn) btn.classList.remove('open');
+}
+</script><!-- HERO -->
+<section id="main-content" class="hero">
+  <div class="hero-img">
+    <img src="IMG_3736.jpeg" alt="Yoga Teacher Training Barcelona"/>
+  </div>
+  <div class="hero-content">
+    <p class="hero-tag">Yoga Teacher Training · Barcelona · 2026</p>
+    <h1 class="hero-title">The training that<br>transforms your<br><em>practice.</em></h1>
+    <p class="hero-subtitle">This is not just about learning to teach yoga. It is a process of understanding the body, the practice, and how to hold space for others from real experience.</p>
+    <div class="hero-details">
+      <div class="hero-detail">
+        <span>Dates</span>
+        <strong>1 – 27 June 2026</strong>
+      </div>
+      <div class="hero-detail">
+        <span>Hours</span>
+        <strong>200h · Intensive</strong>
+      </div>
+      <div class="hero-detail">
+        <span>Certification</span>
+        <strong>Yoga Alliance</strong>
+      </div>
+      <div class="hero-detail">
+        <span>Price</span>
+        <strong>1.350 €</strong>
+      </div>
+    </div>
+    <div>
+      <a href="#inscripcion" class="btn-primary">Reserve your place</a>
+      <a href="#programa" class="btn-secondary">View program</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <p>"Perhaps you have been practising for a while… but feel there is something deeper you have not yet fully integrated. Or perhaps you already teach… but do not always feel fully confident holding a class."</p>
+  <p>This training starts from there. A space to integrate, refine and develop a practice and a way of teaching that is truly yours.</p>
+  <br/><br/>
+  <div class="divider"></div>
+</section>
+
+<!-- PARA QUIÉN -->
+<section class="para-quien">
+  <div class="section-inner">
+    <p class="section-tag">Who it is for</p>
+    <h2 class="section-title">This training is for you if…</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-num">01</div>
+        <h3>You want to deepen your practice</h3>
+        <p>You have been practising for a while and feel there is a deeper dimension you have not yet fully integrated.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <h3>You feel yoga is more than postures</h3>
+        <p>You sense the practice goes far beyond the physical body and want to explore that dimension with guidance and structure.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <h3>You already teach and want more confidence</h3>
+        <p>You teach classes but do not always feel fully confident holding a group. You want to teach with more clarity and presence.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">04</div>
+        <h3>You want to teach from within</h3>
+        <p>Your goal is not to repeat sequences, but to teach from a genuine understanding of the body and your own experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMA -->
+<section class="contenido" id="programa">
+  <div class="section-inner">
+    <p class="section-tag">Content</p>
+    <h2 class="section-title" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;margin-bottom:48px;">The programme</h2>
+    <div class="modulos">
+      <div class="modulo">
+        <p class="modulo-num">01</p>
+        <h3>Practice and body</h3>
+        <ul>
+          <li>Asana, practice and understanding</li>
+          <li>Sadhana, personal practice</li>
+          <li>Kriyas, energetic cleansing</li>
+          <li>Pranayama, conscious breathing</li>
+          <li>Meditation</li>
+          <li>Chakra work</li>
+        </ul>
+      </div>
+      <div class="modulo">
+        <p class="modulo-num">02</p>
+        <h3>Teaching and pedagogy</h3>
+        <ul>
+          <li>How to structure a class</li>
+          <li>Teaching methodology</li>
+          <li>Adapting to different bodies</li>
+          <li>Guiding with clarity and presence</li>
+          <li>Observation and support</li>
+        </ul>
+      </div>
+      <div class="modulo">
+        <p class="modulo-num">03</p>
+        <h3>Yoga philosophy</h3>
+        <ul>
+          <li>Bhagavad Gita</li>
+          <li>Yoga Sutras</li>
+          <li>Hatha Yoga Pradipika</li>
+          <li>Upanishads, philosophical synthesis</li>
+          <li>Raja, Bhakti, Karma y Jnana Yoga</li>
+          <li>Lineage and roots of yoga</li>
+        </ul>
+      </div>
+      <div class="modulo">
+        <p class="modulo-num">04</p>
+        <h3>Energy and subtle body</h3>
+        <ul>
+          <li>The subtle and energetic body</li>
+          <li>Specific chakra training</li>
+          <li>Breathing and energetic balance</li>
+          <li>Emotional and energetic regulation</li>
+        </ul>
+      </div>
+      <div class="modulo">
+        <p class="modulo-num">05</p>
+        <h3>Ayurveda and lifestyle</h3>
+        <ul>
+          <li>Basic principles of Ayurveda</li>
+          <li>Balance and imbalance</li>
+          <li>Nutrition and habits</li>
+          <li>Rhythms and lifestyle</li>
+        </ul>
+      </div>
+      <div class="modulo">
+        <p class="modulo-num">06</p>
+        <h3>Integration and real practice</h3>
+        <ul>
+          <li>Teaching in a supported environment</li>
+          <li>Personalised feedback and guidance</li>
+          <li>Observing and refining your teaching</li>
+          <li>Integrating everything learnt</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMADORES -->
+<section class="formadores">
+  <div class="section-inner">
+    <p class="section-tag">Who we are</p>
+    <h2 class="section-title">The teachers</h2>
+    <div class="formadores-grid">
+      <div class="formador">
+        <img src="IMG_1295.jpeg" alt="Xana Dahdal" class="formador-img"/>
+        <h3>Xana Dahdal</h3>
+        <span class="formador-role">Yoga Teacher · +14 years</span>
+        <p>Born in France and raised in Portugal, Xana came to yoga through a close family member who practised Ashtanga. With over 14 years teaching in Barcelona, she has taught Hatha, Hatha Vinyasa and Ashtanga in studios, companies, festivals and retreats. Her teaching is grounded in listening, adapting and respecting the body.</p>
+      </div>
+      <div class="formador">
+        <img src="Benji 5.jpeg" alt="Benji Frayce" class="formador-img"/>
+        <h3>Benji Frayce</h3>
+        <span class="formador-role">Yoga Teacher · Reiki Master</span>
+        <p>His path in yoga began in Peru and continued in India, where he lived and studied at a traditional Hatha Yoga ashram. Certified teacher of Hatha Raja and Power Yoga, Reiki master and sound therapist. He currently runs his own studio in Barcelona and teaches in French, Spanish and English.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATO Y PRECIO -->
+<section class="formato" id="inscripcion">
+  <div class="formato-grid">
+    <div class="formato-info">
+      <p class="section-tag" style="text-align:left;margin-bottom:16px;">Format</p>
+      <h2>Everything you<br>need to know</h2>
+      <ul class="formato-list">
+        <li><span>Dates</span><span>1–27 June 2026</span></li>
+        <li><span>Schedule</span><span>8:00 AM – 6:00 PM</span></li>
+        <li><span>Duration</span><span>200 hours</span></li>
+        <li><span>Format</span><span>In-person and online</span></li>
+        <li><span>Languages</span><span>Spanish and English</span></li>
+        <li><span>Certification</span><span>Yoga Alliance</span></li>
+        <li><span>Places</span><span>Limited</span></li>
+      </ul>
+    </div>
+    <div class="precio-box">
+      <h3>Investment</h3>
+      <div class="precio-principal">1.350€</div>
+      <p>A 200-hour intensive training with Yoga Alliance certification. Very limited places.</p>
+      <a href="mailto:alexandradahdal@gmail.com?subject=YTT%202026%20Registration&body=Hello%20Xana%2C%20I%20am%20interested%20in%20reserving%20a%20place%20for%20the%20Yoga%20Teacher%20Training%202026." class="btn-primary">Reserve my place</a>
+      <p class="precio-nota">We will get back to you within 48 hours with all the details.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ TE LLEVAS -->
+<section class="llevas">
+  <div class="section-inner">
+    <p class="section-tag">By the end</p>
+    <h2 class="section-title">What you take away</h2>
+    <div class="llevas-grid">
+      <div class="lleva-item">
+        <div class="lleva-icon">I</div>
+        <h3>Design classes</h3>
+        <p>Structure and sequence classes with your own criteria, not copying templates.</p>
+      </div>
+      <div class="lleva-item">
+        <div class="lleva-icon">II</div>
+        <h3>Hold groups</h3>
+        <p>Guide and support a group with genuine confidence and presence.</p>
+      </div>
+      <div class="lleva-item">
+        <div class="lleva-icon">III</div>
+        <h3>Adapt the practice</h3>
+        <p>Adjust yoga to different bodies, levels and life situations.</p>
+      </div>
+      <div class="lleva-item">
+        <div class="lleva-icon">IV</div>
+        <h3>Teach from yourself</h3>
+        <p>A teaching that comes from your real experience, not from repetition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>A process of<br><em>real transformation.</em></h2>
+  <p>This training is an invitation to understand and inhabit the body from a different place. Where you not only learn to teach yoga, but also deepen your own practice.</p>
+  <div class="cta-btns">
+    <a href="mailto:alexandradahdal@gmail.com?subject=YTT%202026%20Registration&body=Hello%20Xana%2C%20I%20am%20interested%20in%20reserving%20a%20place%20for%20the%20Yoga%20Teacher%20Training%202026." class="btn-primary">Reserve my place</a>
+    <a href="mailto:alexandradahdal@gmail.com?subject=Información%20YTT%202026" class="btn-secondary">Request information</a>
+  </div>
+</section>
+
+<footer>
+  <span class="f-logo">Xana Dahdal</span>
+  <span class="f-copy">Barcelona · Yoga · 2026</span>
+  <div class="f-links">
+    <a href="aviso-legal-en.html">Legal Notice</a>
+    <a href="privacy-en.html">Privacy</a>
+    <a href="cookies-en.html">Cookies</a>
+  </div>
+</footer>
+
+<!-- CTA FLOTANTE -->
+<div style="position:fixed;bottom:32px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center;">
+  <a href="https://wa.me/34697774602" target="_blank" style="background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="WhatsApp" aria-label="Contact via WhatsApp">💬</a>
+  <a href="mailto:alexandradahdal@gmail.com" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="Email" aria-label="Contact via Email">✉</a>
+</div>
+
+</body>
+</html>
