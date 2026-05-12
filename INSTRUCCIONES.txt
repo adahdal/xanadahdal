@@ -1,0 +1,35 @@
+INSTRUCCIONES
+
+Sube estos archivos a la raíz de tu repositorio de GitHub y reemplaza los antiguos.
+
+Reemplazar:
+- index.html
+- index-en.html
+- eventos.html
+- events-en.html
+- clases.html
+- classes-en.html
+- retiros.html
+- retreats-en.html
+- ttc.html
+- ttc-en.html
+- corporativo.html
+- corporate-en.html
+- aviso-legal.html
+- politica-privacidad.html
+- politica-cookies.html
+
+Añadir:
+- aviso-legal-en.html
+- privacy-en.html
+- cookies-en.html
+- logo-xana-dahdal.svg
+
+Horario en inglés:
+Guarda la imagen como Class_Schedule.png y súbela también a la raíz del repositorio.
+
+Horario en español:
+Debe llamarse Horario_de_clases_minimalista_beige.png
+
+Importante:
+Los nombres deben coincidir exactamente, incluyendo mayúsculas/minúsculas.
