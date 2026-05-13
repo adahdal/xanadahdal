@@ -366,48 +366,83 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 }
 
 
-/* FIX EVENTOS · vídeos YouTube responsive */
-.event-videos {
-  background: var(--sand);
-  padding: 88px 48px;
-}
-.event-videos .section-tag {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 18px;
-}
-.event-videos .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 400;
-  margin-bottom: 34px;
-  color: var(--dark);
-}
-.video-grid {
+/* EVENTOS: galería y vídeos restaurados */
+.fotos-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 980px;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 6px;
+  align-items: stretch;
 }
-.video-card {
-  background: rgba(255,255,255,0.35);
-  border: 1px solid rgba(184,148,90,0.18);
-  padding: 12px;
-}
-.video-card iframe {
+
+.fotos-grid img {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
   display: block;
+  background: var(--sand-dark);
+}
+
+.fotos-grid .wide {
+  grid-column: span 2;
+}
+
+.fotos-grid .tall {
+  grid-row: span 2;
+  min-height: 486px;
+}
+
+.youtube-events {
+  background: var(--sand);
+  padding: 96px 48px;
+}
+
+.youtube-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.youtube-grid iframe {
   width: 100%;
   aspect-ratio: 9 / 16;
-  min-height: 560px;
+  min-height: 520px;
   border: 0;
+  display: block;
+  background: var(--dark);
 }
+
 @media (max-width: 768px) {
-  .event-videos { padding: 64px 24px; }
-  .video-grid { grid-template-columns: 1fr; }
-  .video-card iframe { min-height: 560px; }
+  .fotos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fotos-grid .wide,
+  .fotos-grid .tall {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: auto;
+  }
+
+  .fotos-grid img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .youtube-events {
+    padding: 72px 24px;
+  }
+
+  .youtube-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .youtube-grid iframe {
+    min-height: 560px;
+  }
 }
 
 </style>
@@ -447,7 +482,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   </div>
 </div><!-- HERO -->
 <section id="main-content" class="hero">
-  <img src="IMG_3315.jpeg" alt="Xana Dahdal dando clase en festival"/>
+  <img src="IMG_1404.jpeg" alt="Xana Dahdal dando clase en festival"/>
   <div class="hero-overlay">
     <p class="hero-tag">Eventos · Festivales · Clases Masivas</p>
     <h1>El yoga<br>en <em>grande.</em></h1>
@@ -481,16 +516,18 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   <p>Cuando doy una clase en un festival sé que delante tengo personas de países distintos, con niveles distintos, que quizás nunca han hecho yoga. Imparto clases de Hatha, Hatha Vinyasa y Ashtanga, y puedo adaptar cualquier clase si hay alguna embarazada o mamá en el posparto en el grupo. Me comunico en castellano, inglés, francés y portugués, y conectó fácilmente con grupos internacionales.</p>
 </section>
 
+
 <!-- FOTOS -->
 <section style="padding: 0 48px 80px;">
   <div class="fotos-grid">
-    <img src="IMG_3316.jpeg" class="tall" style="aspect-ratio:3/4;" alt="Yoga terraza con vistas al mar"/>
-    <img src="IMG_3547.jpeg" alt="Clase de yoga en festival"/>
-    <img src="IMG_3557.jpeg" alt="ZNA Gathering yoga"/>
-    <img src="IMG_3558.jpeg" alt="ZNA Gathering savasana"/>
-    <img src="IMG_3546.jpeg" alt="Grupo de yoga en festival"/>
+    <img src="IMG_1404.jpeg" alt="Clase de yoga en festival" class="wide"/>
+    <img src="4500E08C-0744-462B-B34A-3C8B97C0F76D.jpeg" alt="Yoga en festival"/>
+    <img src="D38E6293-BD86-41A5-BB88-8A432C1070D2.jpeg" alt="Clase de yoga en festival"/>
+    <img src="5376C78D-FCE5-4993-B4A9-3A0E4191D871.jpeg" alt="Clase masiva de yoga"/>
+    <img src="BF1BD308-49F1-4388-A1D5-3B43FB5A5544.jpeg" alt="Yoga para mamás y bebés en evento"/>
   </div>
 </section>
+
 
 <!-- FESTIVALES -->
 <section class="festivales">
@@ -552,6 +589,29 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   </div>
 </section>
 
+
+<!-- VIDEOS YOUTUBE -->
+<section class="youtube-events" id="videos-eventos">
+  <div class="inner">
+    <span class="section-tag">Vídeos</span>
+    <h2 class="section-title">Eventos en movimiento</h2>
+
+    <div class="youtube-grid">
+      <iframe src="https://www.youtube.com/embed/iilot3UyPNc"
+        title="Evento de yoga Xana Dahdal"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+      <iframe src="https://www.youtube.com/embed/2Bh27FI8GMU"
+        title="Evento de yoga Xana Dahdal"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta" id="contacto">
   <h2>¿Quieres yoga<br>en tu <em>festival?</em></h2>
@@ -559,21 +619,6 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   <div class="cta-btns">
     <a href="mailto:alexandradahdal@gmail.com?subject=Yoga%20en%20mi%20evento&body=Hola%20Xana%2C%20me%20gustaría%20contar%20contigo%20para%20un%20evento." class="btn btn-gold">Escribir por email</a>
     <a href="https://wa.me/34697774602?text=Hola%20Xana%2C%20me%20gustaría%20contar%20contigo%20para%20un%20evento." class="btn btn-outline">WhatsApp</a>
-  </div>
-</section>
-
-
-<!-- VÍDEOS YOUTUBE -->
-<section class="event-videos">
-  <p class="section-tag">Vídeos</p>
-  <h2 class="section-title">Xana dando clase en festival</h2>
-  <div class="video-grid">
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/iilot3UyPNc" title="Xana Dahdal dando clase en festival" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/2Bh27FI8GMU" title="Xana Dahdal yoga festival" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
   </div>
 </section>
 
