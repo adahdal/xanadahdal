@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eventos & Festivales · Xana Dahdal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPF6KP6H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q0LPF6KP6H');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --sand: #f2ebe0; --sand-dark: #e8dfd0; --dark: #1e1c18; --muted: #6b6560; --gold: #b8945a; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--sand); color: var(--dark); font-family: 'Nunito Sans', sans-serif; font-weight: 300; }
+
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(242,235,224,0.96); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(184,148,90,0.15); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--dark); text-decoration: none; }
+    .nav-cta { padding: 10px 24px; background: var(--gold); color: #fff; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none; }
+    .nav-cta:hover { background: var(--dark); }
+
+    /* HERO */
+    .hero { position: relative; height: 90vh; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: brightness(0.6); }
+    .hero-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 80px 64px; }
+    .hero-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 400; color: #fff; line-height: 1.05; margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { font-size: 16px; color: rgba(255,255,255,0.7); max-width: 560px; line-height: 1.8; }
+
+    /* SECTIONS */
+    .section { padding: 80px 48px; }
+    .section-tag { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; margin-bottom: 48px; }
+    .gold-line { width: 48px; height: 1px; background: var(--gold); margin-bottom: 48px; }
+
+    /* INTRO */
+    .intro { max-width: 820px; margin: 0 auto; padding: 80px 48px; text-align: center; }
+    .intro p { font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2.5vw, 1.45rem); line-height: 1.8; color: var(--dark); font-weight: 400; }
+    .intro p + p { margin-top: 20px; font-family: 'Nunito Sans', sans-serif; font-size: 15px; color: var(--muted); }
+
+    /* STATS */
+    .stats { background: var(--dark); padding: 60px 48px; display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+    .stat { background: var(--dark); padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.06); }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); font-style: italic; margin-bottom: 8px; }
+    .stat-label { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+
+    /* FOTOS FESTIVAL */
+    .fotos-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; }
+    .fotos-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: filter 0.3s; }
+    .fotos-grid img:hover { filter: brightness(0.85); }
+    .fotos-grid .tall { grid-row: span 2; aspect-ratio: auto; height: 100%; }
+
+    /* FESTIVALES */
+    .festivales { background: var(--sand-dark); padding: 80px 48px; }
+    .festivales-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; background: rgba(184,148,90,0.15); }
+    .festival-card { background: var(--sand-dark); padding: 40px 36px; }
+    .festival-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: rgba(184,148,90,0.3); font-style: italic; margin-bottom: 12px; }
+    .festival-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 10px; }
+    .festival-card p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    /* QUÉ OFREZCO */
+    .ofrezco { padding: 80px 48px; }
+    .ofrezco-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+    .ofrezco-item { border-top: 1px solid rgba(184,148,90,0.3); padding-top: 24px; }
+    .ofrezco-item h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 10px; }
+    .ofrezco-item p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    /* CTA */
+    .cta { background: var(--dark); padding: 100px 48px; text-align: center; }
+    .cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; color: #fff; margin-bottom: 20px; }
+    .cta h2 em { font-style: italic; color: var(--gold); }
+    .cta p { font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: 48px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 16px 40px; font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all 0.2s; }
+    .btn-gold { background: var(--gold); color: #fff; }
+    .btn-gold:hover { background: #fff; color: var(--dark); }
+    .btn-outline { border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.6); }
+    .btn-outline:hover { background: #fff; color: var(--dark); }
+
+    footer { background: #111; padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .f-logo { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.3); font-size: 1rem; }
+    .f-copy { font-size: 11px; color: rgba(255,255,255,0.18); letter-spacing: 1px; }
+    .f-links { display: flex; gap: 20px; }
+    .f-links a { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.25); text-decoration: none; }
+    .f-links a:hover { color: var(--gold); }
+
+    @media(max-width:900px) {
+      .stats { grid-template-columns: 1fr 1fr; }
+      .fotos-grid { grid-template-columns: 1fr 1fr; }
+      .festivales-grid { grid-template-columns: 1fr; }
+      .ofrezco-grid { grid-template-columns: 1fr; }
+      nav, .intro, .section, .festivales, .ofrezco, .cta { padding-left: 24px; padding-right: 24px; }
+      .hero-overlay { padding: 48px 24px; }
+      .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    }
+  
+/* === Xana unified logo + navigation fix === */
+.xd-nav {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 22px !important;
+  min-height: 118px !important;
+  padding: 18px 40px !important;
+  background: rgba(242,235,224,0.97) !important;
+  backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(184,148,90,0.16) !important;
+}
+
+.xd-nav .nav-logo {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 315px !important;
+  max-width: 315px !important;
+  min-width: 250px !important;
+  height: auto !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  color: transparent !important;
+}
+
+.xd-nav .nav-logo img {
+  display: block !important;
+  width: 315px !important;
+  height: auto !important;
+  max-width: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.xd-nav-links {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  flex-wrap: wrap !important;
+  min-width: 0 !important;
+}
+
+.xd-nav-links a,
+.xd-mobile-menu a {
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2.4px !important;
+  text-transform: uppercase !important;
+  color: var(--muted, #6b6560) !important;
+  text-decoration: none !important;
+  line-height: 1.6 !important;
+}
+
+.xd-nav-links a:hover,
+.xd-lang-switcher a:hover,
+.xd-mobile-menu a:hover {
+  color: var(--gold, #b8945a) !important;
+}
+
+.xd-nav-actions {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 18px !important;
+}
+
+.xd-lang-switcher {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+}
+
+.xd-lang-switcher a,
+.xd-lang-switcher span {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  color: var(--muted, #6b6560) !important;
+  text-decoration: none !important;
+}
+
+.xd-lang-switcher a.active,
+.xd-mobile-langs a.active {
+  color: var(--gold, #b8945a) !important;
+  border-bottom: 1px solid var(--gold, #b8945a) !important;
+}
+
+.xd-cta,
+.nav-cta {
+  background: var(--gold, #b8945a) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.xd-hamburger {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 7px !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  cursor: pointer !important;
+}
+
+.xd-hamburger span {
+  display: block !important;
+  width: 31px !important;
+  height: 2px !important;
+  background: var(--dark, #1e1c18) !important;
+  border-radius: 2px !important;
+  transition: transform .25s ease, opacity .25s ease !important;
+}
+
+.xd-hamburger.is-open span:nth-child(1) { transform: translateY(9px) rotate(45deg) !important; }
+.xd-hamburger.is-open span:nth-child(2) { opacity: 0 !important; }
+.xd-hamburger.is-open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg) !important; }
+
+.xd-mobile-menu {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9998 !important;
+  background: rgba(242,235,224,0.98) !important;
+  backdrop-filter: blur(16px) !important;
+  transform: translateY(-100%) !important;
+  transition: transform .35s ease !important;
+  overflow-y: auto !important;
+  padding-top: 122px !important;
+}
+
+.xd-mobile-menu.is-open {
+  transform: translateY(0) !important;
+}
+
+.xd-mobile-menu-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  padding: 28px 48px 60px !important;
+}
+
+.xd-mobile-menu-inner a {
+  display: block !important;
+  padding: 18px 0 !important;
+  border-bottom: 1px solid rgba(184,148,90,0.18) !important;
+  font-size: 13px !important;
+  letter-spacing: 3.2px !important;
+}
+
+.xd-mobile-langs {
+  display: flex !important;
+  gap: 20px !important;
+  padding-top: 26px !important;
+}
+
+.xd-mobile-langs a {
+  border-bottom: 0 !important;
+  padding: 0 !important;
+  color: var(--gold, #b8945a) !important;
+}
+
+/* Floating contact buttons: keep contact visible but in brand palette, not blue/green */
+a[href*="wa.me"][style*="border-radius:50%"] {
+  background: var(--gold, #b8945a) !important;
+}
+
+@media (max-width: 1180px) {
+  .xd-nav {
+    min-height: 96px !important;
+    padding: 14px 28px !important;
+  }
+  .xd-nav .nav-logo {
+    width: 270px !important;
+    min-width: 220px !important;
+    max-width: 270px !important;
+  }
+  .xd-nav .nav-logo img {
+    width: 270px !important;
+  }
+  .xd-nav-links {
+    display: none !important;
+  }
+  .xd-cta {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .xd-nav {
+    min-height: 92px !important;
+    padding: 12px 24px !important;
+  }
+
+  .xd-nav .nav-logo {
+    width: 235px !important;
+    min-width: 0 !important;
+    max-width: calc(100vw - 120px) !important;
+  }
+
+  .xd-nav .nav-logo img {
+    width: 235px !important;
+    max-width: calc(100vw - 120px) !important;
+  }
+
+  .xd-lang-switcher {
+    display: none !important;
+  }
+
+  .xd-hamburger {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .xd-hamburger span {
+    width: 30px !important;
+    height: 2px !important;
+  }
+
+  .xd-mobile-menu {
+    padding-top: 92px !important;
+  }
+
+  .xd-mobile-menu-inner {
+    padding: 24px 32px 52px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .xd-nav .nav-logo,
+  .xd-nav .nav-logo img {
+    width: 205px !important;
+  }
+}
+
+
+.hero video.hero-video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  filter: brightness(0.62) !important;
+  display: block !important;
+}
+
+
+/* EVENTOS: galería estable usando imágenes originales del repositorio */
+.fotos-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.fotos-grid img {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  object-fit: cover;
+  display: block;
+  background: var(--sand-dark);
+}
+
+.fotos-grid .wide {
+  grid-column: span 2;
+}
+
+.fotos-grid .tall {
+  grid-row: span 2;
+  min-height: 486px;
+}
+
+.youtube-events {
+  background: var(--sand);
+  padding: 96px 48px;
+}
+
+.youtube-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.youtube-grid iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  min-height: 520px;
+  border: 0;
+  display: block;
+  background: var(--dark);
+}
+
+@media (max-width: 768px) {
+  .fotos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fotos-grid .wide,
+  .fotos-grid .tall {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: auto;
+  }
+
+  .fotos-grid img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .youtube-events {
+    padding: 72px 24px;
+  }
+
+  .youtube-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .youtube-grid iframe {
+    min-height: 560px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Ir al contenido principal</a>
+<nav class="xd-nav">
+  <a href="index.html" class="nav-logo" aria-label="Xana Dahdal">
+    <img src="logo-xana-dahdal.svg" alt="Xana Dahdal">
+  </a>
+
+  <div class="xd-nav-links">
+    <a href="index.html#sobre-mi">SOBRE MÍ</a><a href="index.html#resultados">RESULTADOS</a><a href="index.html#formaciones">FORMACIONES</a><a href="ttc.html">TTC 2026</a><a href="index.html#tipos-yoga">TIPOS DE YOGA</a><a href="clases.html">APÚNTATE A CLASE</a><a href="retiros.html">RETIROS</a><a href="corporativo.html">PARA EMPRESAS</a><a href="eventos.html">EVENTOS</a><a href="index.html#horario">HORARIO</a><a href="index.html#testimonios">TESTIMONIOS</a><a href="index.html#contacto">CONTACTO</a>
+  </div>
+
+  <div class="xd-nav-actions">
+    <div class="xd-lang-switcher" aria-label="Language switcher">
+      <a href="eventos.html" class="active">ES</a>
+      <span>/</span>
+      <a href="events-en.html" class="">EN</a>
+    </div>
+    <a href="#contacto" class="nav-cta xd-cta">CONTACTAR</a>
+    <button class="hamburger xd-hamburger" type="button" aria-label="Abrir menú" aria-controls="xd-mobile-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="xd-mobile-menu" id="xd-mobile-menu" aria-hidden="true">
+  <div class="xd-mobile-menu-inner">
+    <a href="index.html#sobre-mi">SOBRE MÍ</a><a href="index.html#resultados">RESULTADOS</a><a href="index.html#formaciones">FORMACIONES</a><a href="ttc.html">TTC 2026</a><a href="index.html#tipos-yoga">TIPOS DE YOGA</a><a href="clases.html">APÚNTATE A CLASE</a><a href="retiros.html">RETIROS</a><a href="corporativo.html">PARA EMPRESAS</a><a href="eventos.html">EVENTOS</a><a href="index.html#horario">HORARIO</a><a href="index.html#testimonios">TESTIMONIOS</a><a href="index.html#contacto">CONTACTO</a>
+    <div class="xd-mobile-langs">
+      <a href="eventos.html" class="active">ES</a>
+      <a href="events-en.html" class="">EN</a>
+    </div>
+  </div>
+</div><!-- HERO -->
+<section id="main-content" class="hero">
+  <img src="IMG_3554.jpeg" alt="Xana Dahdal dando clase en festival"/>
+  <div class="hero-overlay">
+    <p class="hero-tag">Eventos · Festivales · Clases Masivas</p>
+    <h1>El yoga<br>en <em>grande.</em></h1>
+    <p>Con más de 14 años de experiencia como profesora de yoga, he tenido el privilegio de participar en festivales de yoga, meditación y crecimiento personal, aportando mi práctica a espacios únicos y comunidades diversas.</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">+14</div>
+    <p class="stat-label">Años enseñando yoga</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100</div>
+    <p class="stat-label">Personas por clase</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">4+</div>
+    <p class="stat-label">Festivales internacionales</p>
+  </div>
+  <div class="stat">
+    <div class="stat-num">∞</div>
+    <p class="stat-label">Energía colectiva</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro">
+  <p>"Dar una clase en un festival es distinto a cualquier otra cosa. La gente llega con una energía diferente, abierta. Y eso lo cambia todo."</p>
+  <p>Cuando doy una clase en un festival sé que delante tengo personas de países distintos, con niveles distintos, que quizás nunca han hecho yoga. Imparto clases de Hatha, Hatha Vinyasa y Ashtanga, y puedo adaptar cualquier clase si hay alguna embarazada o mamá en el posparto en el grupo. Me comunico en castellano, inglés, francés y portugués, y conectó fácilmente con grupos internacionales.</p>
+</section>
+
+
+<!-- FOTOS -->
+<section style="padding: 0 48px 80px;">
+  <div class="fotos-grid">
+    <img src="IMG_3315.jpeg" alt="Clase de yoga en rooftop Barcelona" class="tall"/>
+    <img src="IMG_3316.jpeg" alt="Yoga en terraza con vistas al mar"/>
+    <img src="IMG_3547.jpeg" alt="Clase de yoga en festival"/>
+    <img src="IMG_3557.jpeg" alt="ZNA Gathering yoga"/>
+    <img src="IMG_3558.jpeg" alt="ZNA Gathering savasana"/>
+    <img src="IMG_3546.jpeg" alt="Grupo de yoga en festival"/>
+  </div>
+</section>
+
+
+<!-- FESTIVALES -->
+<section class="festivales">
+  <p class="section-tag">Dónde he estado</p>
+  <h2 class="section-title">Festivales</h2>
+  <div class="festivales-grid">
+    <div class="festival-card">
+      <div class="festival-num">01</div>
+      <h3>Sun Sun Love</h3>
+      <p>Festival de yoga, meditación, astrología y crecimiento personal con una programación rica y variada. He impartido clases de yoga que forman parte de este espacio de transformación colectiva.</p>
+    </div>
+    <div class="festival-card">
+      <div class="festival-num">02</div>
+      <h3>ZNA Gathering</h3>
+      <p>Encuentro internacional de música electrónica y cultura alternativa. Una experiencia única de yoga al amanecer con cientos de asistentes.</p>
+    </div>
+    <div class="festival-card">
+      <div class="festival-num">03</div>
+      <h3>Own Spirit</h3>
+      <p>Festival dedicado al bienestar, la música y la conexión. Clases de yoga en entornos naturales con grupos de todos los niveles y orígenes.</p>
+    </div>
+    <div class="festival-card">
+      <div class="festival-num">04</div>
+      <h3>Kirtan Bhakti Yoga Festival</h3>
+      <p>Festival centrado en la práctica devocional del yoga. Un espacio de profundidad espiritual y movimiento consciente con comunidad internacional.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ OFREZCO -->
+<section class="ofrezco">
+  <p class="section-tag">Lo que ofrezco</p>
+  <h2 class="section-title">¿Qué puedo llevar<br>a tu evento?</h2>
+  <div class="ofrezco-grid">
+    <div class="ofrezco-item">
+      <h3>Clases masivas de yoga</h3>
+      <p>Sesiones de yoga adaptadas a grupos grandes, de 50 a 100 personas o más. Formato accesible para todos los niveles, con energía y presencia.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Sesiones temáticas</h3>
+      <p>Yoga al amanecer, yoga y música en directo, sesiones de meditación y movimiento. Cada propuesta adaptada al espíritu de tu festival o evento.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Yoga para familias y todos los públicos</h3>
+      <p>Adapto mis clases a cualquier público, incluidas familias, principiantes o grupos de nivel mixto. Lo que tu festival necesite, lo hago funcionar.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Talleres y workshops</h3>
+      <p>Talleres más reducidos y profundos para asistentes que quieren ir más allá. Filosofía del yoga, pranayama, meditación o trabajo con chakras.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Colaboración artística</h3>
+      <p>El yoga como performance, como apertura de un evento, como experiencia colectiva que integra música, movimiento y presencia.</p>
+    </div>
+    <div class="ofrezco-item">
+      <h3>Formato flexible</h3>
+      <p>Me adapto a tu espacio, tu duración y tu público. Interior o exterior, mañana o tarde, con o sin música en directo. Cuéntame tu idea.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- VIDEOS YOUTUBE -->
+<section class="youtube-events" id="videos-eventos">
+  <div class="inner">
+    <span class="section-tag">Vídeos</span>
+    <h2 class="section-title">Eventos en movimiento</h2>
+
+    <div class="youtube-grid">
+      <iframe src="https://www.youtube.com/embed/iilot3UyPNc"
+        title="Evento de yoga Xana Dahdal"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+      <iframe src="https://www.youtube.com/embed/2Bh27FI8GMU"
+        title="Evento de yoga Xana Dahdal"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contacto">
+  <h2>¿Quieres yoga<br>en tu <em>festival?</em></h2>
+  <p>Si organizas un festival, evento o encuentro y quieres incorporar yoga a la programación, escríbeme y lo hablamos.</p>
+  <div class="cta-btns">
+    <a href="mailto:alexandradahdal@gmail.com?subject=Yoga%20en%20mi%20evento&body=Hola%20Xana%2C%20me%20gustaría%20contar%20contigo%20para%20un%20evento." class="btn btn-gold">Escribir por email</a>
+    <a href="https://wa.me/34697774602?text=Hola%20Xana%2C%20me%20gustaría%20contar%20contigo%20para%20un%20evento." class="btn btn-outline">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <span class="f-logo">Xana Dahdal</span>
+  <span class="f-copy">Barcelona · Yoga · 2026</span>
+  <div class="f-links">
+    <a href="aviso-legal.html">Aviso Legal</a>
+    <a href="politica-privacidad.html">Privacidad</a>
+    <a href="politica-cookies.html">Cookies</a>
+  </div>
+</footer>
+
+<!-- CTA FLOTANTE -->
+<div style="position:fixed;bottom:32px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center;">
+  <a href="https://wa.me/34697774602" target="_blank" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="WhatsApp" aria-label="Contact via WhatsApp">💬</a>
+  <a href="mailto:alexandradahdal@gmail.com" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="Email" aria-label="Contact via Email">✉</a>
+</div>
+
+
+<script>
+(function () {
+  function initXanaMenu() {
+    var buttons = document.querySelectorAll('.xd-hamburger');
+    var menu = document.getElementById('xd-mobile-menu');
+    if (!menu || !buttons.length) return;
+
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('is-open');
+        button.classList.toggle('is-open', isOpen);
+        button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+    });
+
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.remove('is-open');
+        buttons.forEach(function(button) {
+          button.classList.remove('is-open');
+          button.setAttribute('aria-expanded', 'false');
+        });
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initXanaMenu);
+  } else {
+    initXanaMenu();
+  }
+})();
+</script>
+
+</body>
+</html>
