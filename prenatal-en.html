@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prenatal Yoga & Mums and Babies Teacher Training · Xana Dahdal · Barcelona</title>
+  <meta name="description" content="72-hour training to support women through pregnancy, birth and postpartum. 4 in-person modules in Barcelona. Oct 2026 to Jan 2027." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --arena:     #f0ebe3;
+      --arena-med: #e4dcd1;
+      --arena-osc: #cfc5b8;
+      --tierra:    #2c241c;
+      --tierra-med:#4a3d32;
+      --dorado:    #9e7e52;
+      --dorado-cl: #c4a47a;
+      --blanco:    #faf8f5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--blanco);
+      color: var(--tierra);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 2rem;
+      background: rgba(250,248,245,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--arena-osc);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--tierra);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blanco);
+      background: var(--dorado);
+      text-decoration: none;
+      padding: 0.55rem 1.2rem;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--tierra); }
+
+    /* HERO - una sola columna en móvil, dos en desktop */
+    .hero {
+      min-height: 100vh;
+      padding-top: 64px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-imagen {
+      width: 100%;
+      height: 55vw;
+      max-height: 520px;
+      min-height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .hero-imagen::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40%;
+      background: linear-gradient(to top, var(--arena), transparent);
+    }
+
+    .hero-texto {
+      background: var(--arena);
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    .eyebrow {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 8vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--tierra);
+      margin-bottom: 1.4rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--dorado);
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--tierra-med);
+      margin-bottom: 1.8rem;
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pill {
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--tierra-med);
+      border: 1px solid var(--arena-osc);
+      padding: 0.35rem 0.75rem;
+      background: var(--blanco);
+    }
+
+    .botones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn-pri {
+      display: inline-block;
+      background: var(--tierra);
+      color: var(--blanco);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.95rem 1.8rem;
+      transition: background 0.2s;
+    }
+    .btn-pri:hover { background: var(--dorado); }
+
+    .btn-sec {
+      display: inline-block;
+      color: var(--tierra);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.95rem 1.8rem;
+      border: 1px solid var(--arena-osc);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-sec:hover { border-color: var(--dorado); color: var(--dorado); }
+
+    /* FRANJA */
+    .franja {
+      background: var(--tierra);
+      color: var(--arena);
+      text-align: center;
+      padding: 1rem 1.5rem;
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+    .franja strong { color: var(--dorado-cl); }
+
+    /* SECCIONES */
+    section { padding: 4rem 1.5rem; }
+
+    @media (min-width: 700px) {
+      section { padding: 6rem 3rem; }
+    }
+
+    .container { max-width: 700px; margin: 0 auto; }
+    .container-ancho { max-width: 960px; margin: 0 auto; }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--tierra);
+      margin-bottom: 1rem;
+    }
+    h2 em { font-style: italic; color: var(--dorado); }
+
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--tierra);
+      margin-bottom: 0.5rem;
+    }
+    h3 em { font-style: italic; color: var(--dorado); }
+
+    p { color: var(--tierra-med); }
+
+    .linea {
+      width: 36px;
+      height: 1px;
+      background: var(--dorado);
+      margin: 1rem 0 1.8rem;
+    }
+
+    /* PARA QUIEN - lista simple, muy legible en móvil */
+    .para-quien { background: var(--arena); }
+
+    .perfiles-lista { margin-top: 2rem; }
+
+    .perfil {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--arena-osc);
+    }
+    .perfil:first-child { border-top: 1px solid var(--arena-osc); }
+
+    .perfil h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: var(--tierra);
+    }
+
+    .perfil p { font-size: 0.9rem; }
+
+    /* CTA INTERMEDIO */
+    .cta-bloque {
+      background: var(--tierra);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    @media (min-width: 700px) {
+      .cta-bloque { padding: 3rem; }
+    }
+
+    .cta-bloque .cta-titulo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--dorado-cl);
+      margin-bottom: 0.7rem;
+    }
+
+    .cta-bloque p {
+      color: rgba(224,216,205,0.75);
+      font-size: 0.9rem;
+      max-width: 460px;
+      margin: 0 auto 1.6rem;
+    }
+
+    .btn-dorado {
+      display: inline-block;
+      background: var(--dorado);
+      color: var(--tierra);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.95rem 1.8rem;
+      transition: background 0.2s;
+    }
+    .btn-dorado:hover { background: var(--dorado-cl); }
+
+    /* MÓDULOS - timeline simple */
+    .modulos { background: var(--blanco); }
+
+    .modulo-lista { margin-top: 2.5rem; }
+
+    .modulo {
+      display: flex;
+      gap: 1.2rem;
+      padding: 1.8rem 0;
+      border-bottom: 1px solid var(--arena-osc);
+    }
+    .modulo:first-child { border-top: 1px solid var(--arena-osc); }
+
+    .modulo-fecha {
+      flex-shrink: 0;
+      width: 72px;
+      padding-top: 0.2rem;
+    }
+
+    .modulo-mes {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      display: block;
+    }
+
+    .modulo-dia {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--tierra);
+      line-height: 1;
+    }
+
+    .modulo-contenido h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .modulo-contenido p { font-size: 0.88rem; }
+
+    /* TEMARIO - acordeón visual */
+    .temario { background: var(--arena); }
+
+    .temas { margin-top: 2rem; }
+
+    .tema {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--arena-osc);
+    }
+    .tema:first-child { border-top: 1px solid var(--arena-osc); }
+
+    .tema-titulo {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 0.3rem;
+    }
+
+    .tema p { font-size: 0.88rem; }
+
+    /* GALERÍA - 2 cols en móvil, 3 en desktop */
+    .galeria-section { padding: 0; }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+    }
+
+    @media (min-width: 600px) {
+      .galeria { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .galeria img {
+      width: 100%;
+      aspect-ratio: 2/3;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* PRECIO */
+    .precio-section { background: var(--tierra); }
+
+    .precio-section .eyebrow { color: var(--dorado-cl); }
+    .precio-section h2 { color: var(--arena); }
+    .precio-section h2 em { color: var(--dorado-cl); }
+    .precio-section p { color: rgba(224,216,205,0.75); }
+
+    .precio-cajas {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 420px;
+    }
+
+    @media (min-width: 600px) {
+      .precio-cajas { flex-direction: row; max-width: 560px; }
+    }
+
+    .precio-caja {
+      flex: 1;
+      padding: 2rem 1.5rem;
+      border: 1px solid rgba(158,126,82,0.3);
+      position: relative;
+    }
+
+    .precio-caja.destacada {
+      border-color: var(--dorado);
+      background: rgba(158,126,82,0.1);
+    }
+
+    .precio-tag {
+      position: absolute;
+      top: -1px; left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--dorado);
+      color: var(--tierra);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.8rem;
+      white-space: nowrap;
+    }
+
+    .precio-tipo {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(224,216,205,0.5);
+      margin-bottom: 0.7rem;
+    }
+
+    .precio-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--arena);
+    }
+
+    .precio-num sup { font-size: 1.3rem; vertical-align: super; }
+
+    .precio-detalle {
+      font-size: 0.78rem;
+      color: rgba(224,216,205,0.5);
+      margin-top: 0.4rem;
+    }
+
+    .precio-nota {
+      font-size: 0.78rem;
+      color: var(--dorado-cl);
+      margin-top: 0.6rem;
+    }
+
+    .precio-extra {
+      font-size: 0.82rem;
+      color: rgba(224,216,205,0.6);
+      margin-top: 1.5rem;
+      max-width: 420px;
+    }
+
+    /* QUIEN SOY */
+    .quien-soy { background: var(--arena); }
+
+    .quien-img {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top center;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 700px) {
+      .quien-grid {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .quien-img { margin-bottom: 0; max-width: 100%; }
+    }
+
+    .credencial {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--tierra-med);
+      border: 1px solid var(--arena-osc);
+      padding: 0.28rem 0.65rem;
+      margin-right: 0.4rem;
+      margin-top: 0.4rem;
+      background: var(--blanco);
+    }
+
+    /* TESTIMONIOS */
+    .testimonios { background: var(--blanco); }
+
+    .test-lista { margin-top: 2rem; }
+
+    .test-caja {
+      padding: 1.8rem 1.5rem;
+      background: var(--arena);
+      border-left: 2px solid var(--dorado);
+      margin-bottom: 1rem;
+    }
+
+    .estrellas {
+      color: var(--dorado);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.8rem;
+    }
+
+    .test-texto {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: var(--tierra-med);
+      margin-bottom: 1rem;
+      line-height: 1.75;
+    }
+
+    .test-autor {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dorado);
+    }
+
+    /* FORMULARIO */
+    .formulario-section { background: var(--blanco); }
+
+    .form-wrap { max-width: 520px; margin-top: 2rem; }
+
+    .form-grupo { margin-bottom: 1.1rem; }
+
+    label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin-bottom: 0.45rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: var(--arena);
+      border: none;
+      border-bottom: 2px solid var(--arena-osc);
+      color: var(--tierra);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      padding: 0.75rem 0.5rem;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-bottom-color: var(--dorado);
+    }
+
+    select option { background: var(--arena); }
+    textarea { resize: vertical; min-height: 90px; }
+
+    .btn-form {
+      width: 100%;
+      background: var(--tierra);
+      color: var(--blanco);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .btn-form:hover { background: var(--dorado); }
+
+    .form-nota {
+      font-size: 0.78rem;
+      color: var(--arena-osc);
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .form-nota a { color: var(--dorado); text-decoration: none; }
+
+    /* FAQ */
+    .faq-section { background: var(--arena); }
+
+    .faq-lista { margin-top: 2rem; }
+
+    .faq-item {
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--arena-osc);
+    }
+    .faq-item:first-child { border-top: 1px solid var(--arena-osc); }
+
+    .faq-p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--tierra);
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-r { font-size: 0.88rem; }
+
+    /* CTA FINAL */
+    .cta-final {
+      background: var(--arena-med);
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    @media (min-width: 700px) {
+      .cta-final { padding: 7rem 3rem; }
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--tierra);
+      color: rgba(224,216,205,0.5);
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+
+    footer a { color: rgba(224,216,205,0.5); text-decoration: none; margin: 0 0.6rem; }
+    footer a:hover { color: var(--dorado-cl); }
+
+    .footer-links { margin-top: 0.6rem; }
+
+    /* WHATSAPP */
+    .wa-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 99;
+      width: 50px;
+      height: 50px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+    .wa-float svg { width: 26px; height: 26px; fill: white; }
+
+    /* HERO DESKTOP */
+    @media (min-width: 900px) {
+      .hero {
+        flex-direction: row;
+        min-height: 100vh;
+      }
+      .hero-imagen {
+        width: 50%;
+        height: auto;
+        max-height: none;
+        min-height: 100vh;
+        flex-shrink: 0;
+      }
+      .hero-texto {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem 3rem;
+      }
+    }
+  </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1562064505622800');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+
+<nav>
+  <a href="https://xanadahdal.com" class="nav-logo">Xana Dahdal</a>
+  <a href="#inscripcion" class="nav-cta">Book your place</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-imagen">
+    <img src="https://xanadahdal.com/IMG_1377.jpeg" alt="Yoga prenatal" />
+  </div>
+  <div class="hero-texto">
+    <p class="eyebrow">Specialist Training · Barcelona · 2026 / 2027</p>
+    <h1>Supporting <em>pregnancy,</em> birth and <em>postpartum</em></h1>
+    <p class="hero-desc">A 72-hour training to learn how to hold space for women during one of the most profound moments of their lives. Not just to teach yoga, but to truly be there.</p>
+    <div class="pills">
+      <span class="pill">72 hours</span>
+      <span class="pill">4 modules</span>
+      <span class="pill">Oct 2026 · Jan 2027</span>
+      <span class="pill">In-person · Barcelona</span>
+      <span class="pill">ROPEC Certificate</span>
+    </div>
+    <div class="botones">
+      <a href="#inscripcion" class="btn-pri">Book your place</a>
+      <a href="programa-prenatal-en.html" class="btn-sec">See full programme</a>
+    </div>
+  </div>
+</div>
+
+<!-- FRANJA -->
+<div class="franja">
+  Early bird: <strong>€600</strong> until 31 August. After that the price rises to €750. Limited places.
+</div>
+
+<!-- PARA QUIEN -->
+<section class="para-quien" id="para-quien">
+  <div class="container">
+    <p class="eyebrow">Who is it for</p>
+    <h2>For those who want to <em>accompany</em></h2>
+    <div class="linea"></div>
+    <p>You do not need to be a certified yoga teacher or have a healthcare background. You need to feel called to be present in this process and want to do it well.</p>
+    <div class="perfiles-lista">
+      <div class="perfil">
+        <h3>Yoga teachers</h3>
+        <p>You want to specialise in prenatal and postnatal support and teach with confidence at a very specific moment in the body and in life.</p>
+      </div>
+      <div class="perfil">
+        <h3>Doulas and midwives</h3>
+        <p>You already support women through pregnancy and birth. You want to integrate conscious movement and breathwork as a real tool in your practice.</p>
+      </div>
+      <div class="perfil">
+        <h3>Yoga lovers</h3>
+        <p>You practise yoga, you are passionate about motherhood and feel called to support other women through this process. No previous qualification needed.</p>
+      </div>
+      <div class="perfil">
+        <h3>Health professionals</h3>
+        <p>Physiotherapists, psychologists, therapists and others who work with pregnant women and want to broaden their approach to support.</p>
+      </div>
+      <div class="perfil">
+        <h3>Anyone</h3>
+        <p>Who wants to be present during the pregnancy, birth and postpartum of the women in their life, with real tools and solid knowledge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 1 -->
+<div class="cta-bloque">
+  <p class="cta-titulo">Places are limited.</p>
+  <p>If you feel this training is for you, do not wait until everything is clear. Book your place and we will talk.</p>
+  <a href="#inscripcion" class="btn-dorado">Book your place · Early bird €600</a>
+</div>
+
+<!-- MÓDULOS -->
+<section class="modulos" id="modulos">
+  <div class="container">
+    <p class="eyebrow">The programme</p>
+    <h2>Four modules, <em>one complete journey</em></h2>
+    <div class="linea"></div>
+    <p>Each module is an immersion weekend, Saturday and Sunday from 9:00 to 18:00. Four weekends over four months to integrate what you learn between sessions.</p>
+    <div class="modulo-lista">
+      <div class="modulo">
+        <div class="modulo-fecha">
+          <span class="modulo-mes">Oct 2026</span>
+          <span class="modulo-dia">17 · 18</span>
+        </div>
+        <div class="modulo-contenido">
+          <h3>Module 1 · <em>The changing body</em></h3>
+          <p>Pregnancy anatomy and physiology. How the body changes trimester by trimester: hormonal, cardiovascular, respiratory and musculoskeletal changes. Pelvic floor, relaxin and everything a teacher needs to understand in order to support from knowledge, understanding and common sense.</p>
+        </div>
+      </div>
+      <div class="modulo">
+        <div class="modulo-fecha">
+          <span class="modulo-mes">Nov 2026</span>
+          <span class="modulo-dia">7 · 8</span>
+        </div>
+        <div class="modulo-contenido">
+          <h3>Module 2 · <em>The practice that holds</em></h3>
+          <p>How to prepare and teach a prenatal yoga class. Adapted Surya Namaskar, sequencing by trimester and chakras, working with specific conditions such as lower back pain or sciatica. Asana, pranayama, meditation, positive thinking and relaxation. The teacher's role and how to create the right atmosphere in class.</p>
+        </div>
+      </div>
+      <div class="modulo">
+        <div class="modulo-fecha">
+          <span class="modulo-mes">Dic 2026</span>
+          <span class="modulo-dia">12 · 13</span>
+        </div>
+        <div class="modulo-contenido">
+          <h3>Module 3 · <em>Accompanying birth</em></h3>
+          <p>How birth works and its mechanisms. Birth preparation through yoga: breathing, pain management and visualisation. How to create community and belonging, because a pregnant woman needs to feel held before, during and after. Contraindications and first aid if a student goes into labour during class.</p>
+        </div>
+      </div>
+      <div class="modulo">
+        <div class="modulo-fecha">
+          <span class="modulo-mes">Ene 2027</span>
+          <span class="modulo-dia">16 · 17</span>
+        </div>
+        <div class="modulo-contenido">
+          <h3>Module 4 · <em>Postpartum and mums and babies</em></h3>
+          <p>Postpartum yoga: contraindications, pelvic floor and abdominal recovery, hypopressives. How to structure a mums and babies yoga class. Bonding as practice. How to support women throughout the entire process, from the first trimester to the first months with their baby.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 2.5rem;">
+      <a href="programa-prenatal-en.html" class="btn-sec">See full programme</a>
+    </div>
+  </div>
+</section>
+
+<!-- TEMARIO -->
+<section class="temario">
+  <div class="container">
+    <p class="eyebrow">What you will learn</p>
+    <h2>What you will be able to <em>do</em></h2>
+    <div class="linea"></div>
+    <div class="temas">
+      <div class="tema">
+        <p class="tema-titulo">Pregnancy trimester by trimester</p>
+        <p>What happens in the body at each stage: physical, hormonal and emotional changes. What each change means for practice and how to adapt.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">Anatomy and physiology</p>
+        <p>Cardiovascular, respiratory and musculoskeletal changes. Relaxin and its effects on joints and tendons. Abdominal diastasis.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">Pelvic floor</p>
+        <p>Specific work during pregnancy and postpartum. Kegels, hypopressives and what to avoid at each stage. How to guide it with real knowledge.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">Surya Namaskar, asana and pranayama</p>
+        <p>Sun salutation adapted to pregnancy, standing, seated, extension and inversion poses. Breathing techniques for practice and for birth.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">Meditation and positive thinking</p>
+        <p>Relaxation, visualisation and mental tools to support women in experiencing pregnancy consciously and fully.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">How to teach a prenatal class</p>
+        <p>Preparing the class, creating the atmosphere, adapting language, relieving specific discomforts. The teacher's role and how to support beyond the mat.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">Contraindications</p>
+        <p>What to avoid during pregnancy and postpartum, when to refer and how to make decisions in class safely and with confidence.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">Birth and its mechanisms</p>
+        <p>How birth works, what happens in the body, how to prepare women through yoga and what to do if a student goes into labour during class.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">Postpartum yoga</p>
+        <p>Recuperación segura, suelo pélvico, faja abdominal. Contraindications y cómo volver a la práctica de forma progresiva.</p>
+      </div>
+      <div class="tema">
+        <p class="tema-titulo">Mums and babies yoga and building community</p>
+        <p>Classes with the baby present, bonding as practice, how to build community around motherhood. Supporting the whole journey from start to finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 2 -->
+<div class="cta-bloque">
+  <p class="cta-titulo">72 hours to change how you support.</p>
+  <p>Four weekends in Barcelona, October to January. Early bird until 31 August.</p>
+  <a href="#inscripcion" class="btn-dorado">I want to join</a>
+</div>
+
+<!-- GALERÍA -->
+<section class="galeria-section">
+  <div class="galeria">
+    <img src="https://xanadahdal.com/IMG_1377.jpeg" alt="Yoga prenatal" />
+    <img src="https://xanadahdal.com/IMG_1374.jpeg" alt="Yoga prenatal" />
+    <img src="https://xanadahdal.com/IMG_1378.jpeg" alt="Yoga prenatal" />
+    <img src="https://xanadahdal.com/mamas1.jpeg" alt="Mamás y bebés" />
+    <img src="https://xanadahdal.com/mamas2.jpeg" alt="Mamás y bebés" />
+    <img src="https://xanadahdal.com/mamas3.jpeg" alt="Mamás y bebés" />
+  </div>
+</section>
+
+<!-- PRECIO -->
+<section class="precio-section" id="precio">
+  <div class="container">
+    <p class="eyebrow">Investment</p>
+    <h2>Choose your <em>moment</em></h2>
+    <div class="linea"></div>
+    <div class="precio-cajas">
+      <div class="precio-caja destacada">
+        <div class="precio-tag">Early bird</div>
+        <p class="precio-tipo">Until 31 August</p>
+        <div class="precio-num"><sup>€</sup>600</div>
+        <p class="precio-detalle">72 horas · 4 módulos · Certificado ROPEC</p>
+        <p class="precio-nota">Save €150</p>
+      </div>
+      <div class="precio-caja">
+        <p class="precio-tipo">Standard price</p>
+        <div class="precio-num"><sup>€</sup>750</div>
+        <p class="precio-detalle">72 horas · 4 módulos · Certificado ROPEC</p>
+        <p class="precio-nota">From 1 September</p>
+      </div>
+    </div>
+    <p class="precio-extra">If you need to spread the payment, write to me directly. We will find a way.</p>
+    <div style="margin-top: 2rem;">
+      <a href="#inscripcion" class="btn-dorado">Book at early bird price</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUIEN SOY -->
+<section class="quien-soy">
+  <div class="container">
+    <div class="quien-grid">
+      <img src="https://xanadahdal.com/IMG_1295.jpeg" alt="Xana Dahdal" class="quien-img" />
+      <div>
+        <p class="eyebrow">The trainer</p>
+        <h2>Xana <em>Dahdal</em></h2>
+        <div class="linea"></div>
+        <p>I was born in France and grew up in Portugal. I have been teaching yoga in Barcelona for over 14 years, with accreditation from the Generalitat de Catalunya and registered with ROPEC since 2015.</p>
+        <p style="margin-top:1rem;">I have supported women through pregnancy and postpartum for years. This training comes from that accumulated experience and the desire to pass on what I know to those who want to do the same.</p>
+        <p style="margin-top:1rem;">I teach through listening, adaptation and respect for the body. There is no single way to do things: there is the way that works for the person in front of you.</p>
+        <div style="margin-top:1.5rem;">
+          <span class="credencial">Over 14 years teaching</span>
+          <span class="credencial">ROPEC since 2015</span>
+          <span class="credencial">Hatha · Ashtanga · Iyengar · Dharma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios">
+  <div class="container">
+    <p class="eyebrow">What they say</p>
+    <h2>Students who practised <em>with Xana</em></h2>
+    <div class="linea"></div>
+    <div class="test-lista">
+      <div class="test-caja">
+        <div class="estrellas">* * * * *</div>
+        <p class="test-texto">"Las sesiones de embarazo son activas, con ejercicios que favorecen llegar en plena forma al momento del parto. Las sesiones postparto te ayudan a reconectar con el cuerpo y a sentirte más acompañada."</p>
+        <p class="test-autor">Pilar</p>
+      </div>
+      <div class="test-caja">
+        <div class="estrellas">* * * * *</div>
+        <p class="test-texto">"Cuando me quedé embarazada hice yoga prenatal con ella y también eran geniales. Hice clases durante muchos años y siempre era mi profe preferida."</p>
+        <p class="test-autor">Anna</p>
+      </div>
+      <div class="test-caja">
+        <div class="estrellas">* * * * *</div>
+        <p class="test-texto">"Extraordinaria profesional. Seria y rigurosa en su práctica y en la enseñanza. Invita a la superación, el aprendizaje y el desarrollo personal. La sigo desde hace 9 años."</p>
+        <p class="test-autor">Silvia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 3 -->
+<div class="cta-bloque">
+  <p class="cta-titulo">Have questions? Write to me.</p>
+  <p>If you are not sure whether this training is right for you, tell me about your situation and I will be honest about whether it is for you.</p>
+  <a href="https://wa.me/34697774602" class="btn-dorado" target="_blank">Write on WhatsApp</a>
+</div>
+
+<!-- FORMULARIO -->
+<section class="formulario-section" id="inscripcion">
+  <div class="container">
+    <p class="eyebrow">Book your place</p>
+    <h2>Start <em>here</em></h2>
+    <div class="linea"></div>
+    <p>Fill in the form and I will write to you within 48 hours with payment details and confirmation of your place. Places are reserved in order of request.</p>
+    <div class="form-wrap">
+      <form action="https://formspree.io/f/TUCODIGO" method="POST">
+        <div class="form-grupo">
+          <label for="nombre">Full name</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Your full name" />
+        </div>
+        <div class="form-grupo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@email.com" />
+        </div>
+        <div class="form-grupo">
+          <label for="telefono">Phone or WhatsApp</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+        </div>
+        <div class="form-grupo">
+          <label for="perfil">Your profile</label>
+          <select id="perfil" name="perfil" required>
+            <option value="" disabled selected>How would you describe yourself?</option>
+            <option>Yoga teacher</option>
+            <option>Doula</option>
+            <option>Midwife</option>
+            <option>Physiotherapist or other health professional</option>
+            <option>Yoga practitioner without teaching qualification</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-grupo">
+          <label for="mensaje">Tell me something about yourself (optional)</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Your experience, your motivation, your questions..."></textarea>
+        </div>
+        <button type="submit" class="btn-form">Send request</button>
+        <p class="form-nota">Or write to me directly on <a href="https://wa.me/34697774602">WhatsApp</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <p class="eyebrow">Frequently asked questions</p>
+    <h2><em>Common</em> questions</h2>
+    <div class="linea"></div>
+    <div class="faq-lista">
+      <div class="faq-item">
+        <p class="faq-p">Do I need to be a yoga teacher to join?</p>
+        <p class="faq-r">No. The training is open to anyone who wants to support women through pregnancy and postpartum. If you are unsure, write to me before enrolling.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-p">What certificate do I receive?</p>
+        <p class="faq-r">You receive a certificate from Xana Dahdal that counts towards hours for the ROPEC, the Official Register of Sports Professionals of Catalonia.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-p">Can I pay in instalments?</p>
+        <p class="faq-r">Yes. Write to me directly and we will sort it out. There is flexibility.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-p">Can I miss a module?</p>
+        <p class="faq-r">The training is designed to be completed in full. If you have a special situation, tell me before enrolling.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-p">Where does the training take place?</p>
+        <p class="faq-r">In person in Barcelona. The exact location is confirmed at the time of enrolment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 4 -->
+<div class="cta-bloque">
+  <p class="cta-titulo">If you already know, this is the moment.</p>
+  <p>There is no more information you need. Just decide if you want to be there.</p>
+  <a href="#inscripcion" class="btn-dorado">Book my place now</a>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <p class="eyebrow">Limited places</p>
+  <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; margin-bottom:1rem;">Early bird closes on <em style="font-style:italic; color:var(--dorado);">31 August</em></h2>
+  <p style="max-width:400px; margin:0 auto 2rem; font-size:0.95rem;">After that date the price rises to €750.</p>
+  <a href="#inscripcion" class="btn-pri">Book my place · €600</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="https://xanadahdal.com">Back to xanadahdal.com</a>
+  <span style="display:block; margin-top:0.5rem;">© 2026 Xana Dahdal · Barcelona</span>
+  <div class="footer-links">
+    <a href="https://xanadahdal.com/aviso-legal.html">Aviso legal</a>
+    <a href="https://xanadahdal.com/politica-privacidad.html">Privacidad</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/34697774602" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
