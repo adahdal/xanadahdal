@@ -4,7 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prenatal Yoga & Mums and Babies Teacher Training · Xana Dahdal · Barcelona</title>
-  <meta name="description" content="72-hour training to support women through pregnancy, birth and postpartum. 4 modules in Barcelona, hybrid format (in-person or live online). Nov 2026 to Feb 2027." />
+  <meta name="description" content="Prenatal yoga teacher training in Barcelona, 72 hours to support pregnancy, birth and postpartum. 4 hybrid modules (in-person or live online), November 2026 to February 2027. ROPEC and Yoga Alliance International certified." />
+  <link rel="canonical" href="https://xanadahdal.com/prenatal-en.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Prenatal Yoga Teacher Training · Xana Dahdal · Barcelona" />
+  <meta property="og:description" content="72 hours to support pregnancy, birth and postpartum. 4 modules in Barcelona, in-person or online. ROPEC and Yoga Alliance International certified." />
+  <meta property="og:url" content="https://xanadahdal.com/prenatal-en.html" />
+  <meta property="og:image" content="https://xanadahdal.com/IMG_1377.jpeg" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prenatal Yoga Teacher Training · Xana Dahdal · Barcelona" />
+  <meta name="twitter:description" content="72 hours to support pregnancy, birth and postpartum. ROPEC and Yoga Alliance International certified." />
+  <meta name="twitter:image" content="https://xanadahdal.com/IMG_1377.jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -200,6 +211,94 @@
     }
     .franja strong { color: var(--dorado-cl); }
 
+    .hero-fechas {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--tierra);
+      margin: -1rem 0 1.4rem;
+      line-height: 1.6;
+    }
+
+    .hero-precio {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin: 0.3rem 0 1.8rem;
+    }
+    .hero-precio-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--dorado);
+      color: var(--blanco);
+      padding: 0.2rem 0.55rem;
+    }
+    .hero-precio-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      color: var(--tierra);
+    }
+    .hero-precio-old {
+      font-size: 0.95rem;
+      color: var(--arena-osc);
+      text-decoration: line-through;
+    }
+    .hero-precio-nota {
+      font-size: 0.78rem;
+      color: var(--tierra-med);
+      width: 100%;
+    }
+    @media (min-width: 500px) {
+      .hero-precio-nota { width: auto; }
+    }
+
+    /* AUTORIDAD */
+    .autoridad {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1.6rem 1.5rem;
+      background: var(--blanco);
+    }
+    .autoridad img {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .autoridad-nombre {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--tierra);
+      font-style: italic;
+    }
+    .autoridad-cred {
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: var(--dorado);
+      margin-top: 0.2rem;
+    }
+
+    /* ENFOQUE BREVE */
+    .enfoque-breve {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+      text-align: center;
+    }
+    .enfoque-breve p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--tierra-med);
+    }
+
     /* SECCIONES */
     section { padding: 4rem 1.5rem; }
 
@@ -256,6 +355,30 @@
     }
 
     .perfil p { font-size: 0.9rem; }
+
+    /* RESULTADOS */
+    .resultados-lista {
+      margin-top: 1.5rem;
+      list-style: none;
+    }
+    .resultados-lista li {
+      position: relative;
+      padding: 0.9rem 0 0.9rem 1.6rem;
+      border-bottom: 1px solid var(--arena-med);
+      font-size: 0.95rem;
+      color: var(--tierra-med);
+    }
+    .resultados-lista li:first-child { padding-top: 0; }
+    .resultados-lista li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1.35rem;
+      width: 7px;
+      height: 7px;
+      background: var(--dorado);
+      border-radius: 50%;
+    }
 
     /* CTA INTERMEDIO */
     .cta-bloque {
@@ -345,6 +468,16 @@
     .temario { background: var(--arena); }
 
     .temas { margin-top: 2rem; }
+
+    .tema-grupo {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      margin: 2.2rem 0 0.4rem;
+    }
+    .tema-grupo:first-child { margin-top: 0; }
 
     .tema {
       padding: 1.2rem 0;
@@ -464,6 +597,28 @@
       color: rgba(224,216,205,0.6);
       margin-top: 1.5rem;
       max-width: 420px;
+    }
+
+    .duda-inline {
+      margin-top: 2.2rem;
+      padding-top: 1.6rem;
+      padding-right: 3.5rem;
+      border-top: 1px solid rgba(224,216,205,0.25);
+    }
+    .duda-inline p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(224,216,205,0.85);
+      margin-bottom: 0.5rem;
+    }
+    .duda-inline a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      text-decoration: underline;
     }
 
     /* QUIEN SOY */
@@ -715,21 +870,26 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 <!-- HERO -->
 <div class="hero">
   <div class="hero-imagen">
-    <img src="https://xanadahdal.com/IMG_1377.jpeg" alt="Yoga prenatal" />
+    <img src="https://xanadahdal.com/IMG_1377.jpeg" alt="Prenatal yoga teacher training in Barcelona with Xana Dahdal" />
   </div>
   <div class="hero-texto">
     <p class="eyebrow">Specialist Training · Barcelona · 2026 / 2027</p>
     <h1>Supporting <em>pregnancy,</em> birth and <em>postpartum</em></h1>
-    <p class="hero-desc">A 72-hour training to learn how to hold space for women during one of the most profound moments of their lives. Not just to teach yoga, but to truly be there.</p>
+    <p class="hero-desc">72 hours to learn how to adapt the practice and support women from the first trimester through the first months with their baby. Not just to teach yoga, but to truly be there.</p>
+    <p class="hero-fechas">4 weekends · Barcelona + live streaming<br>7 November 2026 — 28 February 2027</p>
     <div class="pills">
       <span class="pill">72 hours</span>
-      <span class="pill">4 modules</span>
-      <span class="pill">Nov 2026 · Feb 2027</span>
       <span class="pill">Hybrid · Barcelona</span>
       <span class="pill">ROPEC · Yoga Alliance International</span>
     </div>
+    <div class="hero-precio">
+      <span class="hero-precio-tag">Early bird</span>
+      <span class="hero-precio-num">€600</span>
+      <span class="hero-precio-old">€750</span>
+      <span class="hero-precio-nota">until 5 October · save €150</span>
+    </div>
     <div class="botones">
-      <a href="#inscripcion" class="btn-pri">Book your place</a>
+      <a href="#inscripcion" class="btn-pri">I want to book my place</a>
       <a href="programa-prenatal-en.html" class="btn-sec">See full programme</a>
     </div>
   </div>
@@ -738,6 +898,20 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 <!-- FRANJA -->
 <div class="franja">
   Early bird: <strong>€600</strong> until 5 October. After that the price rises to €750. Limited places.
+</div>
+
+<!-- AUTORIDAD -->
+<div class="autoridad">
+  <img src="https://xanadahdal.com/IMG_1295.jpeg" alt="Xana Dahdal, prenatal yoga teacher in Barcelona" />
+  <div>
+    <p class="autoridad-nombre">Training created and taught by Xana Dahdal</p>
+    <p class="autoridad-cred">14+ years teaching yoga · ROPEC since 2015 · Specialised in pregnancy and postpartum</p>
+  </div>
+</div>
+
+<!-- ENFOQUE BREVE -->
+<div class="enfoque-breve">
+  <p>Knowing yoga does not mean knowing how to support a pregnancy. Prenatal yoga is not about removing a few postures from a regular sequence: it requires understanding how the body changes at each stage, observing the woman in front of you, and adapting the practice to support her safely and consciously.</p>
 </div>
 
 <!-- PARA QUIEN -->
@@ -765,8 +939,8 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
         <p>Physiotherapists, psychologists, therapists and others who work with pregnant women and want to broaden their approach to support.</p>
       </div>
       <div class="perfil">
-        <h3>Anyone</h3>
-        <p>Who wants to be present during the pregnancy, birth and postpartum of the women in their life, with real tools and solid knowledge.</p>
+        <h3>Yoga practitioners who want to go deeper</h3>
+        <p>You already practise yoga and feel ready to specialise in a very specific moment in the body and in life, with a serious training, not a generic course.</p>
       </div>
     </div>
   </div>
@@ -780,6 +954,22 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 </div>
 
 <!-- MÓDULOS -->
+<section class="resultados">
+  <div class="container">
+    <p class="eyebrow">By the end of this training</p>
+    <h2>You will be <em>able to</em></h2>
+    <div class="linea"></div>
+    <ul class="resultados-lista">
+      <li>Design and guide a complete prenatal yoga class.</li>
+      <li>Adapt the practice according to the trimester and each woman's needs.</li>
+      <li>Recognise contraindications and know when a situation needs referral to a healthcare professional.</li>
+      <li>Use asana, pranayama, meditation and relaxation during pregnancy and birth preparation.</li>
+      <li>Support postpartum recovery within the scope of yoga and create mother and baby classes.</li>
+      <li>Feel more confident and prepared when a pregnant woman arrives at your class.</li>
+    </ul>
+  </div>
+</section>
+
 <section class="modulos" id="modulos">
   <div class="container">
     <p class="eyebrow">The programme</p>
@@ -841,6 +1031,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
     <h2>What you will be able to <em>do</em></h2>
     <div class="linea"></div>
     <div class="temas">
+      <p class="tema-grupo">Pregnancy</p>
       <div class="tema">
         <p class="tema-titulo">Pregnancy trimester by trimester</p>
         <p>What happens in the body at each stage: physical, hormonal and emotional changes. What each change means for practice and how to adapt.</p>
@@ -853,6 +1044,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
         <p class="tema-titulo">Pelvic floor</p>
         <p>Specific work during pregnancy and postpartum. Kegels, hypopressives and what to avoid at each stage. How to guide it with real knowledge.</p>
       </div>
+      <p class="tema-grupo">Practice and teaching</p>
       <div class="tema">
         <p class="tema-titulo">Surya Namaskar, asana and pranayama</p>
         <p>Distinct sun salutations depending on need and type of practice, standing, seated, extension and inversion poses. Breathing techniques for practice and for birth.</p>
@@ -869,13 +1061,14 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
         <p class="tema-titulo">Contraindications</p>
         <p>What to avoid during pregnancy and postpartum, when to refer and how to make decisions in class safely and with confidence.</p>
       </div>
+      <p class="tema-grupo">Birth and postpartum</p>
       <div class="tema">
         <p class="tema-titulo">Birth and its mechanisms</p>
         <p>How birth works, what happens in the body, how to prepare women through yoga and what to do if a student goes into labour during class.</p>
       </div>
       <div class="tema">
         <p class="tema-titulo">Postpartum yoga</p>
-        <p>Recuperación segura, suelo pélvico, faja abdominal. Contraindications y cómo volver a la práctica de forma progresiva.</p>
+        <p>Safe recovery, pelvic floor, abdominal support. Contraindications and how to return to practice progressively.</p>
       </div>
       <div class="tema">
         <p class="tema-titulo">Mums and babies yoga and continuity of community</p>
@@ -895,12 +1088,12 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 <!-- GALERÍA -->
 <section class="galeria-section">
   <div class="galeria">
-    <img src="https://xanadahdal.com/IMG_1377.jpeg" alt="Yoga prenatal" />
-    <img src="https://xanadahdal.com/IMG_1374.jpeg" alt="Yoga prenatal" />
-    <img src="https://xanadahdal.com/IMG_1378.jpeg" alt="Yoga prenatal" />
-    <img src="https://xanadahdal.com/mamas1.jpeg" alt="Mamás y bebés" />
-    <img src="https://xanadahdal.com/mamas2.jpeg" alt="Mamás y bebés" />
-    <img src="https://xanadahdal.com/mamas3.jpeg" alt="Mamás y bebés" />
+    <img src="https://xanadahdal.com/IMG_1377.jpeg" alt="Prenatal yoga pose adapted for pregnancy" />
+    <img src="https://xanadahdal.com/IMG_1374.jpeg" alt="Group prenatal yoga class in Barcelona" />
+    <img src="https://xanadahdal.com/IMG_1378.jpeg" alt="Prenatal yoga practice, birth preparation" />
+    <img src="https://xanadahdal.com/mamas1.jpeg" alt="Mums and babies yoga class in Barcelona" />
+    <img src="https://xanadahdal.com/mamas2.jpeg" alt="Postpartum yoga with baby present" />
+    <img src="https://xanadahdal.com/mamas3.jpeg" alt="Mother and baby bond in postpartum yoga class" />
   </div>
 </section>
 
@@ -922,12 +1115,16 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
         <p class="precio-tipo">Standard price</p>
         <div class="precio-num"><sup>€</sup>750</div>
         <p class="precio-detalle">72 hours · 4 modules · ROPEC · Yoga Alliance International</p>
-        <p class="precio-nota">From 1 September</p>
+        <p class="precio-nota">From 6 October</p>
       </div>
     </div>
     <p class="precio-extra">If you need to spread the payment, write to me directly. We will find a way.</p>
     <div style="margin-top: 2rem;">
-      <a href="#inscripcion" class="btn-dorado">Book at early bird price</a>
+      <a href="#inscripcion" class="btn-dorado">Book my place · €600</a>
+    </div>
+    <div class="duda-inline">
+      <p>Not sure yet if this training is for you? Let's talk.</p>
+      <a href="https://wa.me/34697774602" target="_blank">I want to ask my questions</a>
     </div>
   </div>
 </section>
@@ -958,7 +1155,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 <section class="testimonios">
   <div class="container">
     <p class="eyebrow">What they say</p>
-    <h2>Students who practised <em>with Xana</em></h2>
+    <h2>Students who have practised <em>and learned with me</em></h2>
     <div class="linea"></div>
     <div class="test-lista">
       <div class="test-caja">
