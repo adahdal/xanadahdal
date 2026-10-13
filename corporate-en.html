@@ -61,13 +61,12 @@
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --sand: #f2ebe0; --sand-dark: #e8dfd0; --cream: #f8f4ee; --dark: #1e1c18; --muted: #5f5953; --gold: #b8945a; --gold-text: #7a5c30; --line: rgba(184,148,90,.35); }
+    :root { --sand: #F2EBE0; --ivory: #F8F4EE; --cream: #F8F4EE; --beige: #E8DFD0; --sand-dark: #E8DFD0; --gold: #B8945A; --dark: #1E1C18; --muted: #5f5953; --gold-text: #7a5c30; --line: rgba(184,148,90,.38); }
     html { scroll-behavior: smooth; }
     body { background: var(--sand); color: var(--dark); font-family: 'Nunito Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; }
     :focus-visible { outline: 2px solid var(--gold-text); outline-offset: 3px; }
-    section[id] { scroll-margin-top: 110px; }
 
     .wrap { max-width: 1180px; margin: 0 auto; padding: 0 48px; }
     .tag { font-size: 11px; font-weight: 600; letter-spacing: 3.5px; text-transform: uppercase; color: var(--gold-text); margin-bottom: 18px; display: block; }
@@ -92,35 +91,36 @@
     .hero h1 { font-size: clamp(2.4rem, 4.6vw, 3.9rem); margin-bottom: 26px; }
     .hero .lead { margin-bottom: 36px; }
     .hero-access { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 520px; }
-    .access { display: block; text-decoration: none; padding: 20px 22px 18px; border: 1px solid var(--dark); transition: background .2s, color .2s; }
+    .access { display: block; text-decoration: none; padding: 20px 22px 18px; border: 1px solid var(--gold); background: var(--ivory); transition: background .2s, color .2s; }
     .access strong { display: block; font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.22rem; line-height: 1.25; }
     .access span { display: block; margin-top: 6px; font-size: 13px; color: var(--muted); }
-    .access:hover { background: var(--dark); color: #fff; }
-    .access:hover span { color: rgba(255,255,255,.75); }
-    .access.primary { background: var(--dark); color: #fff; }
+    .access:hover { background: var(--beige); }
+    .access:hover span { color: var(--muted); }
+    .access.primary { background: var(--gold-text); border-color: var(--gold-text); color: #fff; }
     .access.primary span { color: rgba(255,255,255,.75); }
-    .access.primary:hover { background: var(--gold-text); border-color: var(--gold-text); }
+    .access.primary:hover { background: var(--dark); border-color: var(--dark); }
     .hero-more { margin-top: 22px; font-size: 14px; }
     .hero-more a { color: var(--gold-text); font-weight: 600; text-underline-offset: 4px; }
     .hero-img { position: relative; overflow: hidden; background: var(--sand-dark); }
     .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
 
     /* DATOS */
-    .facts { background: var(--dark); color: #fff; }
+    .facts { background: var(--beige); color: var(--dark); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .facts ul { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); }
-    .facts li { padding: 30px 28px; border-right: 1px solid rgba(255,255,255,.1); font-size: 14px; line-height: 1.5; color: rgba(255,255,255,.88); }
+    .facts li { padding: 30px 28px; border-right: 1px solid var(--line); font-size: 14px; line-height: 1.5; color: var(--muted); }
     .facts li:last-child { border-right: 0; }
-    .facts li b { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; font-size: 1.15rem; color: #d9c29a; margin-bottom: 4px; }
+    .facts li b { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; font-size: 1.2rem; color: var(--gold-text); margin-bottom: 4px; }
 
     /* INTRO */
-    .intro { padding: 96px 0 80px; }
+    .intro { padding: 96px 0 80px; background: var(--sand); }
     .intro .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
     .intro p { color: var(--muted); }
     .intro p + p { margin-top: 14px; }
 
     /* SECCIONES */
-    .block { padding: 96px 0; }
-    .block.alt { background: var(--cream); }
+    .block { padding: 96px 0; background: var(--sand); }
+    .block.alt { background: var(--ivory); }
+    .block + .block, .intro + .benefits, .benefits + .block { border-top: 1px solid var(--line); }
     .head { max-width: 760px; margin-bottom: 52px; }
 
     /* A. YOGA */
@@ -148,15 +148,12 @@
     .practical p { font-size: 15px; color: var(--muted); }
     .practical p + p { margin-top: 8px; }
 
-    .band { position: relative; min-height: 440px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; }
-    .band img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
-    .band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(30,28,24,.82) 0%, rgba(30,28,24,.55) 55%, rgba(30,28,24,.25) 100%); }
-    .band h2, .band p { text-shadow: 0 1px 12px rgba(0,0,0,.35); }
-    .band .wrap { position: relative; z-index: 1; padding-top: 48px; padding-bottom: 52px; width: 100%; }
-    .band h2 { color: #fff; max-width: 760px; margin-bottom: 14px; }
-    .band p { max-width: 640px; color: rgba(255,255,255,.9); }
-    .band .tag { color: #d9c29a; }
-    .band h2 em { color: #e6d4b4; }
+    .band { display: grid; grid-template-columns: 1.35fr 1fr; background: var(--ivory); border-top: 1px solid var(--line); }
+    .band-img { min-height: 480px; }
+    .band-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+    .band-text { display: flex; flex-direction: column; justify-content: center; padding: 64px 56px; }
+    .band-text h2 { margin-bottom: 18px; }
+    .band-text p { color: var(--muted); max-width: 460px; }
 
     /* B. FORMACIÓN */
     .courses { list-style: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; counter-reset: c; }
@@ -165,8 +162,7 @@
     .courses h3 { font-size: 1.3rem; margin-bottom: 6px; }
     .courses p { font-size: 15px; color: var(--muted); }
     .formats { margin-top: 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
-    .formats-box { background: var(--dark); color: #fff; padding: 30px 32px; }
-    .formats-box .tag { color: #d9c29a; }
+    .formats-box { background: var(--beige); color: var(--dark); padding: 30px 32px; border-top: 2px solid var(--gold); }
     .formats-box ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
     .formats-box li { padding-left: 18px; position: relative; font-size: 15px; }
     .formats-box li::before { content: ""; position: absolute; left: 0; top: 12px; width: 9px; border-top: 1px solid var(--gold); }
@@ -176,7 +172,7 @@
 
     /* C. MODALIDADES */
     .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .plan { background: var(--cream); padding: 34px 30px 32px; border-top: 2px solid var(--gold); display: flex; flex-direction: column; }
+    .plan { background: var(--sand); padding: 34px 30px 32px; border-top: 2px solid var(--gold); display: flex; flex-direction: column; }
     .plan .tag { margin-bottom: 8px; }
     .plan h3 { font-size: 1.5rem; margin-bottom: 14px; }
     .plan p { font-size: 15px; color: var(--muted); }
@@ -204,58 +200,52 @@
 
 
     /* EMPRESAS */
-    .clients { background: var(--cream); padding: 64px 0 60px; text-align: center; border-bottom: 1px solid var(--line); }
-    .clients h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); margin-bottom: 34px; }
-    .client-list { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px 0; max-width: 980px; margin: 0 auto; }
-    .client-list li { font-family: 'Playfair Display', serif; font-size: clamp(1.35rem, 2.4vw, 1.9rem); color: var(--dark); letter-spacing: .5px; padding: 0 30px; line-height: 1.2; }
+    .clients { background: var(--ivory); padding: 76px 0 72px; text-align: center; border-bottom: 1px solid var(--line); }
+    .clients h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); margin-bottom: 38px; }
+    .client-list { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px 0; max-width: 980px; margin: 0 auto; padding: 26px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .client-list li { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 2.5vw, 2rem); color: var(--dark); letter-spacing: .5px; padding: 0 32px; line-height: 1.2; }
     .client-list li + li { border-left: 1px solid var(--gold); }
 
     /* QUÉ APORTA */
-    .benefits { background: var(--dark); color: #fff; padding: 88px 0; }
-    .benefits .tag { color: #d9c29a; }
-    .benefits h2 { color: #fff; margin-bottom: 18px; }
-    .ben-lead { color: rgba(255,255,255,.8); margin-bottom: 44px; }
-    .ben-grid { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.1); }
-    .ben-grid li { background: var(--dark); padding: 34px 30px; }
-    .bn { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.7rem; color: #d9c29a; margin-bottom: 10px; }
+    .benefits { background: var(--ivory); color: var(--dark); padding: 96px 0; }
+    .benefits h2 { margin-bottom: 18px; }
+    .ben-lead { margin-bottom: 48px; }
+    .ben-grid { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .ben-grid li { padding: 34px 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .bn { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.7rem; color: var(--gold-text); margin-bottom: 10px; }
     .ben-grid h3 { font-family: 'Nunito Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-    .ben-grid p { font-size: 15px; color: rgba(255,255,255,.75); }
+    .ben-grid p { font-size: 15px; color: var(--muted); }
 
     /* FORMACIÓN: cabecera con foto */
     .head-photo { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; margin-bottom: 52px; }
     .head-photo .head { margin-bottom: 0; }
     .head-photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 
-    /* GALERÍA sin recortes: cada foto con su proporción real */
-    .gallery { display: block; columns: 4; column-gap: 10px; }
-    .gallery figure { break-inside: avoid; margin: 0 0 10px; }
-    .gallery img { width: 100%; height: auto; aspect-ratio: auto; object-fit: initial; }
+    /* GALERÍA: cuadrícula uniforme */
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .gallery figure { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; background: var(--beige); }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* F. DOSSIER */
     .dossier { padding: 0 0 96px; }
-    .dossier-box { display: flex; justify-content: space-between; align-items: center; gap: 32px; border: 1px solid var(--line); padding: 34px 40px; background: var(--cream); flex-wrap: wrap; }
+    .dossier-box { display: flex; justify-content: space-between; align-items: center; gap: 32px; border: 1px solid var(--line); border-left: 2px solid var(--gold); padding: 34px 40px; background: var(--beige); flex-wrap: wrap; }
     .dossier-box h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); margin-bottom: 8px; }
     .dossier-box p { color: var(--muted); font-size: 15px; max-width: 560px; }
     .dossier-box .size { display: block; margin-top: 8px; font-size: 13px; color: var(--muted); text-align: center; }
 
     /* G. CONTACTO */
-    .contact { background: var(--dark); color: #fff; padding: 100px 0; }
+    .contact { background: var(--beige); color: var(--dark); padding: 100px 0; border-top: 1px solid var(--line); }
     .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
-    .contact h2 { color: #fff; }
-    .contact h2 em { color: #d9c29a; }
-    .contact .tag { color: #d9c29a; }
-    .contact p { color: rgba(255,255,255,.82); }
+    .contact p { color: var(--muted); }
     .contact p + p { margin-top: 12px; }
     .ask { list-style: none; display: grid; gap: 10px; }
-    .ask a { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; border: 1px solid rgba(255,255,255,.28); text-decoration: none; transition: background .2s, border-color .2s; }
-    .ask a:hover { background: rgba(255,255,255,.07); border-color: #d9c29a; }
+    .ask a { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; border: 1px solid var(--gold); background: var(--ivory); text-decoration: none; transition: background .2s, border-color .2s; }
+    .ask a:hover { background: var(--sand); border-color: var(--gold-text); }
     .ask strong { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.2rem; }
-    .ask span { font-size: 11px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: #d9c29a; white-space: nowrap; }
+    .ask span { font-size: 11px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: var(--gold-text); white-space: nowrap; }
     .direct { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .direct .btn-line { border-color: rgba(255,255,255,.6); color: #fff; }
-    .direct .btn-line:hover { background: #fff; color: var(--dark); }
-    .direct-data { margin-top: 18px; font-size: 14px; color: rgba(255,255,255,.7); }
-    .direct-data a { color: #fff; text-underline-offset: 4px; }
+    .direct-data { margin-top: 18px; font-size: 14px; color: var(--muted); }
+    .direct-data a { color: var(--dark); text-underline-offset: 4px; }
 
     footer { background: #111; padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     .f-logo { font-family: 'Playfair Display', serif; font-style: italic; color: rgba(255,255,255,0.55); font-size: 1rem; }
@@ -270,24 +260,25 @@
       .hero-img { order: -1; height: 78vw; max-height: 620px; }
       .hero-text { padding: 44px 24px 56px; max-width: none; margin: 0; }
       .facts ul { grid-template-columns: 1fr 1fr; }
-      .facts li { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); padding: 22px 24px; }
-      .facts li:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.1); }
+      .facts li { border-right: 0; border-bottom: 1px solid var(--line); padding: 22px 24px; }
+      .facts li:nth-child(odd) { border-right: 1px solid var(--line); }
       .intro, .block { padding: 68px 0; }
       .intro .wrap, .split, .about, .contact .wrap, .formats { grid-template-columns: 1fr; gap: 36px; }
       .ways { grid-template-columns: 1fr; }
       .way + .way { border-left: 0; border-top: 1px solid var(--line); }
       .photo-tall { position: static; }
+      .band { grid-template-columns: 1fr; }
+      .band-img { min-height: 0; height: 70vw; max-height: 520px; }
+      .band-text { padding: 44px 24px 52px; }
       .head-photo { grid-template-columns: 1fr; gap: 28px; }
       .ben-grid { grid-template-columns: 1fr 1fr; }
       .benefits { padding: 68px 0; }
-      .gallery { columns: 2; column-gap: 6px; }
-      .gallery figure { margin-bottom: 6px; }
+      .ben-grid li { padding: 28px 22px; }
+      .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .client-list li { padding: 0 20px; }
       .courses { grid-template-columns: 1fr; }
       .plans { grid-template-columns: 1fr; }
       .about img { aspect-ratio: 4/3; max-height: 520px; }
-      .band { min-height: 380px; }
-      .band::after { background: rgba(30,28,24,.66); }
       .contact { padding: 72px 0; }
       .dossier { padding-bottom: 68px; }
       .dossier-box { padding: 28px 24px; }
@@ -309,6 +300,10 @@
       .dossier-box > div:last-child { width: 100%; }
       .ask a { padding: 18px 18px; }
       .direct .btn { flex: 1 1 100%; }
+    }
+    @media (max-width: 480px) {
+      .gallery { grid-template-columns: 1fr; gap: 12px; }
+      .gallery figure { aspect-ratio: 4 / 3; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
@@ -566,6 +561,24 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   }
 }
 
+
+/* === Encabezado compacto solo en las páginas corporativas === */
+.xd-nav { min-height: 0 !important; padding: 10px 40px !important; }
+.xd-nav .nav-logo, .xd-nav .nav-logo img { width: 205px !important; max-width: 205px !important; min-width: 0 !important; }
+.xd-mobile-menu { padding-top: 100px !important; }
+section[id] { scroll-margin-top: 100px; }
+@media (max-width: 1180px) {
+  .xd-nav { min-height: 0 !important; padding: 8px 28px !important; }
+  .xd-nav .nav-logo, .xd-nav .nav-logo img { width: 190px !important; max-width: 190px !important; }
+  .xd-mobile-menu { padding-top: 90px !important; }
+  section[id] { scroll-margin-top: 92px; }
+}
+@media (max-width: 768px) {
+  .xd-nav { min-height: 0 !important; padding: 6px 20px !important; }
+  .xd-nav .nav-logo, .xd-nav .nav-logo img { width: 172px !important; max-width: calc(100vw - 100px) !important; }
+  .xd-mobile-menu { padding-top: 78px !important; }
+  section[id] { scroll-margin-top: 84px; }
+}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -673,7 +686,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
     <span class="tag">Why at work</span>
     <h2 id="ben-t">What it can bring to your <em>team</em></h2>
     <p class="lead ben-lead">We spend many hours working and do not always notice how that routine affects us. Long periods sitting down, built-up tension, a lack of breaks or communication difficulties can all influence how we feel day to day.</p>
-    <ul class="ben-grid"><li><span class="bn">I</span><h3>Less built-up tension</h3><p>Breathing and mindful movement offer tools to slow down and respond better to everyday pressure.</p></li><li><span class="bn">II</span><h3>Back and posture care</h3><p>Long hours sitting and work postures put strain on the neck, shoulders and lower back. Sessions work on mobility, strength and postural awareness.</p></li><li><span class="bn">III</span><h3>More focus</h3><p>Breathing well changes your mental state. Breathing and mindfulness techniques help train focus and presence.</p></li><li><span class="bn">IV</span><h3>A more cohesive team</h3><p>Doing something together that has nothing to do with work creates a different kind of bond.</p></li><li><span class="bn">V</span><h3>Better atmosphere</h3><p>When a company takes care of its people, people notice, and it shows in the day-to-day atmosphere.</p></li><li><span class="bn">VI</span><h3>A clear signal</h3><p>Offering yoga says something about how you treat people. It shows that wellbeing is more than a word in the company policy.</p></li></ul>
+    <ul class="ben-grid"><li><span class="bn">I</span><h3>Less built-up tension</h3><p>Breathing and mindful movement offer tools to slow down and respond better to everyday pressure.</p></li><li><span class="bn">II</span><h3>Back and posture care</h3><p>Long hours sitting and work postures put strain on the neck, shoulders and lower back. Sessions work on mobility, strength and postural awareness.</p></li><li><span class="bn">III</span><h3>More focus</h3><p>Breathing and mindfulness techniques help train focus and presence.</p></li><li><span class="bn">IV</span><h3>A more cohesive team</h3><p>Doing something together that has nothing to do with work creates a different kind of bond.</p></li><li><span class="bn">V</span><h3>Better atmosphere</h3><p>When a company takes care of its people, people notice, and it shows in the day-to-day atmosphere.</p></li><li><span class="bn">VI</span><h3>A clear signal</h3><p>Offering yoga says something about how you treat people. It shows that wellbeing is more than a word in the company policy.</p></li></ul>
   </div>
 </section>
 
@@ -697,7 +710,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
           <span class="tag">Regular programme</span>
           <h3>Weekly classes at your company</h3>
           <p>One or more fixed sessions a week, at the time that suits the team best.</p><p>This is the format that helps build a habit and gives continuity to the practice.</p>
-          <p class="meta">Weekly or monthly programmes with 30, 45 or 60 minute sessions</p>
+          <p class="meta">Weekly or monthly programmes with 30, 45 or 60-minute sessions</p>
         </div>
     </div>
 
@@ -720,8 +733,8 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 </section>
 
 <section class="band" aria-labelledby="exp-t">
-  <img src="img_0784.jpeg" width="4032" height="3024" loading="lazy" decoding="async" alt="Group sitting in a circle during an evening meditation activity in a garden">
-  <div class="wrap">
+  <div class="band-img"><img src="img_0784.jpeg" width="4032" height="3024" loading="lazy" decoding="async" alt="Group sitting in a circle during an evening meditation activity in a garden"></div>
+  <div class="band-text">
     <span class="tag">Team experiences</span>
     <h2 id="exp-t">A different activity to share as a <em>team</em></h2>
     <p>Alongside classes and training, I organise activities for corporate events, team gatherings and special days. Each experience is adapted to the number of participants, the space available and the type of event.</p>
@@ -783,7 +796,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
         <article class="plan">
           <span class="tag">Plus</span>
           <h3>A regular programme for the team</h3>
-          <p>For companies that want to make wellbeing activities part of their routine.</p><p>Includes a programme of four sessions that can combine yoga, mobility, breathing or meditation.</p><ul><li>45 or 60 minute sessions.</li><li>Frequency agreed with the company.</li></ul>
+          <p>For companies that want to make wellbeing activities part of their routine.</p><p>Includes a programme of four sessions that can combine yoga, mobility, breathing or meditation.</p><ul><li>45- or 60-minute sessions.</li><li>Frequency agreed with the company.</li></ul>
         </article>
         <article class="plan">
           <span class="tag">Premium</span>
@@ -820,7 +833,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
       <span class="tag">At companies</span>
       <h2 id="gal-t">Classes in offices, terraces and workplaces</h2>
     </div>
-    <div class="gallery"><figure><img src="IMG_7608.jpeg" alt="Yoga class in an office with the team on mats" width="4032" height="3024" loading="lazy" decoding="async"></figure><figure><img src="IMG_3316.jpeg" alt="Group practising yoga on a terrace facing the sea in Barcelona" width="1179" height="1535" loading="lazy" decoding="async"></figure><figure><img src="IMG_9049.jpeg" alt="Outdoor yoga class on the terrace of an office building" width="3024" height="4032" loading="lazy" decoding="async"></figure><figure><img src="IMG_3315.jpeg" alt="Group yoga session on a terrace by the beach" width="1179" height="1171" loading="lazy" decoding="async"></figure></div>
+    <div class="gallery"><figure><img src="IMG_7608.jpeg" alt="Yoga class in an office with the team on mats" width="4032" height="3024" loading="lazy" decoding="async" style="object-position:55% 60%"></figure><figure><img src="IMG_3316.jpeg" alt="Group practising yoga on a terrace facing the sea in Barcelona" width="1179" height="1535" loading="lazy" decoding="async" style="object-position:50% 55%"></figure><figure><img src="IMG_9049.jpeg" alt="Outdoor yoga class on the terrace of an office building" width="3024" height="4032" loading="lazy" decoding="async" style="object-position:50% 62%"></figure><figure><img src="IMG_3315.jpeg" alt="Group yoga session on a terrace by the beach" width="1179" height="1171" loading="lazy" decoding="async" style="object-position:50% 50%"></figure></div>
   </div>
 </section>
 
