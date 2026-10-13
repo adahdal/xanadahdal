@@ -13,12 +13,11 @@
   <meta property="og:title" content="Corporate wellbeing and training | Xana Dahdal, Barcelona" />
   <meta property="og:description" content="Corporate yoga in Barcelona and online: regular classes, one-off sessions, team experiences and training in stress management, attention and communication. Request a proposal." />
   <meta property="og:url" content="https://xanadahdal.com/corporate-en.html" />
-  <meta property="og:image" content="https://xanadahdal.com/empresas-hero.jpg" />
+  <meta property="og:image" content="https://xanadahdal.com/IMG_7609.jpeg" />
   <meta property="og:locale" content="en_GB" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="preload" as="image" href="empresas-hero-800.jpg" imagesrcset="empresas-hero-800.jpg 800w, empresas-hero.jpg 1600w" imagesizes="(max-width: 1000px) 100vw, 50vw">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPF6KP6H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -104,7 +103,7 @@
     .hero-more { margin-top: 22px; font-size: 14px; }
     .hero-more a { color: var(--gold-text); font-weight: 600; text-underline-offset: 4px; }
     .hero-img { position: relative; overflow: hidden; background: var(--sand-dark); }
-    .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: 45% center; }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
 
     /* DATOS */
     .facts { background: var(--dark); color: #fff; }
@@ -142,7 +141,7 @@
     .svc h3 { font-size: 1.22rem; margin-bottom: 4px; }
     .svc p { font-size: 15px; color: var(--muted); }
     .photo-tall { position: sticky; top: 130px; }
-    .photo-tall img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+    .photo-tall img { width: 100%; height: auto; }
     .photo-tall figcaption, .note { font-size: 13.5px; color: var(--muted); margin-top: 12px; }
     .practical { margin-top: 26px; background: var(--sand-dark); padding: 26px 28px; }
     .practical h3 { font-size: 1.15rem; margin-bottom: 10px; }
@@ -151,7 +150,8 @@
 
     .band { position: relative; min-height: 440px; display: flex; align-items: flex-end; color: #fff; overflow: hidden; }
     .band img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
-    .band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,28,24,.05) 30%, rgba(30,28,24,.78)); }
+    .band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(30,28,24,.82) 0%, rgba(30,28,24,.55) 55%, rgba(30,28,24,.25) 100%); }
+    .band h2, .band p { text-shadow: 0 1px 12px rgba(0,0,0,.35); }
     .band .wrap { position: relative; z-index: 1; padding-top: 48px; padding-bottom: 52px; width: 100%; }
     .band h2 { color: #fff; max-width: 760px; margin-bottom: 14px; }
     .band p { max-width: 640px; color: rgba(255,255,255,.9); }
@@ -201,8 +201,35 @@
     .creds li::before { content: ""; position: absolute; left: 0; top: 19px; width: 9px; border-top: 1px solid var(--gold); }
 
     /* E. GALERÍA */
-    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-    .gallery img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+
+
+    /* EMPRESAS */
+    .clients { background: var(--cream); padding: 64px 0 60px; text-align: center; border-bottom: 1px solid var(--line); }
+    .clients h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); margin-bottom: 34px; }
+    .client-list { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px 0; max-width: 980px; margin: 0 auto; }
+    .client-list li { font-family: 'Playfair Display', serif; font-size: clamp(1.35rem, 2.4vw, 1.9rem); color: var(--dark); letter-spacing: .5px; padding: 0 30px; line-height: 1.2; }
+    .client-list li + li { border-left: 1px solid var(--gold); }
+
+    /* QUÉ APORTA */
+    .benefits { background: var(--dark); color: #fff; padding: 88px 0; }
+    .benefits .tag { color: #d9c29a; }
+    .benefits h2 { color: #fff; margin-bottom: 18px; }
+    .ben-lead { color: rgba(255,255,255,.8); margin-bottom: 44px; }
+    .ben-grid { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.1); }
+    .ben-grid li { background: var(--dark); padding: 34px 30px; }
+    .bn { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.7rem; color: #d9c29a; margin-bottom: 10px; }
+    .ben-grid h3 { font-family: 'Nunito Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .ben-grid p { font-size: 15px; color: rgba(255,255,255,.75); }
+
+    /* FORMACIÓN: cabecera con foto */
+    .head-photo { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; margin-bottom: 52px; }
+    .head-photo .head { margin-bottom: 0; }
+    .head-photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+    /* GALERÍA sin recortes: cada foto con su proporción real */
+    .gallery { display: block; columns: 4; column-gap: 10px; }
+    .gallery figure { break-inside: avoid; margin: 0 0 10px; }
+    .gallery img { width: 100%; height: auto; aspect-ratio: auto; object-fit: initial; }
 
     /* F. DOSSIER */
     .dossier { padding: 0 0 96px; }
@@ -240,7 +267,7 @@
     @media (max-width: 1000px) {
       .wrap { padding: 0 24px; }
       .hero { grid-template-columns: 1fr; min-height: 0; }
-      .hero-img { order: -1; height: 58vw; max-height: 460px; }
+      .hero-img { order: -1; height: 78vw; max-height: 620px; }
       .hero-text { padding: 44px 24px 56px; max-width: none; margin: 0; }
       .facts ul { grid-template-columns: 1fr 1fr; }
       .facts li { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); padding: 22px 24px; }
@@ -250,11 +277,17 @@
       .ways { grid-template-columns: 1fr; }
       .way + .way { border-left: 0; border-top: 1px solid var(--line); }
       .photo-tall { position: static; }
+      .head-photo { grid-template-columns: 1fr; gap: 28px; }
+      .ben-grid { grid-template-columns: 1fr 1fr; }
+      .benefits { padding: 68px 0; }
+      .gallery { columns: 2; column-gap: 6px; }
+      .gallery figure { margin-bottom: 6px; }
+      .client-list li { padding: 0 20px; }
       .courses { grid-template-columns: 1fr; }
       .plans { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: 1fr 1fr; gap: 6px; }
       .about img { aspect-ratio: 4/3; max-height: 520px; }
       .band { min-height: 380px; }
+      .band::after { background: rgba(30,28,24,.66); }
       .contact { padding: 72px 0; }
       .dossier { padding-bottom: 68px; }
       .dossier-box { padding: 28px 24px; }
@@ -265,6 +298,10 @@
       .hero-access { grid-template-columns: 1fr; }
       .facts ul { grid-template-columns: 1fr; }
       .facts li:nth-child(odd) { border-right: 0; }
+      .ben-grid { grid-template-columns: 1fr; }
+      .client-list { flex-direction: column; gap: 0; }
+      .client-list li { padding: 12px 0; width: 70%; }
+      .client-list li + li { border-left: 0; border-top: 1px solid var(--line); }
       .way { padding: 28px 22px; }
       .formats-box { padding: 26px 22px; }
       .formats-box ul { grid-template-columns: 1fr; }
@@ -599,7 +636,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
     <p class="hero-more"><a href="#contacto">Request a proposal</a></p>
   </div>
   <div class="hero-img">
-    <img src="empresas-hero.jpg" srcset="empresas-hero-800.jpg 800w, empresas-hero.jpg 1600w" sizes="(max-width: 1000px) 100vw, 50vw" width="1600" height="1200" alt="Corporate yoga class taught by Xana Dahdal in a Barcelona office" fetchpriority="high">
+    <img src="IMG_3773.jpeg" width="3000" height="4000" alt="Group practising yoga on mats in an outdoor garden" fetchpriority="high">
   </div>
 </section>
 
@@ -608,16 +645,35 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
   <ul class="wrap"><li><b>Since 2011</b>Yoga teacher and trainer</li><li><b>Teacher training</b>Experience training yoga teachers</li><li><b>ROPEC</b>Registered in the official register of sports professionals in Catalonia</li><li><b>Four languages</b>Sessions in Spanish, English, French and Portuguese</li></ul>
 </section>
 
-<!-- INTRODUCCIÓN -->
+<!-- EMPRESAS CON LAS QUE HE TRABAJADO (recuperado de la versión original) -->
+<section class="clients" aria-labelledby="clients-t">
+  <div class="wrap">
+    <span class="tag">They trust me</span>
+    <h2 id="clients-t">Companies I have worked with</h2>
+    <ul class="client-list"><li>Glovo</li><li>H&amp;M</li><li>Global CAD</li><li>Synton</li><li>WeWork</li></ul>
+  </div>
+</section>
+
+<!-- INTRODUCCIÓN (recuperada de la versión original) -->
 <section class="intro">
   <div class="wrap">
     <div>
-      <span class="tag">The approach</span>
-      <h2>Wellbeing is also part of <em>work</em></h2>
+      <span class="tag">My approach</span>
+      <h2>I know the corporate world from the <em>inside</em></h2>
     </div>
     <div>
-      <p class="lead">We spend many hours working and do not always notice how that routine affects us. Long periods sitting down, accumulated tension, a lack of breaks or communication difficulties can all influence how we feel day to day.</p><p class="lead">My aim is to bring companies practical tools that people can understand, experience and use in their daily lives. Activities can be organised as one-off sessions or as part of an ongoing programme.</p>
+      <p class="lead">I have been teaching in companies for years and I know what someone working under pressure needs. Lack of focus, tension within teams and mental exhaustion have a cost for people and for the company too.</p><p class="lead">With more than 14 years of experience teaching yoga and my own background in the corporate world, I understand the dynamics, the pace and the real needs of teams. I do not come with a generic programme. I come knowing what people need when they spend hours in front of a screen, carry a lot of responsibility and rarely have time to stop.</p><p class="lead">My aim is to bring companies practical tools that people can understand, experience and use in their daily lives, through one-off activities or ongoing programmes, with no previous experience needed.</p>
     </div>
+  </div>
+</section>
+
+<!-- QUÉ APORTA A LOS EQUIPOS (recuperado de la versión original, sin cifras ni afirmaciones sin fuente) -->
+<section class="benefits" aria-labelledby="ben-t">
+  <div class="wrap">
+    <span class="tag">Why at work</span>
+    <h2 id="ben-t">What it can bring to your <em>team</em></h2>
+    <p class="lead ben-lead">We spend many hours working and do not always notice how that routine affects us. Long periods sitting down, built-up tension, a lack of breaks or communication difficulties can all influence how we feel day to day.</p>
+    <ul class="ben-grid"><li><span class="bn">I</span><h3>Less built-up tension</h3><p>Breathing and mindful movement offer tools to slow down and respond better to everyday pressure.</p></li><li><span class="bn">II</span><h3>Back and posture care</h3><p>Long hours sitting and work postures put strain on the neck, shoulders and lower back. Sessions work on mobility, strength and postural awareness.</p></li><li><span class="bn">III</span><h3>More focus</h3><p>Breathing well changes your mental state. Breathing and mindfulness techniques help train focus and presence.</p></li><li><span class="bn">IV</span><h3>A more cohesive team</h3><p>Doing something together that has nothing to do with work creates a different kind of bond.</p></li><li><span class="bn">V</span><h3>Better atmosphere</h3><p>When a company takes care of its people, people notice, and it shows in the day-to-day atmosphere.</p></li><li><span class="bn">VI</span><h3>A clear signal</h3><p>Offering yoga says something about how you treat people. It shows that wellbeing is more than a word in the company policy.</p></li></ul>
   </div>
 </section>
 
@@ -652,11 +708,11 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
       </div>
       <div>
         <figure class="photo-tall">
-          <img src="empresas-clase-oficina.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="Group of employees practising yoga in an office room">
+          <img src="IMG_7609.jpeg" width="4032" height="3024" loading="lazy" decoding="async" alt="Group of employees practising yoga in an office room">
         </figure>
         <div class="practical">
           <h3>How it works</h3>
-          <p>Sessions take place at the company’s premises, in a meeting room, a dining area, a terrace or any available space. No special equipment is needed.</p><p>They can be scheduled before the working day starts, during a break or at the end of the day, in person or live online.</p>
+          <p>Sessions take place at the company’s premises, in a meeting room, a dining area, a terrace or any available space. No special equipment is needed.</p><p>They can be scheduled before the working day starts, during a break or at the end of the day, in person or live online.</p><p>Sessions are adapted to the group’s level, from people with no experience at all to regular practitioners. The goal is for everyone to be able to take part.</p>
         </div>
       </div>
     </div>
@@ -664,7 +720,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 </section>
 
 <section class="band" aria-labelledby="exp-t">
-  <img src="empresas-experiencias.jpg" srcset="empresas-experiencias-800.jpg 800w, empresas-experiencias.jpg 1600w" sizes="100vw" width="1600" height="1200" loading="lazy" decoding="async" alt="Group sitting in a circle during an evening meditation activity in a garden">
+  <img src="img_0784.jpeg" width="4032" height="3024" loading="lazy" decoding="async" alt="Group sitting in a circle during an evening meditation activity in a garden">
   <div class="wrap">
     <span class="tag">Team experiences</span>
     <h2 id="exp-t">A different activity to share as a <em>team</em></h2>
@@ -690,10 +746,13 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 <!-- B. FORMACIÓN PARA EMPRESAS -->
 <section class="block" id="formacion" aria-labelledby="form-t">
   <div class="wrap">
-    <div class="head">
-      <span class="tag">Training for companies</span>
-      <h2 id="form-t">Learning tools we can actually <em>use</em></h2>
-      <p class="lead">The courses combine theory, practical exercises and situations related to the workplace. The aim is for each participant to understand what they are learning and be able to apply it afterwards.</p>
+    <div class="head-photo">
+      <div class="head">
+        <span class="tag">Training for companies</span>
+        <h2 id="form-t">Learning tools we can actually <em>use</em></h2>
+        <p class="lead">The courses combine theory, practical exercises and situations related to the workplace. The aim is for each participant to understand what they are learning and be able to apply it afterwards.</p>
+      </div>
+      <img src="IMG_7607.jpeg" width="4032" height="3024" loading="lazy" decoding="async" alt="Corporate yoga class in an office room, with the team on mats">
     </div>
     <ol class="courses"><li><div><h3>Stress management and emotional self-regulation</h3><p>Recognising the usual signs of stress, understanding how they affect the body and attention, and practising tools to respond better to tense situations.</p></div></li><li><div><h3>Mindfulness and attention</h3><p>Training attention, noticing distractions and learning simple meditation exercises that can be built into the working day.</p></div></li><li><div><h3>Breathing and stress management</h3><p>Understanding the link between breathing and the stress response, and practising breathing techniques adapted to different situations.</p></div></li><li><div><h3>Mindful movement and postural habits</h3><p>Learning about movement habits, doing mobility exercises and developing greater body awareness during the working day.</p></div></li><li><div><h3>Positive and assertive communication</h3><p>Working on active listening, expressing needs clearly, feedback and difficult conversations.</p></div></li><li><div><h3>Conflict prevention and management</h3><p>Understanding how disagreements arise and learning communication strategies and constructive ways of handling tense situations.</p></div></li></ol>
     <div class="formats">
@@ -742,7 +801,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 <!-- D. SOBRE MÍ -->
 <section class="block" id="sobre-mi" aria-labelledby="about-t">
   <div class="wrap about">
-    <img src="empresas-sobre-mi.jpg" width="900" height="1567" loading="lazy" decoding="async" alt="Xana Dahdal sitting in meditation in a bright room">
+    <img src="IMG_5879.jpeg" width="1170" height="2078" loading="lazy" decoding="async" alt="Xana Dahdal sitting in meditation in a bright room">
     <div>
       <span class="tag">About me</span>
       <h2 id="about-t">Xana Dahdal</h2>
@@ -761,11 +820,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
       <span class="tag">At companies</span>
       <h2 id="gal-t">Classes in offices, terraces and workplaces</h2>
     </div>
-    <div class="gallery"><img src="empresas-galeria-1.jpg" alt="Yoga class in an office with the team on mats" width="800" height="1000" loading="lazy" decoding="async"><img src="empresas-galeria-2.jpg" alt="Group practising yoga on a terrace facing the sea in Barcelona" width="800" height="1000" loading="lazy" decoding="async"><img src="empresas-galeria-3.jpg" alt="Outdoor yoga class on the terrace of an office building" width="800" height="1000" loading="lazy" decoding="async"><img src="empresas-galeria-4.jpg" alt="Group yoga session on a terrace by the beach" width="800" height="1000" loading="lazy" decoding="async"></div>
-    <!--
-      Nombres de empresas retirados de forma provisional (Glovo, H&M, Global CAD, Synton, WeWork).
-      Vuelve a mostrar aquí solo las que estén confirmadas y cuyo uso público esté autorizado.
-    -->
+    <div class="gallery"><figure><img src="IMG_7608.jpeg" alt="Yoga class in an office with the team on mats" width="4032" height="3024" loading="lazy" decoding="async"></figure><figure><img src="IMG_3316.jpeg" alt="Group practising yoga on a terrace facing the sea in Barcelona" width="1179" height="1535" loading="lazy" decoding="async"></figure><figure><img src="IMG_9049.jpeg" alt="Outdoor yoga class on the terrace of an office building" width="3024" height="4032" loading="lazy" decoding="async"></figure><figure><img src="IMG_3315.jpeg" alt="Group yoga session on a terrace by the beach" width="1179" height="1171" loading="lazy" decoding="async"></figure></div>
   </div>
 </section>
 
@@ -791,7 +846,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
     <div>
       <span class="tag">Contact</span>
       <h2 id="contact-t">Let’s talk about what your <em>team needs</em></h2>
-      <p>You can book a one-off activity, organise regular sessions or request a course adapted to your company.</p><p>Tell me what kind of activity you are looking for, how many people would take part and where you would like it to happen. I will prepare a proposal with the available options, duration and budget.</p>
+      <p>Every company is different. Tell me about your team size, your goals and your situation, and I will prepare a tailored proposal with no commitment.</p><p>You can book a one-off activity, organise regular sessions or request a course adapted to your company. The proposal will include the available options, duration and budget.</p>
     </div>
     <div>
       <ul class="ask"><li><a href="mailto:alexandradahdal@gmail.com?subject=Companies%3A%20one-off%20activity&body=Hi%20Xana%2C%0A%0AI%20would%20like%20some%20information%20about%20a%20one-off%20activity%20for%20my%20company.%0A%0ACompany%3A%0ANumber%20of%20people%3A%0ALocation%20%28office%2C%20other%20venue%20or%20online%29%3A%0AApproximate%20date%3A%0A%0AThank%20you."><strong>A one-off class or activity</strong><span>Write</span></a></li><li><a href="mailto:alexandradahdal@gmail.com?subject=Companies%3A%20regular%20programme&body=Hi%20Xana%2C%0A%0AI%20would%20like%20some%20information%20about%20a%20regular%20class%20programme%20for%20my%20company.%0A%0ACompany%3A%0ANumber%20of%20people%3A%0ALocation%20%28office%2C%20other%20venue%20or%20online%29%3A%0APreferred%20frequency%3A%0A%0AThank%20you."><strong>A regular programme</strong><span>Write</span></a></li><li><a href="mailto:alexandradahdal@gmail.com?subject=Companies%3A%20training%20course&body=Hi%20Xana%2C%0A%0AI%20would%20like%20some%20information%20about%20a%20training%20course%20for%20my%20company.%0A%0ACompany%3A%0ACourse%20we%20are%20interested%20in%3A%0ANumber%20of%20people%3A%0AIn%20person%20or%20online%3A%0A%0AThank%20you."><strong>A training course</strong><span>Write</span></a></li></ul>
