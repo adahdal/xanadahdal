@@ -43,6 +43,13 @@
     .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
     .pill { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tierra-med); border: 1px solid var(--arena-osc); padding: 0.28rem 0.65rem; background: var(--blanco); }
     .pill-cert { border-color: var(--dorado); }
+    .cert-bloque { background: var(--blanco); border: 1px solid var(--arena-osc); border-left: 3px solid var(--dorado); padding: 1.8rem 1.5rem; margin-top: 2rem; }
+    .cert-fila { display: flex; align-items: center; gap: 1.2rem; }
+    .cert-fila img { width: 88px; height: 88px; flex-shrink: 0; }
+    @media (max-width: 480px) { .cert-fila { flex-direction: column-reverse; align-items: flex-start; } .cert-fila img { width: 84px; height: 84px; } }
+    .cert-bloque .linea { margin: 0.2rem 0 1.2rem; }
+    .cert-destacado { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; line-height: 1.35; color: var(--tierra); margin-bottom: 0.8rem; }
+    .cert-bloque p:not(.eyebrow):not(.cert-destacado) { font-size: 0.88rem; color: var(--tierra-med); }
 
     main { max-width: 680px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
 
@@ -244,6 +251,18 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
         <li>Bonding as practice</li>
         <li>How to support the whole journey, from start to finish</li>
       </ul>
+    </div>
+  </div>
+
+  <div class="cert-bloque">
+    <p class="eyebrow">Recognition and certification</p>
+    <div class="linea"></div>
+    <div class="cert-fila">
+      <div>
+        <p class="cert-destacado">72 hours of training whose hours count towards ROPEC, with the Yoga Alliance International seal.</p>
+        <p>A training to deepen how you support pregnancy, birth and the postpartum period through yoga, expanding your professional knowledge and resources.</p>
+      </div>
+      <img src="sello-yoga-alliance-international.png" width="250" height="250" alt="Yoga Alliance International Europe seal">
     </div>
   </div>
 

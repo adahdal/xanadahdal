@@ -179,7 +179,7 @@
 
     /* TESTIMONIOS */
     .testimonials { background: var(--white); }
-    .t-header { display: flex; align-items: center; gap: 16px; margin-bottom: 44px; }
+    .t-header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 44px; }
     .t-stars { font-size: 20px; color: var(--gold); letter-spacing: 3px; }
     .t-meta { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
     .t-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
@@ -1140,11 +1140,12 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 </footer>
 
 <!-- COOKIE BANNER -->
+<style>@media (max-width:600px){#cookie-banner{padding:16px 20px !important;gap:14px !important}}</style>
 <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#111; color:rgba(255,255,255,0.75); padding:20px 48px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; border-top:2px solid var(--gold);">
   <p style="font-size:13px; line-height:1.7; max-width:640px; margin:0;">
     We use cookies to analyse traffic and personalise your experience. You can accept all cookies or configure your preferences. More information in our <a href="cookies-en.html" style="color:var(--gold);">Cookie Policy</a> y <a href="privacy-en.html" style="color:var(--gold);">Privacy Policy</a>.
   </p>
-  <div style="display:flex; gap:12px; flex-shrink:0;">
+  <div style="display:flex; gap:12px; flex-wrap:wrap;">
     <button onclick="rejectCookies()" style="padding:10px 24px; background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.5); font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; cursor:pointer;">Essential only</button>
     <button onclick="acceptCookies()" style="padding:10px 24px; background:var(--gold); border:none; color:#fff; font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; cursor:pointer;">Accept all</button>
   </div>
