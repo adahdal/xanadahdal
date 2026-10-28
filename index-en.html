@@ -2,13 +2,6 @@
 <html lang="en">
 <head>
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0LPF6KP6H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Q0LPF6KP6H');
-  </script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Xana Dahdal · Yoga Barcelona</title>
@@ -604,26 +597,10 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   margin-bottom: 20px;
 }
 </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1562064505622800');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
   <link rel="alternate" hreflang="es" href="https://xanadahdal.com/" />
   <link rel="alternate" hreflang="en" href="https://xanadahdal.com/index-en.html" />
   <link rel="alternate" hreflang="x-default" href="https://xanadahdal.com/" />
+  <script src="consent.js?v=1" defer></script>
 </head>
 <body>
 
@@ -1145,38 +1122,6 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
 </footer>
 
 <!-- COOKIE BANNER -->
-<style>@media (max-width:600px){#cookie-banner{padding:16px 20px !important;gap:14px !important}}</style>
-<div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#111; color:rgba(255,255,255,0.75); padding:20px 48px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; border-top:2px solid var(--gold);">
-  <p style="font-size:13px; line-height:1.7; max-width:640px; margin:0;">
-    We use cookies to analyse traffic and personalise your experience. You can accept all cookies or configure your preferences. More information in our <a href="cookies-en.html" style="color:var(--gold);">Cookie Policy</a> y <a href="privacy-en.html" style="color:var(--gold);">Privacy Policy</a>.
-  </p>
-  <div style="display:flex; gap:12px; flex-wrap:wrap;">
-    <button onclick="rejectCookies()" style="padding:10px 24px; background:transparent; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.5); font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; cursor:pointer;">Essential only</button>
-    <button onclick="acceptCookies()" style="padding:10px 24px; background:var(--gold); border:none; color:#fff; font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; cursor:pointer;">Accept all</button>
-  </div>
-</div>
-
-<script>
-  function acceptCookies() {
-    localStorage.setItem('cookie_consent', 'accepted');
-    document.getElementById('cookie-banner').style.display = 'none';
-    loadAnalytics();
-  }
-  function rejectCookies() {
-    localStorage.setItem('cookie_consent', 'rejected');
-    document.getElementById('cookie-banner').style.display = 'none';
-  }
-  function loadAnalytics() {}
-  window.addEventListener('DOMContentLoaded', function() {
-    var consent = localStorage.getItem('cookie_consent');
-    if (!consent) {
-      document.getElementById('cookie-banner').style.display = 'flex';
-    } else if (consent === 'accepted') {
-      loadAnalytics();
-    }
-  });
-</script>
-
 <!-- CTA FLOTANTE -->
 <div style="position:fixed;bottom:32px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center;">
   <a href="https://wa.me/34697774602" target="_blank" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="WhatsApp" aria-label="Contact via WhatsApp">💬</a>
