@@ -42,6 +42,7 @@
     .cabecera p { color: var(--tierra-med); max-width: 520px; margin-top: 0.5rem; font-size: 0.95rem; }
     .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
     .pill { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tierra-med); border: 1px solid var(--arena-osc); padding: 0.28rem 0.65rem; background: var(--blanco); }
+    .pill-cert { border-color: var(--dorado); }
 
     main { max-width: 680px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
 
@@ -90,6 +91,14 @@
     .btn-dorado:hover { background: var(--dorado-cl); }
     .btn-arena { display: inline-block; color: var(--arena); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 1.6rem; border: 1px solid rgba(158,126,82,0.4); margin-left: 0.8rem; transition: border-color 0.2s; }
     .btn-arena:hover { border-color: var(--dorado-cl); }
+
+    .cert-bloque { background: var(--blanco); border: 1px solid var(--arena-osc); border-left: 3px solid var(--dorado); padding: 1.8rem 1.5rem; margin-top: 2rem; }
+    .cert-fila { display: flex; align-items: center; gap: 1.2rem; }
+    .cert-fila img { width: 88px; height: 88px; flex-shrink: 0; }
+    @media (max-width: 480px) { .cert-fila { flex-direction: column-reverse; align-items: flex-start; } .cert-fila img { width: 84px; height: 84px; } }
+    .cert-bloque .linea { margin: 0.2rem 0 1.2rem; }
+    .cert-destacado { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 400; line-height: 1.35; color: var(--tierra); margin-bottom: 0.8rem; }
+    .cert-bloque p:not(.eyebrow):not(.cert-destacado) { font-size: 0.88rem; color: var(--tierra-med); }
 
     .precio-bloque { background: var(--arena); border: 1px solid var(--arena-osc); padding: 2rem 1.5rem; margin-top: 2rem; }
     .precio-fila { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; border-bottom: 1px solid var(--arena-osc); }
@@ -141,7 +150,8 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
     <span class="pill">Sábado y domingo · 9:00 a 18:00h</span>
     <span class="pill">Nov 2026 · Feb 2027</span>
     <span class="pill">Presencial · Barcelona</span>
-    <span class="pill">Certificado ROPEC</span>
+    <span class="pill pill-cert">Horas computables para ROPEC</span>
+    <span class="pill pill-cert">Sello Yoga Alliance International</span>
   </div>
 </div>
 
@@ -242,6 +252,18 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
     </div>
   </div>
 
+  <div class="cert-bloque">
+    <p class="eyebrow">Reconocimiento y certificación</p>
+    <div class="linea"></div>
+    <div class="cert-fila">
+      <div>
+        <p class="cert-destacado">72 horas de formación con horas computables para ROPEC y sello Yoga Alliance International.</p>
+        <p>Una formación para profundizar en el acompañamiento del embarazo, el parto y el posparto desde el yoga, ampliando tus conocimientos y recursos profesionales.</p>
+      </div>
+      <img src="sello-yoga-alliance-international.png" width="250" height="250" alt="Sello Yoga Alliance International Europe">
+    </div>
+  </div>
+
   <div class="precio-bloque">
     <p class="eyebrow">Inversión</p>
     <div class="linea"></div>
@@ -253,7 +275,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
       <p class="precio-label">Pago fraccionado · 3 cuotas</p>
       <div class="precio-valor">€250</div>
     </div>
-    <p style="font-size:0.78rem; color:var(--tierra-med); margin-top:1rem;">72 horas · 4 módulos · Certificado ROPEC · Presencial en Barcelona. Transferencia bancaria · Efectivo · PayPal. La formación se contrata completa; el pago fraccionado no permite contratar módulos por separado.</p>
+    <p style="font-size:0.78rem; color:var(--tierra-med); margin-top:1rem;">72 horas · 4 módulos · Horas computables para ROPEC · Sello Yoga Alliance International · Presencial en Barcelona. Transferencia bancaria · Efectivo · PayPal. La formación se contrata completa; el pago fraccionado no permite contratar módulos por separado.</p>
   </div>
 
   <div class="cta-bloque">
