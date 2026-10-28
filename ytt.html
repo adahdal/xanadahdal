@@ -163,6 +163,12 @@
 
     /* DETALLES */
     .detalles { background: var(--sand); }
+    .reco-bloque { margin-top: 48px; padding: 28px 28px; background: var(--white); border-left: 3px solid var(--gold); display: flex; align-items: center; gap: 28px; }
+    .reco-bloque img { width: 96px; height: 96px; flex-shrink: 0; }
+    .reco-bloque .reco-tit { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+    .reco-bloque .reco-l { font-size: 15px; color: var(--dark); line-height: 1.6; margin-bottom: 4px; }
+    .reco-bloque .reco-n { font-size: 13px; color: var(--muted); line-height: 1.7; margin-top: 12px; }
+    @media (max-width: 600px) { .reco-bloque { flex-direction: column-reverse; align-items: flex-start; gap: 16px; padding: 24px 20px; } .reco-bloque img { width: 84px; height: 84px; } }
     .detalles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
     .detalle-lista { list-style: none; display: flex; flex-direction: column; gap: 0; }
     .detalle-item { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(184,148,90,0.2); font-size: 14px; }
@@ -580,7 +586,7 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
         <div class="divider"></div>
         <p>Nací en Francia y crecí en Portugal. Mi conexión con el yoga comenzó a través de un familiar que practicaba Ashtanga. Con más de 14 años enseñando en Barcelona, he integrado estilos como Hatha Vinyasa, Ashtanga, Iyengar y Dharma Yoga.</p>
         <p>He impartido clases en estudios, empresas, festivales y retiros. Mi enseñanza se basa en la escucha, la adaptación y el respeto por el cuerpo. No enseño lo que me dijeron que enseñara, enseño desde lo que he vivido.</p>
-        <p>Cuento con la acreditación profesional de la Generalitat de Catalunya y estoy inscrita en el ROPEC desde 2015.</p>
+        <p>Cuento con la acreditación profesional de la Generalitat de Catalunya y estoy inscrita en el ROPEC desde 2015. Soy Senior Experienced Yoga Teacher (SEYT) de Yoga Alliance International: es mi acreditación personal, distinta del reconocimiento de la formación.</p>
         <div class="creds">
           <span class="cred">+14 años enseñando</span>
           <span class="cred">ROPEC desde 2015</span>
@@ -664,6 +670,15 @@ src="https://www.facebook.com/tr?id=1562064505622800&ev=PageView&noscript=1"
         <li class="detalle-item"><span class="detalle-label">Plazas</span><span class="detalle-val">Limitadas</span></li>
         <li class="detalle-item"><span class="detalle-label">Pago</span><span class="detalle-val">Fraccionamiento disponible</span></li>
       </ul>
+    </div>
+    <div class="reco-bloque">
+      <img src="sello-yoga-alliance-international.png" width="250" height="250" alt="Sello de Yoga Alliance International Europe" loading="lazy" decoding="async">
+      <div>
+        <span class="reco-tit">Reconocimiento de la formación</span>
+        <p class="reco-l">Formación con reconocimiento de Yoga Alliance International</p>
+        <p class="reco-l">Horas de formación computables para ROPEC</p>
+        <p class="reco-n">Mi acreditación personal como Senior Experienced Yoga Teacher (SEYT) de Yoga Alliance International aparece aparte, en el apartado sobre mí.</p>
+      </div>
     </div>
   </div>
 </section>
