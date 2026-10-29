@@ -190,6 +190,13 @@
     .form-nota { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; }
     .form-nota a { color: var(--gold); text-decoration: none; }
 
+    .form-privacidad { font-size: 12px; color: var(--muted); line-height: 1.6; margin: 14px 0 10px; }
+    .form-privacidad a { color: var(--gold); }
+    .form-consent { display: flex; gap: 10px; align-items: flex-start; margin: 10px 0 6px; }
+    .form-consent input[type=checkbox] { width: 16px; height: 16px; margin-top: 2px; flex: none; -webkit-appearance: checkbox; appearance: auto; accent-color: var(--gold); }
+    .form-consent label { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 300; color: var(--dark); margin: 0; }
+    .form-consent small { display: block; font-size: 11px; color: var(--muted); }
+
     /* CTA FINAL */
     .cta-final { background: var(--dark); padding: 96px 48px; text-align: center; }
     .cta-final h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--white); margin-bottom: 16px; }
@@ -694,8 +701,8 @@
           <input type="hidden" name="SMS__COUNTRY_CODE" value="+34" />
         </div>
         <div class="form-grupo">
-          <label for="experiencia">Your yoga experience</label>
-          <select id="experiencia" name="experiencia" required>
+          <label for="EXPERIENCIA">Your yoga experience</label>
+          <select id="EXPERIENCIA" name="EXPERIENCIA" required>
             <option value="" disabled selected>How long have you been practising?</option>
             <option>Less than 1 year</option>
             <option>Between 1 and 3 years</option>
@@ -705,12 +712,17 @@
           </select>
         </div>
         <div class="form-grupo">
-          <label for="mensaje">Why do you want to do this training?</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Tell me your motivation, your questions..."></textarea>
+          <label for="MENSAJE">Why do you want to do this training?</label>
+          <textarea id="MENSAJE" name="MENSAJE" placeholder="Tell me your motivation, your questions..."></textarea>
         </div>
         <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off" />
         <input type="hidden" name="locale" value="en" />
-        <button type="submit" class="btn-form">Send request</button>
+                <p class="form-privacidad">I will use your data only to answer your information request. Controller: Xana Dahdal. Brevo, the platform I use to manage contacts, processes the data on my behalf. More information in the <a href="privacy-en.html" target="_blank" rel="noopener">privacy policy</a>.</p>
+        <div class="form-consent">
+          <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" />
+          <label for="OPT_IN">I would also like to receive news and offers from Xana Dahdal by email. <small>Optional. You can unsubscribe at any time.</small></label>
+        </div>
+<button type="submit" class="btn-form">Send request</button>
         <p class="form-nota">Or write to me directly on <a href="https://wa.me/34697774602?text=Hi%20Xana%2C%20I%20am%20interested%20in%20the%20200-hour%20yoga%20teacher%20training.%20I%20would%20like%20more%20information.">WhatsApp</a></p>
       </form>
     </div>

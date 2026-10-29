@@ -756,6 +756,13 @@
     }
     .form-nota a { color: var(--dorado); text-decoration: none; }
 
+    .form-privacidad { font-size: 0.78rem; color: var(--tierra); line-height: 1.6; margin: 1rem 0 0.8rem; opacity: 0.85; }
+    .form-privacidad a { color: var(--dorado); }
+    .form-consent { display: flex; gap: 0.6rem; align-items: flex-start; margin: 0.6rem 0 0.4rem; }
+    .form-consent input[type=checkbox] { width: 1.1rem; height: 1.1rem; margin-top: 0.15rem; flex: none; -webkit-appearance: checkbox; appearance: auto; accent-color: var(--dorado); }
+    .form-consent label { text-transform: none; letter-spacing: 0; font-size: 0.82rem; font-weight: 300; color: var(--tierra); margin: 0; }
+    .form-consent small { display: block; font-size: 0.72rem; opacity: 0.75; }
+
     /* FAQ */
     .faq-section { background: var(--arena); }
 
@@ -1268,19 +1275,19 @@
 <!-- FORMULARIO -->
 <section class="formulario-section" id="inscripcion">
   <div class="container">
-    <p class="eyebrow">Book your place</p>
+    <p class="eyebrow">Request information</p>
     <h2>Start <em>here</em></h2>
     <div class="linea"></div>
-    <p>Fill in the form and I will write to you within 48 hours with payment details and confirmation of your place. Places are reserved in order of request.</p>
+    <p>I will contact you personally to answer your questions.</p>
     <div class="form-wrap">
-      <form action="https://2651d686.sibforms.com/serve/MUIFAD9k7HfZxf6kz91KU_iwd7d9Dk4d3r1fOcHLLn6cqAO6Hl-ZoeAsS_WSCKuLWRMj2kVtzPJeWw3OjYWV6x1NF5W4c1sMbHPfXdTt7GH9InNGWsMBxQZS3K-sBEAkvKl70Kdu3FclzxU0zU66MlLjJZI7z3YLRbFEh4f49p5W-lhiDgrKIM-zaqLXxTXtyCu_gPJkSV_JjHa05Q==" method="POST">
+      <form action="https://2651d686.sibforms.com/serve/MUIFALC9qAWzhhye5TYO04FvBc6Whc8cArjmZFXM_IsytF1hRNFb8Z5uoDHdDK-UZDUE9-BU5i0r2g0T_7JVUrl5gUG5YD8tly6qR74KWzGjmtxDIGbEwZ0e_iS0MSaF8uJrIHLqRvVf5fvSBSQAAkQ2Gof3t8IkaYuWoT19__JkKUfUMdOglGTNOQ4xAIG6jXudVGg5MsqiC7HKrg==" method="POST">
         <div class="form-grupo">
           <label for="FIRSTNAME">First name</label>
           <input type="text" id="FIRSTNAME" name="FIRSTNAME" required placeholder="Your first name" />
         </div>
         <div class="form-grupo">
-          <label for="LASTNAME">Last name</label>
-          <input type="text" id="LASTNAME" name="LASTNAME" required placeholder="Your last name" />
+          <label for="LASTNAME">Last name (optional)</label>
+          <input type="text" id="LASTNAME" name="LASTNAME" placeholder="Your last name" />
         </div>
         <div class="form-grupo">
           <label for="EMAIL">Email</label>
@@ -1292,24 +1299,29 @@
           <input type="hidden" name="SMS__COUNTRY_CODE" value="+34" />
         </div>
         <div class="form-grupo">
-          <label for="perfil">Your profile</label>
-          <select id="perfil" name="perfil" required>
-            <option value="" disabled selected>How would you describe yourself?</option>
+          <label for="PERFIL">Professional background (optional)</label>
+          <select id="PERFIL" name="PERFIL">
+            <option value="" selected>How would you describe yourself?</option>
             <option>Yoga teacher</option>
             <option>Doula</option>
             <option>Midwife</option>
             <option>Physiotherapist or other health professional</option>
             <option>Yoga practitioner without teaching qualification</option>
-            <option>Otro</option>
+            <option>Other</option>
           </select>
         </div>
         <div class="form-grupo">
-          <label for="mensaje">Tell me something about yourself (optional)</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Your experience, your motivation, your questions..."></textarea>
+          <label for="MENSAJE">Message (optional)</label>
+          <textarea id="MENSAJE" name="MENSAJE" placeholder="Your experience, your motivation, your questions..."></textarea>
         </div>
         <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off" />
         <input type="hidden" name="locale" value="en" />
-        <button type="submit" class="btn-form">Send request</button>
+                <p class="form-privacidad">I will use your data only to answer your information request. Controller: Xana Dahdal. Brevo, the platform I use to manage contacts, processes the data on my behalf. More information in the <a href="privacy-en.html" target="_blank" rel="noopener">privacy policy</a>.</p>
+        <div class="form-consent">
+          <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" />
+          <label for="OPT_IN">I would also like to receive news and offers from Xana Dahdal by email. <small>Optional. You can unsubscribe at any time.</small></label>
+        </div>
+        <button type="submit" class="btn-form">I want to receive information</button>
         <p class="form-nota">Or write to me directly on <a href="https://wa.me/34697774602?text=Hi%20Xana%2C%20I%20am%20interested%20in%20the%20prenatal%20and%20mums%20and%20babies%20yoga%20training.%20I%20would%20like%20more%20information.">WhatsApp</a></p>
       </form>
     </div>

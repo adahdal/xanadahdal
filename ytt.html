@@ -190,6 +190,13 @@
     .form-nota { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; }
     .form-nota a { color: var(--gold); text-decoration: none; }
 
+    .form-privacidad { font-size: 12px; color: var(--muted); line-height: 1.6; margin: 14px 0 10px; }
+    .form-privacidad a { color: var(--gold); }
+    .form-consent { display: flex; gap: 10px; align-items: flex-start; margin: 10px 0 6px; }
+    .form-consent input[type=checkbox] { width: 16px; height: 16px; margin-top: 2px; flex: none; -webkit-appearance: checkbox; appearance: auto; accent-color: var(--gold); }
+    .form-consent label { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 300; color: var(--dark); margin: 0; }
+    .form-consent small { display: block; font-size: 11px; color: var(--muted); }
+
     /* CTA FINAL */
     .cta-final { background: var(--dark); padding: 96px 48px; text-align: center; }
     .cta-final h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--white); margin-bottom: 16px; }
@@ -694,8 +701,8 @@
           <input type="hidden" name="SMS__COUNTRY_CODE" value="+34" />
         </div>
         <div class="form-grupo">
-          <label for="experiencia">Tu experiencia con el yoga</label>
-          <select id="experiencia" name="experiencia" required>
+          <label for="EXPERIENCIA">Tu experiencia con el yoga</label>
+          <select id="EXPERIENCIA" name="EXPERIENCIA" required>
             <option value="" disabled selected>¿Cuánto llevas practicando?</option>
             <option>Menos de 1 año</option>
             <option>Entre 1 y 3 años</option>
@@ -705,12 +712,17 @@
           </select>
         </div>
         <div class="form-grupo">
-          <label for="mensaje">¿Por qué quieres hacer esta formación?</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Cuéntame tu motivación, tus preguntas..."></textarea>
+          <label for="MENSAJE">¿Por qué quieres hacer esta formación?</label>
+          <textarea id="MENSAJE" name="MENSAJE" placeholder="Cuéntame tu motivación, tus preguntas..."></textarea>
         </div>
         <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off" />
         <input type="hidden" name="locale" value="es" />
-        <button type="submit" class="btn-form">Enviar solicitud</button>
+                <p class="form-privacidad">Usaré tus datos solo para responder a tu solicitud de información. Responsable: Xana Dahdal. Brevo, la plataforma que uso para gestionar los contactos, trata los datos por encargo mío. Más información en la <a href="politica-privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</p>
+        <div class="form-consent">
+          <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" />
+          <label for="OPT_IN">Además, quiero recibir novedades y propuestas de Xana Dahdal por email. <small>Es opcional. Puedes darte de baja cuando quieras.</small></label>
+        </div>
+<button type="submit" class="btn-form">Enviar solicitud</button>
         <p class="form-nota">O escríbeme directamente por <a href="https://wa.me/34697774602?text=Hola%20Xana%2C%20me%20interesa%20la%20formaci%C3%B3n%20de%20profesores%20de%20yoga%20de%20200%20horas.%20Quiero%20m%C3%A1s%20informaci%C3%B3n.">WhatsApp</a></p>
       </form>
     </div>

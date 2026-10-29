@@ -772,6 +772,13 @@
     }
     .form-nota a { color: var(--dorado); text-decoration: none; }
 
+    .form-privacidad { font-size: 0.78rem; color: var(--tierra); line-height: 1.6; margin: 1rem 0 0.8rem; opacity: 0.85; }
+    .form-privacidad a { color: var(--dorado); }
+    .form-consent { display: flex; gap: 0.6rem; align-items: flex-start; margin: 0.6rem 0 0.4rem; }
+    .form-consent input[type=checkbox] { width: 1.1rem; height: 1.1rem; margin-top: 0.15rem; flex: none; -webkit-appearance: checkbox; appearance: auto; accent-color: var(--dorado); }
+    .form-consent label { text-transform: none; letter-spacing: 0; font-size: 0.82rem; font-weight: 300; color: var(--tierra); margin: 0; }
+    .form-consent small { display: block; font-size: 0.72rem; opacity: 0.75; }
+
     /* FAQ */
     .faq-section { background: var(--arena); }
 
@@ -1291,19 +1298,19 @@
 <!-- FORMULARIO -->
 <section class="formulario-section" id="inscripcion">
   <div class="container">
-    <p class="eyebrow">Reserva tu plaza</p>
+    <p class="eyebrow">Solicita información</p>
     <h2>Empieza <em>aquí</em></h2>
     <div class="linea"></div>
-    <p>Rellena el formulario y te escribo en menos de 48 horas con los detalles del pago y la confirmación de tu plaza. Las plazas se reservan por orden de solicitud.</p>
+    <p>Te contactaré personalmente para resolver tus dudas.</p>
     <div class="form-wrap">
-      <form action="https://2651d686.sibforms.com/serve/MUIFAD9k7HfZxf6kz91KU_iwd7d9Dk4d3r1fOcHLLn6cqAO6Hl-ZoeAsS_WSCKuLWRMj2kVtzPJeWw3OjYWV6x1NF5W4c1sMbHPfXdTt7GH9InNGWsMBxQZS3K-sBEAkvKl70Kdu3FclzxU0zU66MlLjJZI7z3YLRbFEh4f49p5W-lhiDgrKIM-zaqLXxTXtyCu_gPJkSV_JjHa05Q==" method="POST">
+      <form action="https://2651d686.sibforms.com/serve/MUIFALC9qAWzhhye5TYO04FvBc6Whc8cArjmZFXM_IsytF1hRNFb8Z5uoDHdDK-UZDUE9-BU5i0r2g0T_7JVUrl5gUG5YD8tly6qR74KWzGjmtxDIGbEwZ0e_iS0MSaF8uJrIHLqRvVf5fvSBSQAAkQ2Gof3t8IkaYuWoT19__JkKUfUMdOglGTNOQ4xAIG6jXudVGg5MsqiC7HKrg==" method="POST">
         <div class="form-grupo">
           <label for="FIRSTNAME">Nombre</label>
           <input type="text" id="FIRSTNAME" name="FIRSTNAME" required placeholder="Tu nombre" />
         </div>
         <div class="form-grupo">
-          <label for="LASTNAME">Apellidos</label>
-          <input type="text" id="LASTNAME" name="LASTNAME" required placeholder="Tus apellidos" />
+          <label for="LASTNAME">Apellidos (opcional)</label>
+          <input type="text" id="LASTNAME" name="LASTNAME" placeholder="Tus apellidos" />
         </div>
         <div class="form-grupo">
           <label for="EMAIL">Email</label>
@@ -1315,9 +1322,9 @@
           <input type="hidden" name="SMS__COUNTRY_CODE" value="+34" />
         </div>
         <div class="form-grupo">
-          <label for="perfil">Tu perfil</label>
-          <select id="perfil" name="perfil" required>
-            <option value="" disabled selected>¿Cómo te defines?</option>
+          <label for="PERFIL">Perfil profesional (opcional)</label>
+          <select id="PERFIL" name="PERFIL">
+            <option value="" selected>¿Cómo te defines?</option>
             <option>Profesora de yoga</option>
             <option>Doula</option>
             <option>Matrona</option>
@@ -1327,12 +1334,17 @@
           </select>
         </div>
         <div class="form-grupo">
-          <label for="mensaje">Cuéntame algo sobre ti (opcional)</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Tu experiencia, tu motivación, tus preguntas..."></textarea>
+          <label for="MENSAJE">Mensaje (opcional)</label>
+          <textarea id="MENSAJE" name="MENSAJE" placeholder="Tu experiencia, tu motivación, tus preguntas..."></textarea>
         </div>
         <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off" />
         <input type="hidden" name="locale" value="es" />
-        <button type="submit" class="btn-form">Enviar solicitud</button>
+                <p class="form-privacidad">Usaré tus datos solo para responder a tu solicitud de información. Responsable: Xana Dahdal. Brevo, la plataforma que uso para gestionar los contactos, trata los datos por encargo mío. Más información en la <a href="politica-privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</p>
+        <div class="form-consent">
+          <input type="checkbox" id="OPT_IN" name="OPT_IN" value="1" />
+          <label for="OPT_IN">Además, quiero recibir novedades y propuestas de Xana Dahdal por email. <small>Es opcional. Puedes darte de baja cuando quieras.</small></label>
+        </div>
+        <button type="submit" class="btn-form">Quiero recibir información</button>
         <p class="form-nota">O escríbeme directamente por <a href="https://wa.me/34697774602?text=Hola%20Xana%2C%20me%20interesa%20la%20formaci%C3%B3n%20de%20yoga%20prenatal%20y%20mam%C3%A1s%20y%20beb%C3%A9s.%20Quiero%20m%C3%A1s%20informaci%C3%B3n.">WhatsApp</a></p>
       </form>
     </div>
