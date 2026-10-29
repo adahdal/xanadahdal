@@ -1,17 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Cookie Policy · Xana Dahdal</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cookie Policy · Xana Dahdal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --sand: #f2ebe0; --dark: #1e1c18; --muted: #6b6560; --gold: #b8945a; --white: #faf8f4; }
+    body { background: var(--sand); color: var(--dark); font-family: 'Nunito Sans', sans-serif; font-weight: 300; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 48px; background: rgba(242,235,224,0.96); border-bottom: 1px solid rgba(184,148,90,0.15); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: var(--dark); text-decoration: none; }
+    main { max-width: 800px; margin: 0 auto; padding: 80px 48px; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 400; margin-bottom: 12px; }
+    .subtitle { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 48px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 500; margin: 40px 0 12px; }
+    p { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 16px; }
+    ul { padding-left: 20px; margin-bottom: 16px; }
+    ul li { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+    th { text-align: left; padding: 10px 12px; background: rgba(184,148,90,0.1); color: var(--dark); font-weight: 600; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+    td { padding: 10px 12px; border-bottom: 1px solid rgba(184,148,90,0.15); color: var(--muted); vertical-align: top; }
+    a { color: var(--gold); }
+    .divider { width: 48px; height: 1px; background: var(--gold); margin-bottom: 48px; }
+    footer { text-align: center; padding: 40px 48px; border-top: 1px solid rgba(184,148,90,0.2); display: flex; flex-direction: column; gap: 8px; }
+    .f-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; }
+    .f-copy { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+    .f-links { display: flex; justify-content: center; gap: 24px; margin-top: 8px; }
+    .f-links a { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+    .f-links a:hover { color: var(--gold); }
+    @media(max-width:600px){ main { padding: 48px 24px; } nav { padding: 16px 24px; } table { font-size: 12px; } }
+  
+/* === Xana unified logo + navigation fix === */
+.xd-nav {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 22px !important;
+  min-height: 118px !important;
+  padding: 18px 40px !important;
+  background: rgba(242,235,224,0.97) !important;
+  backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(184,148,90,0.16) !important;
+}
+
+.xd-nav .nav-logo {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 315px !important;
+  max-width: 315px !important;
+  min-width: 250px !important;
+  height: auto !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  color: transparent !important;
+}
+
+.xd-nav .nav-logo img {
+  display: block !important;
+  width: 315px !important;
+  height: auto !important;
+  max-width: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.xd-nav-links {
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  flex-wrap: wrap !important;
+  min-width: 0 !important;
+}
+
+.xd-nav-links a,
+.xd-mobile-menu a {
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2.4px !important;
+  text-transform: uppercase !important;
+  color: var(--muted, #6b6560) !important;
+  text-decoration: none !important;
+  line-height: 1.6 !important;
+}
+
+.xd-nav-links a:hover,
+.xd-lang-switcher a:hover,
+.xd-mobile-menu a:hover {
+  color: var(--gold, #b8945a) !important;
+}
+
+.xd-nav-actions {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 18px !important;
+}
+
+.xd-lang-switcher {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+}
+
+.xd-lang-switcher a,
+.xd-lang-switcher span {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  color: var(--muted, #6b6560) !important;
+  text-decoration: none !important;
+}
+
+.xd-lang-switcher a.active,
+.xd-mobile-langs a.active {
+  color: var(--gold, #b8945a) !important;
+  border-bottom: 1px solid var(--gold, #b8945a) !important;
+}
+
+.xd-cta,
+.nav-cta {
+  background: var(--gold, #b8945a) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.xd-hamburger {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 7px !important;
+  width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  cursor: pointer !important;
+}
+
+.xd-hamburger span {
+  display: block !important;
+  width: 31px !important;
+  height: 2px !important;
+  background: var(--dark, #1e1c18) !important;
+  border-radius: 2px !important;
+  transition: transform .25s ease, opacity .25s ease !important;
+}
+
+.xd-hamburger.is-open span:nth-child(1) { transform: translateY(9px) rotate(45deg) !important; }
+.xd-hamburger.is-open span:nth-child(2) { opacity: 0 !important; }
+.xd-hamburger.is-open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg) !important; }
+
+.xd-mobile-menu {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9998 !important;
+  background: rgba(242,235,224,0.98) !important;
+  backdrop-filter: blur(16px) !important;
+  transform: translateY(-100%) !important;
+  transition: transform .35s ease !important;
+  overflow-y: auto !important;
+  padding-top: 122px !important;
+}
+
+.xd-mobile-menu.is-open {
+  transform: translateY(0) !important;
+}
+
+.xd-mobile-menu-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+  padding: 28px 48px 60px !important;
+}
+
+.xd-mobile-menu-inner a {
+  display: block !important;
+  padding: 18px 0 !important;
+  border-bottom: 1px solid rgba(184,148,90,0.18) !important;
+  font-size: 13px !important;
+  letter-spacing: 3.2px !important;
+}
+
+.xd-mobile-langs {
+  display: flex !important;
+  gap: 20px !important;
+  padding-top: 26px !important;
+}
+
+.xd-mobile-langs a {
+  border-bottom: 0 !important;
+  padding: 0 !important;
+  color: var(--gold, #b8945a) !important;
+}
+
+/* Floating contact buttons: keep contact visible but in brand palette, not blue/green */
+a[href*="wa.me"][style*="border-radius:50%"] {
+  background: var(--gold, #b8945a) !important;
+}
+
+@media (max-width: 1180px) {
+  .xd-nav {
+    min-height: 96px !important;
+    padding: 14px 28px !important;
+  }
+  .xd-nav .nav-logo {
+    width: 270px !important;
+    min-width: 220px !important;
+    max-width: 270px !important;
+  }
+  .xd-nav .nav-logo img {
+    width: 270px !important;
+  }
+  .xd-nav-links {
+    display: none !important;
+  }
+  .xd-cta {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .xd-nav {
+    min-height: 92px !important;
+    padding: 12px 24px !important;
+  }
+
+  .xd-nav .nav-logo {
+    width: 235px !important;
+    min-width: 0 !important;
+    max-width: calc(100vw - 120px) !important;
+  }
+
+  .xd-nav .nav-logo img {
+    width: 235px !important;
+    max-width: calc(100vw - 120px) !important;
+  }
+
+  .xd-lang-switcher {
+    display: none !important;
+  }
+
+  .xd-hamburger {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .xd-hamburger span {
+    width: 30px !important;
+    height: 2px !important;
+  }
+
+  .xd-mobile-menu {
+    padding-top: 92px !important;
+  }
+
+  .xd-mobile-menu-inner {
+    padding: 24px 32px 52px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .xd-nav .nav-logo,
+  .xd-nav .nav-logo img {
+    width: 205px !important;
+  }
+}
+
+</style>
   <script src="consent.js?v=2" defer></script>
 </head>
 <body>
-<h1>Cookie Policy</h1>
-<p>This website may use cookies to improve user experience, analyze traffic and personalize content.</p>
-<h2>What are cookies?</h2>
-<p>Cookies are small text files stored on your device when visiting a website.</p>
-<h2>Managing cookies</h2>
-<p>You can configure or disable cookies through your browser settings.</p>
+
+<nav class="xd-nav">
+  <a href="index-en.html" class="nav-logo" aria-label="Xana Dahdal">
+    <img src="logo-xana-dahdal.svg" alt="Xana Dahdal">
+  </a>
+
+  <div class="xd-nav-links">
+    <a href="index-en.html#about">ABOUT</a><a href="index-en.html#results">RESULTS</a><a href="index-en.html#training">TRAININGS</a><a href="ytt-en.html">TEACHER TRAINING</a><a href="index-en.html#classes">YOGA TYPES</a><a href="classes-en.html">JOIN A CLASS</a><a href="retreats-en.html">RETREATS</a><a href="corporate-en.html">CORPORATE</a><a href="events-en.html">EVENTS</a><a href="index-en.html#schedule">SCHEDULE</a><a href="index-en.html#testimonials">TESTIMONIALS</a><a href="index-en.html#contact">CONTACT</a>
+  </div>
+
+  <div class="xd-nav-actions">
+    <div class="xd-lang-switcher" aria-label="Language switcher">
+      <a href="politica-cookies.html" class="">ES</a>
+      <span>/</span>
+      <a href="cookies-en.html" class="active">EN</a>
+    </div>
+    <a href="classes-en.html" class="nav-cta xd-cta">JOIN A CLASS</a>
+    <button class="hamburger xd-hamburger" type="button" aria-label="Open menu" aria-controls="xd-mobile-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="xd-mobile-menu" id="xd-mobile-menu" aria-hidden="true">
+  <div class="xd-mobile-menu-inner">
+    <a href="index-en.html#about">ABOUT</a><a href="index-en.html#results">RESULTS</a><a href="index-en.html#training">TRAININGS</a><a href="ytt-en.html">TEACHER TRAINING</a><a href="index-en.html#classes">YOGA TYPES</a><a href="classes-en.html">JOIN A CLASS</a><a href="retreats-en.html">RETREATS</a><a href="corporate-en.html">CORPORATE</a><a href="events-en.html">EVENTS</a><a href="index-en.html#schedule">SCHEDULE</a><a href="index-en.html#testimonials">TESTIMONIALS</a><a href="index-en.html#contact">CONTACT</a>
+    <div class="xd-mobile-langs">
+      <a href="politica-cookies.html" class="">ES</a>
+      <a href="cookies-en.html" class="active">EN</a>
+    </div>
+  </div>
+</div><main>
+  <h1>Cookie Policy</h1>
+  <p class="subtitle">Last updated: October 2026</p>
+  <div class="divider"></div>
+
+  <h2>1. What are cookies</h2>
+  <p>Cookies are small text files stored on your device when you visit a website. They let the site remember your preferences and measure how it is used. This website also saves some data in the browser storage (local and session), which we treat the same way as cookies.</p>
+
+  <h2>2. What this website uses</h2>
+  <p>The first time you visit, a notice lets you choose Accept all, Reject all or Settings by category. If you reject, only what is strictly necessary is used. Analytics and advertising tools load only if you accept them.</p>
+
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Purpose</th>
+      <th>Duration</th>
+    </tr>
+    <tr>
+      <td>Necessary</td>
+      <td>xd_consent_v2 (local storage)</td>
+      <td>Save your cookie choice</td>
+      <td>6 months, then you are asked again</td>
+    </tr>
+    <tr>
+      <td>Necessary</td>
+      <td>xd_last_lang (session storage)</td>
+      <td>Remember the language when a form is sent</td>
+      <td>Session</td>
+    </tr>
+    <tr>
+      <td>Analytics, only if you accept</td>
+      <td>Google Analytics 4: _ga and _ga_Q0LPF6KP6H</td>
+      <td>Count visits and page views, and measure clicks on WhatsApp and email and the information requests sent</td>
+      <td>Up to 2 years</td>
+    </tr>
+    <tr>
+      <td>Analytics, only if you accept</td>
+      <td>xd_lead_pending (session storage)</td>
+      <td>Count each information request sent only once</td>
+      <td>Session</td>
+    </tr>
+    <tr>
+      <td>Advertising, only if you accept</td>
+      <td>Meta Pixel: _fbp, _fbc and fr</td>
+      <td>Measure advertising on Facebook and Instagram</td>
+      <td>Up to 90 days</td>
+    </tr>
+  </table>
+
+  <p>Google Analytics is configured with advertising storage disabled and loads only with your analytics consent. Meta Pixel loads only with your advertising consent.</p>
+
+  <h2>3. Third-party content</h2>
+  <p>Some pages, such as the events page, include YouTube videos. This content is loaded by YouTube directly and may set its own cookies, even if you rejected analytics and advertising cookies. We recommend reading its privacy policy:</p>
+  <ul>
+    <li><a href="https://policies.google.com/privacy" target="_blank">Google / YouTube privacy policy</a></li>
+  </ul>
+
+  <h2>4. How to manage cookies</h2>
+  <p>You can change your choice at any time with the Cookie preferences link at the bottom of every page. If you withdraw your analytics or advertising consent, the corresponding cookies of this site are deleted and the page reloads.</p>
+  <p>You can also set your browser to block or delete cookies. Please note that this may affect how some parts of the site work.</p>
+  <ul>
+    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
+    <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">Mozilla Firefox</a></li>
+    <li><a href="https://support.apple.com/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
+    <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank">Microsoft Edge</a></li>
+  </ul>
+
+  <h2>5. Consent</h2>
+  <p>Necessary cookies do not require your consent. For analytics and advertising cookies we ask for your consent in the cookie notice, and you can accept one category and reject the other. For more on how we handle your data, see the <a href="privacy-en.html">privacy policy</a>.</p>
+
+  <h2>6. More information</h2>
+  <p>For any question about the use of cookies, you can contact us at <a href="mailto:alexandradahdal@gmail.com">alexandradahdal@gmail.com</a>.</p>
+</main>
+
+<footer>
+  <span class="f-logo">Xana Dahdal</span>
+  <span class="f-copy">Barcelona · Yoga · 2026</span>
+  <div class="f-links">
+    <a href="aviso-legal-en.html">Legal Notice</a>
+    <a href="privacy-en.html">Privacy</a>
+    <a href="cookies-en.html">Cookies</a>
+  </div>
+</footer>
+
+
+<script>
+(function () {
+  function initXanaMenu() {
+    var buttons = document.querySelectorAll('.xd-hamburger');
+    var menu = document.getElementById('xd-mobile-menu');
+    if (!menu || !buttons.length) return;
+
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('is-open');
+        button.classList.toggle('is-open', isOpen);
+        button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+    });
+
+    menu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        menu.classList.remove('is-open');
+        buttons.forEach(function(button) {
+          button.classList.remove('is-open');
+          button.setAttribute('aria-expanded', 'false');
+        });
+        menu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initXanaMenu);
+  } else {
+    initXanaMenu();
+  }
+})();
+</script>
+
 </body>
 </html>
