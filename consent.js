@@ -91,7 +91,16 @@
       ad_personalization: 'denied'
     });
     window.gtag('js', new Date());
-    window.gtag('config', GA_ID);
+    /* Depuracion solo para una sesion de prueba: abrir cualquier pagina con ?xd_debug=1
+       (para desactivarla, ?xd_debug=0). Los visitantes normales no tienen ese parametro. */
+    var dbg = false;
+    try {
+      var m = /[?&]xd_debug=([01])/.exec(location.search);
+      if (m) { window.sessionStorage.setItem('xd_debug', m[1]); }
+      dbg = window.sessionStorage.getItem('xd_debug') === '1';
+    } catch (err) { dbg = false; }
+    if (dbg) { window.gtag('config', GA_ID, { debug_mode: true }); }
+    else { window.gtag('config', GA_ID); }
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
