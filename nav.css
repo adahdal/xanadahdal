@@ -1,0 +1,159 @@
+/* Xana Dahdal: menú jerárquico (desktop + móvil). Se carga después del CSS inline de cada página. */
+
+/* ---------- Desplegables: indicador (chevron) ---------- */
+.xd-nav .xd-sub-toggle,
+.xd-mobile-menu .xd-sub-toggle {
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  color: var(--muted, #6b6560) !important;
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+}
+.xd-sub-toggle::after {
+  content: "" !important;
+  width: 6px; height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .2s ease;
+  flex: 0 0 auto;
+}
+.xd-sub-toggle[aria-expanded="true"]::after { transform: translateY(1px) rotate(-135deg); }
+.xd-nav .xd-sub-toggle:hover,
+.xd-nav .xd-sub-toggle[aria-expanded="true"],
+.xd-mobile-menu .xd-sub-toggle[aria-expanded="true"] { color: var(--gold, #b8945a) !important; }
+
+.xd-nav .xd-sub-toggle:focus-visible,
+.xd-nav a:focus-visible,
+.xd-mobile-menu .xd-sub-toggle:focus-visible,
+.xd-mobile-menu a:focus-visible,
+.xd-hamburger:focus-visible {
+  outline: 2px solid var(--gold, #b8945a) !important;
+  outline-offset: 3px !important;
+}
+
+/* ---------- Móvil / tablet: acordeón ---------- */
+.xd-mobile-menu-inner .xd-mitem { border-bottom: 1px solid rgba(184,148,90,0.18); }
+.xd-mobile-menu-inner .xd-mitem > a { border-bottom: 0 !important; }
+.xd-mobile-menu .xd-sub-toggle {
+  width: 100% !important;
+  justify-content: space-between !important;
+  padding: 18px 0 !important;
+  font-size: 13px !important;
+  letter-spacing: 3.2px !important;
+  line-height: 1.6 !important;
+  text-align: left !important;
+  min-height: 44px;
+}
+.xd-mobile-menu .xd-sub-toggle::after { width: 8px; height: 8px; }
+.xd-msub { display: none; list-style: none; margin: 0; padding: 0 0 12px 16px; border-left: 1px solid rgba(184,148,90,0.45); margin-left: 2px; margin-bottom: 14px; }
+.xd-sub-toggle[aria-expanded="true"] + .xd-msub { display: block; }
+.xd-mobile-menu-inner .xd-msub a {
+  padding: 13px 0 !important;
+  border-bottom: 0 !important;
+  font-size: 12px !important;
+  letter-spacing: 1.6px !important;
+  text-transform: none !important;
+  line-height: 1.5 !important;
+  min-height: 44px;
+  display: flex !important;
+  align-items: center !important;
+}
+.xd-mobile-menu-inner a[aria-current="page"] { color: var(--gold, #b8945a) !important; }
+
+/* Botón principal de reserva (móvil) */
+.xd-mobile-menu-inner a.xd-book {
+  display: block !important;
+  text-align: center !important;
+  background: var(--gold, #b8945a) !important;
+  color: #fff !important;
+  border: 0 !important;
+  padding: 17px 20px !important;
+  margin: 0 0 10px !important;
+  font-size: 12px !important;
+  letter-spacing: 3px !important;
+  font-weight: 700 !important;
+}
+.xd-mobile-menu-inner a.xd-book:hover { background: var(--gold2, #d4aa72) !important; color: #fff !important; }
+
+/* ---------- Desktop: barra horizontal con desplegables ---------- */
+@media (min-width: 1320px) {
+  .xd-nav { gap: 14px !important; padding-left: 28px !important; padding-right: 28px !important; }
+  .xd-nav .xd-nav-actions { gap: 14px !important; }
+  .xd-nav .nav-logo, .xd-nav .nav-logo img { width: 235px !important; min-width: 0 !important; max-width: 235px !important; }
+  .xd-nav .xd-hamburger { display: none !important; }
+  .xd-mobile-menu { display: none !important; }
+  .xd-nav .xd-nav-links { display: block !important; flex: 1 1 auto; }
+  .xd-menu { display: flex; align-items: center; justify-content: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+  .xd-menu > li { position: relative; }
+  .xd-menu > li > a,
+  .xd-menu > li > .xd-sub-toggle {
+    font-size: 10px !important;
+    letter-spacing: 1.6px !important;
+    padding: 12px 8px !important;
+    line-height: 1.6 !important;
+    display: inline-flex !important;
+    white-space: nowrap;
+  }
+  .xd-nav .xd-nav-links .xd-menu > li > a[aria-current="page"] { color: var(--gold, #b8945a) !important; }
+  .xd-sub {
+    display: none;
+    position: absolute; top: 100%; left: 50%;
+    transform: translateX(-50%);
+    min-width: 270px; margin: 0; padding: 10px 0; list-style: none;
+    background: rgba(250,248,244,0.99);
+    border: 1px solid rgba(184,148,90,0.28);
+    border-top: 2px solid var(--gold, #b8945a);
+    box-shadow: 0 14px 34px rgba(30,28,24,0.10);
+    z-index: 10000;
+  }
+  .xd-sub-toggle[aria-expanded="true"] + .xd-sub { display: block; }
+  .xd-nav .xd-sub a {
+    display: block !important;
+    padding: 11px 22px !important;
+    font-size: 11.5px !important;
+    letter-spacing: 1.2px !important;
+    text-transform: none !important;
+    white-space: nowrap;
+    color: var(--dark, #1e1c18) !important;
+  }
+  .xd-nav .xd-sub a:hover,
+  .xd-nav .xd-sub a:focus-visible { color: var(--gold, #b8945a) !important; background: rgba(184,148,90,0.08); }
+  .xd-nav .xd-cta {
+    display: inline-block !important;
+    padding: 13px 16px !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2.2px !important;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background .2s ease;
+  }
+  .xd-nav .xd-cta:hover { background: var(--gold2, #d4aa72) !important; color: #fff !important; }
+}
+
+@media (min-width: 1500px) {
+  .xd-menu > li > a, .xd-menu > li > .xd-sub-toggle { letter-spacing: 1.9px !important; padding: 12px 11px !important; }
+  .xd-nav .nav-logo, .xd-nav .nav-logo img { width: 255px !important; max-width: 255px !important; }
+  .xd-nav .xd-cta { padding: 13px 20px !important; }
+}
+
+/* Entre 769 y 1319 px se usa hamburguesa; el botón de reserva solo en el menú. */
+@media (max-width: 1319px) {
+  .xd-nav .xd-nav-links { display: none !important; }
+}
+
+/* Anclas con barra fija */
+#online { scroll-margin-top: 130px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .xd-sub-toggle::after { transition: none; }
+}
