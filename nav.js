@@ -83,6 +83,33 @@
     a.addEventListener('click', function () { closeAll(null, document.getElementById('xd-mobile-menu')); });
   });
 
+
+  /* Menú móvil: estado global (botones flotantes, scroll, etiqueta accesible) */
+  (function () {
+    var menu = document.getElementById('xd-mobile-menu');
+    var burger = document.querySelector('.xd-hamburger');
+    if (!menu || !burger) return;
+    var root = document.documentElement;
+    var en = (root.lang || '').toLowerCase().indexOf('en') === 0;
+    document.querySelectorAll('a[href^="https://wa.me/"], a[href^="mailto:"]').forEach(function (a) {
+      var p = a.parentNode;
+      if (p && p !== document.body && /position\s*:\s*fixed/.test(p.getAttribute('style') || '')) p.classList.add('xd-float');
+    });
+    function sync() {
+      var open = menu.classList.contains('is-open');
+      root.classList.toggle('xd-menu-open', open);
+      burger.setAttribute('aria-label', open ? (en ? 'Close menu' : 'Cerrar menú') : (en ? 'Open menu' : 'Abrir menú'));
+      if (open) menu.removeAttribute('inert'); else menu.setAttribute('inert', '');
+      if (!open) document.body.style.overflow = '';
+    }
+    new MutationObserver(sync).observe(menu, { attributes: true, attributeFilter: ['class'] });
+    sync();
+    /* Si se pasa a escritorio con el menú abierto, se cierra y se restaura el scroll */
+    desktop.addEventListener ? desktop.addEventListener('change', function (e) {
+      if (e.matches && menu.classList.contains('is-open')) burger.click();
+    }) : desktop.addListener(function (e) { if (e.matches && menu.classList.contains('is-open')) burger.click(); });
+  })();
+
   /* Página actual */
   var here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.xd-nav-links a, #xd-mobile-menu a').forEach(function (a) {
