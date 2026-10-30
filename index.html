@@ -11,6 +11,9 @@
   <meta property="og:title" content="Xana Dahdal · Yoga Barcelona" />
   <meta property="og:description" content="Xana Dahdal, profesora de yoga en Barcelona. Clases presenciales y online, formación de profesores de yoga de 200 horas, formación de yoga prenatal, retiros, eventos y yoga para empresas." />
   <meta property="og:url" content="https://xanadahdal.com/" />
+  <meta property="og:image" content="https://xanadahdal.com/og-xana-dahdal-yoga-barcelona.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="es_ES" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <style>
@@ -33,6 +36,7 @@
     /* HERO */
     .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 60px; }
     .hero-img { position: relative; overflow: hidden; }
+    .hero-img picture { display: contents; }
     .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, transparent 45%, var(--sand) 100%); }
     .hero-text { display: flex; flex-direction: column; justify-content: center; padding: 80px 60px 80px 48px; }
@@ -624,6 +628,48 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   ]
 }
   </script>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "@id": "https://xanadahdal.com/#negocio",
+ "name": "Yoga Xana Dahdal",
+ "url": "https://xanadahdal.com/",
+ "description": "Instructora de yoga en Barcelona. Clases de yoga presenciales y online, formación de profesores de yoga, yoga prenatal y yoga para empresas.",
+ "telephone": "+34697774602",
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Barcelona",
+  "addressCountry": "ES"
+ },
+ "areaServed": {
+  "@type": "City",
+  "name": "Barcelona"
+ },
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "09:00",
+   "closes": "20:00"
+  }
+ ],
+ "founder": {
+  "@type": "Person",
+  "name": "Xana Dahdal",
+  "url": "https://xanadahdal.com/"
+ },
+ "sameAs": [
+  "https://instagram.com/xanadahdal"
+ ]
+}
+  </script>
 <link rel="stylesheet" href="nav.css?v=1">
 </head>
 <body>
@@ -632,7 +678,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Ir al contenido principal</a>
 <nav class="xd-nav">
   <a href="index.html" class="nav-logo" aria-label="Xana Dahdal">
-    <img src="logo-xana-dahdal.svg" alt="Xana Dahdal">
+    <img src="logo-xana-dahdal.svg" alt="Xana Dahdal" width="580" height="220">
   </a>
 
   <div class="xd-nav-links">
@@ -667,7 +713,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 <!-- HERO -->
 <section id="main-content" class="hero">
   <div class="hero-img">
-    <img src="IMG_6685.jpeg" alt="Xana Dahdal yoga en la naturaleza"/>
+    <picture><source type="image/webp" srcset="IMG_6685-640.webp 640w, IMG_6685-960.webp 960w, IMG_6685-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw"><img src="IMG_6685.jpeg" width="2000" height="1333" alt="Xana Dahdal yoga en la naturaleza" fetchpriority="high" decoding="async"></picture>
   </div>
   <div class="hero-text">
     <span class="eyebrow">Yoga · Barcelona</span>
@@ -1094,6 +1140,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
       <a href="https://instagram.com/xanadahdal" target="_blank" class="btn ghost">Instagram</a>
       <a href="https://youtube.com/@xanadahdal6324?si=0xUxZ1v3pgp98xXa" target="_blank" class="btn ghost">YouTube</a>
     </div>
+    <p class="contact-sub" style="margin:28px auto 0;max-width:none;font-size:14px;color:rgba(255,255,255,0.72);">Teléfono: <a href="tel:+34697774602" style="color:inherit;text-underline-offset:3px;">+34 697 77 46 02</a> · Atención de lunes a viernes, de 9:00 a 20:00</p>
   </div>
 </section>
 

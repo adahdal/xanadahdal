@@ -11,6 +11,9 @@
   <meta property="og:title" content="Xana Dahdal · Yoga Barcelona" />
   <meta property="og:description" content="Xana Dahdal, yoga teacher in Barcelona. In-person and online classes, 200-hour yoga teacher training, prenatal yoga training, retreats, events and corporate yoga." />
   <meta property="og:url" content="https://xanadahdal.com/index-en.html" />
+  <meta property="og:image" content="https://xanadahdal.com/og-xana-dahdal-yoga-barcelona.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <style>
@@ -33,6 +36,7 @@
     /* HERO */
     .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 60px; }
     .hero-img { position: relative; overflow: hidden; }
+    .hero-img picture { display: contents; }
     .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, transparent 45%, var(--sand) 100%); }
     .hero-text { display: flex; flex-direction: column; justify-content: center; padding: 80px 60px 80px 48px; }
@@ -624,6 +628,48 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   ]
 }
   </script>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "@id": "https://xanadahdal.com/#negocio",
+ "name": "Yoga Xana Dahdal",
+ "url": "https://xanadahdal.com/",
+ "description": "Yoga instructor in Barcelona. In-person and online yoga classes, yoga teacher training, prenatal yoga and corporate yoga.",
+ "telephone": "+34697774602",
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Barcelona",
+  "addressCountry": "ES"
+ },
+ "areaServed": {
+  "@type": "City",
+  "name": "Barcelona"
+ },
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "09:00",
+   "closes": "20:00"
+  }
+ ],
+ "founder": {
+  "@type": "Person",
+  "name": "Xana Dahdal",
+  "url": "https://xanadahdal.com/"
+ },
+ "sameAs": [
+  "https://instagram.com/xanadahdal"
+ ]
+}
+  </script>
 <link rel="stylesheet" href="nav.css?v=1">
 </head>
 <body>
@@ -632,7 +678,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
 <nav class="xd-nav">
   <a href="index-en.html" class="nav-logo" aria-label="Xana Dahdal">
-    <img src="logo-xana-dahdal.svg" alt="Xana Dahdal">
+    <img src="logo-xana-dahdal.svg" alt="Xana Dahdal" width="580" height="220">
   </a>
 
   <div class="xd-nav-links">
@@ -667,7 +713,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 <!-- HERO -->
 <section id="main-content" class="hero">
   <div class="hero-img">
-    <img src="IMG_6685.jpeg" alt="Xana Dahdal yoga en la naturaleza"/>
+    <picture><source type="image/webp" srcset="IMG_6685-640.webp 640w, IMG_6685-960.webp 960w, IMG_6685-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw"><img src="IMG_6685.jpeg" width="2000" height="1333" alt="Xana Dahdal practising yoga in nature" fetchpriority="high" decoding="async"></picture>
   </div>
   <div class="hero-text">
     <span class="eyebrow">Yoga · Barcelona</span>
@@ -826,8 +872,8 @@ a[href*="wa.me"][style*="border-radius:50%"] {
         </ul>
         <div class="f-price-box">
           <span class="f-eb-tag">Early Bird</span>
-          <span class="f-price">1.500€</span>
-          <span class="f-price-old">1.850€</span>
+          <span class="f-price">€1,500</span>
+          <span class="f-price-old">€1,850</span>
         </div>
         <p class="f-note">One-off payment · Until 30 November or the first 6 places. Small group, maximum 12-13 participants.</p>
         <a href="ytt-en.html" class="btn full">See full training</a>
@@ -1008,7 +1054,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
     <img src="IMG_7784.jpeg" alt="Yoga apertura piernas" loading="lazy" decoding="async"/>
     <img src="IMG_7794.jpeg" alt="Yoga en el puente" loading="lazy" decoding="async"/>
     <img src="IMG_3736.jpeg" alt="Retiro invertidas jardín" loading="lazy" decoding="async"/>
-    <img src="IMG_3773.jpeg" alt="Retiro meditación atardecer" loading="lazy" decoding="async"/>
+    <img src="IMG_3773.jpeg" alt="Meditation retreat at sunset" loading="lazy" decoding="async"/>
     <img src="img_0784.jpeg" alt="Retiro círculo nocturno" loading="lazy" decoding="async"/>
     <img src="IMG_3412.jpeg" alt="Retiro buganvilla" loading="lazy" decoding="async"/>
     <img src="IMG_3553.jpeg" alt="Retiro invertidas bosque" loading="lazy" decoding="async"/>
@@ -1092,6 +1138,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
       <a href="https://instagram.com/xanadahdal" target="_blank" class="btn ghost">Instagram</a>
       <a href="https://youtube.com/@xanadahdal6324?si=0xUxZ1v3pgp98xXa" target="_blank" class="btn ghost">YouTube</a>
     </div>
+    <p class="contact-sub" style="margin:28px auto 0;max-width:none;font-size:14px;color:rgba(255,255,255,0.72);">Phone: <a href="tel:+34697774602" style="color:inherit;text-underline-offset:3px;">+34 697 77 46 02</a> · Open Monday to Friday, 9:00 to 20:00</p>
   </div>
 </section>
 
