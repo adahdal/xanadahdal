@@ -6,7 +6,7 @@
   <title>OMJOY Dance Gathering | Sober party in Barcelona</title>
   <meta name="description" content="A sober dance party in Barcelona: music, free dancing and connection, with no alcohol or drugs. Upcoming gatherings, private parties and team events." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="theme-color" content="#1a1033" />
+  <meta name="theme-color" content="#30291F" />
   <link rel="canonical" href="https://xanadahdal.com/omjoy-en.html" />
   <link rel="alternate" hreflang="es" href="https://xanadahdal.com/omjoy.html" />
   <link rel="alternate" hreflang="en" href="https://xanadahdal.com/omjoy-en.html" />
@@ -26,150 +26,11 @@
   <meta name="twitter:title" content="OMJOY Dance Gathering | Sober party in Barcelona" />
   <meta name="twitter:description" content="A new way to celebrate in Barcelona: music, dancing and people, with no alcohol or drugs." />
   <meta name="twitter:image" content="https://xanadahdal.com/omjoy-dance-gathering-barcelona-en.jpg" />
-  <link rel="preload" href="bricolage-grotesque-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="omjoy.css?v=1" />
   <style>
-@font-face{font-family:'Bricolage Grotesque';src:url('bricolage-grotesque-latin-wght.woff2') format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sand:#f2ebe0;--dark:#1e1c18;--muted:#6b6560;--gold:#b8945a;--gold2:#d4aa72;
---ink:#1a1033;--ink2:#2b1a57;--cream:#fff4e3;--coral:#ff5b3a;--sun:#ffc233;--teal:#19c3b1;--lilac:#b9a2ff}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font-family:'Nunito Sans',sans-serif;font-weight:400;font-size:17px;line-height:1.7;overflow-x:hidden}
-.om-disp{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif}
-section[id]{scroll-margin-top:130px}
-.om-wrap{max-width:1100px;margin:0 auto}
-a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.om-dark a:focus-visible,.om-dark summary:focus-visible,.om-coral a:focus-visible{outline-color:var(--sun)}
-.om-coral a:focus-visible{outline-color:var(--ink)}
-
-/* HERO */
-.om-hero{position:relative;overflow:hidden;background:var(--ink);color:var(--cream);padding:56px 24px 0;isolation:isolate}
-.om-hero::before,.om-hero::after{content:"";position:absolute;border-radius:50%;z-index:-1;pointer-events:none}
-.om-hero::before{width:78vmax;height:78vmax;right:-34vmax;top:-38vmax;background:radial-gradient(circle,rgba(255,91,58,.75) 0,rgba(255,91,58,0) 62%)}
-.om-hero::after{width:70vmax;height:70vmax;left:-34vmax;bottom:-30vmax;background:radial-gradient(circle,rgba(25,195,177,.55) 0,rgba(25,195,177,0) 62%)}
-.om-tag{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--sun);margin-bottom:22px}
-.om-h1{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:800;line-height:.84;letter-spacing:-.045em;margin:0 0 30px}
-.om-h1 .om-word{display:block;font-size:clamp(4.2rem,23vw,14rem)}
-.om-h1 .om-word span{color:var(--sun)}
-.om-h1 .om-sub{display:block;font-family:'Nunito Sans',sans-serif;font-weight:700;font-size:clamp(.78rem,3.2vw,1.25rem);letter-spacing:.42em;text-transform:uppercase;color:var(--teal);margin-top:20px;line-height:1.3}
-.om-motto{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:700;font-size:clamp(1.7rem,6vw,3.2rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:18px}
-.om-motto span{display:inline-block;margin-right:.35em}
-.om-motto .a{color:var(--sun)}.om-motto .b{color:var(--teal)}.om-motto .c{color:#ff8a6e}
-.om-lead{max-width:600px;font-size:clamp(1rem,2.4vw,1.2rem);color:rgba(255,244,227,.88);margin-bottom:32px}
-.om-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:56px}
-.om-btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:50px;padding:13px 26px;border-radius:999px;font-weight:700;font-size:15px;line-height:1.3;text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,transform .2s}
-.om-btn-sun{background:var(--sun);color:var(--ink)}
-.om-btn-sun:hover{background:var(--coral)}
-.om-btn-line{border-color:var(--cream);color:var(--cream)}
-.om-btn-line:hover{background:var(--cream);color:var(--ink)}
-.om-btn-ink{background:var(--ink);color:var(--cream)}
-.om-btn-ink:hover{background:var(--ink2)}
-.om-btn-inkline{border-color:var(--ink);color:var(--ink)}
-.om-btn-inkline:hover{background:var(--ink);color:var(--cream)}
-.om-eq{display:flex;align-items:flex-end;gap:5px;height:88px;margin:0 -24px;padding:0 24px}
-.om-eq i{flex:1;height:100%;border-radius:6px 6px 0 0;transform-origin:bottom;transform:scaleY(.5);animation:om-eq 1.15s ease-in-out infinite alternate;animation-delay:calc(var(--i)*-.17s)}
-.om-eq i:nth-child(4n+1){background:var(--sun)}.om-eq i:nth-child(4n+2){background:var(--coral)}.om-eq i:nth-child(4n+3){background:var(--teal)}.om-eq i:nth-child(4n){background:var(--lilac)}
-@keyframes om-eq{from{transform:scaleY(.18)}to{transform:scaleY(1)}}
-
-/* MARQUEE */
-.om-band{background:var(--sun);color:var(--ink);overflow:hidden;white-space:nowrap;border-block:2px solid var(--ink)}
-.om-band-track{display:inline-flex;animation:om-marq 38s linear infinite}
-.om-band span{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(1rem,3vw,1.4rem);padding:14px 22px}
-.om-band span::after{content:"\25CF";margin-left:44px;color:var(--coral);font-size:.6em;vertical-align:middle}
-@keyframes om-marq{to{transform:translateX(-50%)}}
-
-/* SECCIONES */
-.om-sec{padding:76px 24px}
-.om-k{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
-.om-dark .om-k{color:var(--sun)}
-.om-h2{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:800;font-size:clamp(2rem,6.2vw,3.7rem);line-height:1.02;letter-spacing:-.035em;margin-bottom:28px;max-width:16em}
-.om-h2 em{font-style:normal;color:var(--coral)}
-.om-dark .om-h2 em{color:var(--sun)}
-.om-dark{background:var(--ink);color:var(--cream)}
-.om-p{max-width:650px;margin-bottom:18px}
-.om-grid2{display:grid;gap:36px}
-.om-not{background:var(--ink);color:var(--cream);border-radius:28px;padding:30px 28px;align-self:start}
-.om-not h3{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:700;font-size:1.35rem;margin-bottom:14px;color:var(--sun)}
-.om-not ul{list-style:none}
-.om-not li{padding:12px 0;border-top:1px solid rgba(255,244,227,.22);font-weight:600}
-.om-not li::before{content:"\2715";color:var(--coral);margin-right:12px;font-weight:800}
-
-/* EXPERIENCIA */
-.om-cards{display:grid;gap:18px;margin-top:8px}
-.om-card{border-radius:28px;padding:28px 26px 30px;color:var(--ink)}
-.om-card .n{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:800;font-size:3.2rem;line-height:1;letter-spacing:-.04em;margin-bottom:34px;opacity:.9}
-.om-card h3{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:800;font-size:1.5rem;line-height:1.12;letter-spacing:-.02em;margin-bottom:10px}
-.om-card p{font-size:16px;line-height:1.6}
-.om-c1{background:var(--coral)}.om-c2{background:var(--sun)}.om-c3{background:var(--teal)}.om-c4{background:var(--lilac)}
-
-/* EVENTOS */
-.om-soon{border:2px dashed rgba(255,244,227,.4);border-radius:28px;padding:32px 26px;max-width:760px}
-.om-soon h3{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:800;font-size:clamp(1.5rem,4.5vw,2.1rem);line-height:1.1;margin-bottom:12px;color:var(--sun)}
-.om-soon p{margin-bottom:22px;max-width:560px;color:rgba(255,244,227,.9)}
-.om-event{display:grid;gap:20px;background:var(--cream);color:var(--ink);border-radius:28px;padding:24px;margin-bottom:18px}
-.om-event img{width:100%;height:auto;border-radius:18px;display:block}
-.om-event .om-date{display:inline-block;background:var(--sun);border-radius:14px;padding:8px 16px;font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:800;margin-bottom:12px}
-.om-event h3{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:800;font-size:1.6rem;line-height:1.1;margin-bottom:10px}
-.om-event dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:14px 0 18px;font-size:15px}
-.om-event dt{font-weight:700}
-
-/* PRIVADOS */
-.om-list{list-style:none;display:grid;gap:0;margin:8px 0 34px;max-width:760px}
-.om-list li{padding:16px 0 16px 38px;border-top:2px solid var(--ink);position:relative;font-weight:600;font-size:18px}
-.om-list li:last-child{border-bottom:2px solid var(--ink)}
-.om-list li::before{content:"";position:absolute;left:4px;top:23px;width:16px;height:16px;border-radius:50%;background:var(--coral)}
-.om-list li:nth-child(3n+2)::before{background:var(--teal)}.om-list li:nth-child(3n)::before{background:var(--sun);box-shadow:0 0 0 2px var(--ink)}
-.om-link{color:var(--ink);font-weight:700;text-underline-offset:4px}
-.om-link:hover{color:var(--coral)}
-
-/* PROYECTO */
-.om-about{background:var(--sand)}
-.om-about .om-big{font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:700;font-size:clamp(1.5rem,4.4vw,2.5rem);line-height:1.15;letter-spacing:-.025em}
-.om-about .om-big em{font-style:normal;color:var(--coral)}
-
-/* FAQ */
-.om-faq details{border-top:2px solid var(--cream)}
-.om-faq details:last-child{border-bottom:2px solid var(--cream)}
-.om-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-family:'Bricolage Grotesque','Nunito Sans',sans-serif;font-weight:700;font-size:clamp(1.1rem,3.2vw,1.5rem);line-height:1.25;min-height:56px}
-.om-faq summary::-webkit-details-marker{display:none}
-.om-faq summary::after{content:"+";flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:var(--sun);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;line-height:1;transition:transform .2s}
-.om-faq details[open] summary::after{transform:rotate(45deg);background:var(--coral)}
-.om-faq .ans{padding:0 0 24px;max-width:680px;color:rgba(255,244,227,.9)}
-
-/* CTA FINAL */
-.om-coral{background:var(--coral);color:var(--ink)}
-.om-coral .om-h2{max-width:14em}
-.om-coral .om-k{color:var(--ink)}
-.om-coral .om-h2 em{color:var(--cream)}
-.om-coral .om-p{font-weight:600}
-.om-small{font-size:14px;margin-top:22px;max-width:560px}
-
-/* FOOTER */
-footer{background:#111;padding:32px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.f-logo{font-family:'Playfair Display',serif;font-style:italic;color:rgba(255,255,255,.55);font-size:1rem}
-.f-copy{font-size:11px;color:rgba(255,255,255,.5);letter-spacing:1px}
-.f-links{display:flex;gap:20px;flex-wrap:wrap}
-.f-links a{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none}
-.f-links a:hover{color:var(--gold)}
-
-@media(min-width:700px){
- .om-cards{grid-template-columns:repeat(2,1fr)}
- .om-event{grid-template-columns:minmax(0,260px) 1fr;padding:28px;align-items:start}
-}
-@media(min-width:900px){
- .om-hero{padding:80px 56px 0}
- .om-eq{margin:0 -56px;padding:0 56px}
- .om-sec{padding:104px 56px}
- .om-grid2{grid-template-columns:1.25fr 1fr;gap:64px}
- footer{padding:32px 56px}
-}
-@media(min-width:1100px){.om-cards{grid-template-columns:repeat(4,1fr)}}
-@media(prefers-reduced-motion:reduce){
- html{scroll-behavior:auto}
- .om-band-track,.om-eq i{animation:none}
- .om-eq i{transform:scaleY(.6)}
-}
-
 /* === Xana unified logo + navigation fix === */
 .xd-nav {
   position: sticky !important;
@@ -669,6 +530,31 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 </head>
 <body>
 <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<symbol id="om-tri" viewBox="-104 -104 208 208"><g fill="none" stroke-linejoin="miter" vector-effect="non-scaling-stroke"><path d="M-96.34 -26.79H96.34L0 100Z M-59.51 -71.9H59.51L0 10.66Z M-69.02 -46.88H69.02L0 70.04Z M-33.65 -15.69H33.65L0 47.92Z M-25.39 -5.2H25.39L0 24.25Z" stroke="var(--y-b,#B28B4E)" vector-effect="non-scaling-stroke"/><path d="M-97.02 24.25H97.02L0 -100Z M-51.28 70.04H51.28L0 -26.79Z M-71.74 47.92H71.74L0 -71.9Z M-35.05 10.66H35.05L0 -46.88Z" stroke="var(--y-a,#D4BE94)" vector-effect="non-scaling-stroke"/><circle r="100" stroke="var(--y-c,#55638F)" vector-effect="non-scaling-stroke"/></g><circle r="2.4" fill="var(--y-p,#8B759F)"/></symbol>
+<symbol id="om-yantra" viewBox="-200 -200 400 400"><g fill="none" stroke-linejoin="miter" stroke-width="1">
+<path d="M-180 -180H-34V-196H34V-180H180V-34H196V34H180V180H34V196H-34V180H-180V34H-196V-34H-180Z" stroke="var(--c1,#A65A4C)" vector-effect="non-scaling-stroke"/>
+<path d="M-174 -174H-28V-190H28V-174H174V-28H190V28H174V174H28V190H-28V174H-174V28H-190V-28H-174Z" stroke="var(--c2,#B9703F)" vector-effect="non-scaling-stroke"/>
+<path d="M-168 -168H-22V-184H22V-168H168V-22H184V22H168V168H22V184H-22V168H-168V22H-184V-22H-168Z" stroke="var(--c3,#BFA24B)" vector-effect="non-scaling-stroke"/>
+<circle r="150" stroke="var(--c6,#55638F)" vector-effect="non-scaling-stroke"/>
+<path d="M0 -125C2.72 -136.19 23.36 -144.94 29.26 -147.12C33.88 -142.85 49.6 -126.87 47.84 -115.48M47.84 -115.48C54.63 -124.78 77.05 -124.97 83.34 -124.72C85.97 -119.01 94.38 -98.23 88.39 -88.39M88.39 -88.39C98.23 -94.38 119.01 -85.97 124.72 -83.34C124.97 -77.05 124.78 -54.63 115.48 -47.84M115.48 -47.84C126.87 -49.6 142.85 -33.88 147.12 -29.26C144.94 -23.36 136.19 -2.72 125 0M125 0C136.19 2.72 144.94 23.36 147.12 29.26C142.85 33.88 126.87 49.6 115.48 47.84M115.48 47.84C124.78 54.63 124.97 77.05 124.72 83.34C119.01 85.97 98.23 94.38 88.39 88.39M88.39 88.39C94.38 98.23 85.97 119.01 83.34 124.72C77.05 124.97 54.63 124.78 47.84 115.48M47.84 115.48C49.6 126.87 33.88 142.85 29.26 147.12C23.36 144.94 2.72 136.19 0 125M0 125C-2.72 136.19 -23.36 144.94 -29.26 147.12C-33.88 142.85 -49.6 126.87 -47.84 115.48M-47.84 115.48C-54.63 124.78 -77.05 124.97 -83.34 124.72C-85.97 119.01 -94.38 98.23 -88.39 88.39M-88.39 88.39C-98.23 94.38 -119.01 85.97 -124.72 83.34C-124.97 77.05 -124.78 54.63 -115.48 47.84M-115.48 47.84C-126.87 49.6 -142.85 33.88 -147.12 29.26C-144.94 23.36 -136.19 2.72 -125 -0M-125 -0C-136.19 -2.72 -144.94 -23.36 -147.12 -29.26C-142.85 -33.88 -126.87 -49.6 -115.48 -47.84M-115.48 -47.84C-124.78 -54.63 -124.97 -77.05 -124.72 -83.34C-119.01 -85.97 -98.23 -94.38 -88.39 -88.39M-88.39 -88.39C-94.38 -98.23 -85.97 -119.01 -83.34 -124.72C-77.05 -124.97 -54.63 -124.78 -47.84 -115.48M-47.84 -115.48C-49.6 -126.87 -33.88 -142.85 -29.26 -147.12C-23.36 -144.94 -2.72 -136.19 -0 -125" stroke="var(--c4,#6F8F6B)" vector-effect="non-scaling-stroke"/>
+<circle r="125" stroke="var(--c6,#55638F)" vector-effect="non-scaling-stroke"/>
+<path d="M-38.27 -92.39C-37.5 -106.09 -8.42 -121.09 0 -125C8.42 -121.09 37.5 -106.09 38.27 -92.39M38.27 -92.39C48.49 -101.53 79.67 -91.57 88.39 -88.39C91.57 -79.67 101.53 -48.49 92.39 -38.27M92.39 -38.27C106.09 -37.5 121.09 -8.42 125 0C121.09 8.42 106.09 37.5 92.39 38.27M92.39 38.27C101.53 48.49 91.57 79.67 88.39 88.39C79.67 91.57 48.49 101.53 38.27 92.39M38.27 92.39C37.5 106.09 8.42 121.09 0 125C-8.42 121.09 -37.5 106.09 -38.27 92.39M-38.27 92.39C-48.49 101.53 -79.67 91.57 -88.39 88.39C-91.57 79.67 -101.53 48.49 -92.39 38.27M-92.39 38.27C-106.09 37.5 -121.09 8.42 -125 0C-121.09 -8.42 -106.09 -37.5 -92.39 -38.27M-92.39 -38.27C-101.53 -48.49 -91.57 -79.67 -88.39 -88.39C-79.67 -91.57 -48.49 -101.53 -38.27 -92.39" stroke="var(--c5,#5F8A99)" vector-effect="non-scaling-stroke"/>
+<circle r="100" stroke="var(--c6,#55638F)" vector-effect="non-scaling-stroke"/>
+<path d="M-96.34 -26.79H96.34L0 100Z M-59.51 -71.9H59.51L0 10.66Z M-69.02 -46.88H69.02L0 70.04Z M-33.65 -15.69H33.65L0 47.92Z M-25.39 -5.2H25.39L0 24.25Z" stroke="var(--y-b,#B28B4E)" vector-effect="non-scaling-stroke"/>
+<path d="M-97.02 24.25H97.02L0 -100Z M-51.28 70.04H51.28L0 -26.79Z M-71.74 47.92H71.74L0 -71.9Z M-35.05 10.66H35.05L0 -46.88Z" stroke="var(--y-a,#D4BE94)" vector-effect="non-scaling-stroke"/>
+</g><circle r="2.6" fill="var(--c7,#8B759F)"/></symbol>
+<symbol id="om-yantra-core" viewBox="-156 -156 312 312"><g fill="none" stroke-linejoin="miter" stroke-width="1">
+<circle r="150" stroke="var(--c6,#55638F)" vector-effect="non-scaling-stroke"/>
+<path d="M0 -125C2.72 -136.19 23.36 -144.94 29.26 -147.12C33.88 -142.85 49.6 -126.87 47.84 -115.48M47.84 -115.48C54.63 -124.78 77.05 -124.97 83.34 -124.72C85.97 -119.01 94.38 -98.23 88.39 -88.39M88.39 -88.39C98.23 -94.38 119.01 -85.97 124.72 -83.34C124.97 -77.05 124.78 -54.63 115.48 -47.84M115.48 -47.84C126.87 -49.6 142.85 -33.88 147.12 -29.26C144.94 -23.36 136.19 -2.72 125 0M125 0C136.19 2.72 144.94 23.36 147.12 29.26C142.85 33.88 126.87 49.6 115.48 47.84M115.48 47.84C124.78 54.63 124.97 77.05 124.72 83.34C119.01 85.97 98.23 94.38 88.39 88.39M88.39 88.39C94.38 98.23 85.97 119.01 83.34 124.72C77.05 124.97 54.63 124.78 47.84 115.48M47.84 115.48C49.6 126.87 33.88 142.85 29.26 147.12C23.36 144.94 2.72 136.19 0 125M0 125C-2.72 136.19 -23.36 144.94 -29.26 147.12C-33.88 142.85 -49.6 126.87 -47.84 115.48M-47.84 115.48C-54.63 124.78 -77.05 124.97 -83.34 124.72C-85.97 119.01 -94.38 98.23 -88.39 88.39M-88.39 88.39C-98.23 94.38 -119.01 85.97 -124.72 83.34C-124.97 77.05 -124.78 54.63 -115.48 47.84M-115.48 47.84C-126.87 49.6 -142.85 33.88 -147.12 29.26C-144.94 23.36 -136.19 2.72 -125 -0M-125 -0C-136.19 -2.72 -144.94 -23.36 -147.12 -29.26C-142.85 -33.88 -126.87 -49.6 -115.48 -47.84M-115.48 -47.84C-124.78 -54.63 -124.97 -77.05 -124.72 -83.34C-119.01 -85.97 -98.23 -94.38 -88.39 -88.39M-88.39 -88.39C-94.38 -98.23 -85.97 -119.01 -83.34 -124.72C-77.05 -124.97 -54.63 -124.78 -47.84 -115.48M-47.84 -115.48C-49.6 -126.87 -33.88 -142.85 -29.26 -147.12C-23.36 -144.94 -2.72 -136.19 -0 -125" stroke="var(--c4,#6F8F6B)" vector-effect="non-scaling-stroke"/>
+<circle r="125" stroke="var(--c6,#55638F)" vector-effect="non-scaling-stroke"/>
+<path d="M-38.27 -92.39C-37.5 -106.09 -8.42 -121.09 0 -125C8.42 -121.09 37.5 -106.09 38.27 -92.39M38.27 -92.39C48.49 -101.53 79.67 -91.57 88.39 -88.39C91.57 -79.67 101.53 -48.49 92.39 -38.27M92.39 -38.27C106.09 -37.5 121.09 -8.42 125 0C121.09 8.42 106.09 37.5 92.39 38.27M92.39 38.27C101.53 48.49 91.57 79.67 88.39 88.39C79.67 91.57 48.49 101.53 38.27 92.39M38.27 92.39C37.5 106.09 8.42 121.09 0 125C-8.42 121.09 -37.5 106.09 -38.27 92.39M-38.27 92.39C-48.49 101.53 -79.67 91.57 -88.39 88.39C-91.57 79.67 -101.53 48.49 -92.39 38.27M-92.39 38.27C-106.09 37.5 -121.09 8.42 -125 0C-121.09 -8.42 -106.09 -37.5 -92.39 -38.27M-92.39 -38.27C-101.53 -48.49 -91.57 -79.67 -88.39 -88.39C-79.67 -91.57 -48.49 -101.53 -38.27 -92.39" stroke="var(--c5,#5F8A99)" vector-effect="non-scaling-stroke"/>
+<circle r="100" stroke="var(--c6,#55638F)" vector-effect="non-scaling-stroke"/>
+<path d="M-96.34 -26.79H96.34L0 100Z M-59.51 -71.9H59.51L0 10.66Z M-69.02 -46.88H69.02L0 70.04Z M-33.65 -15.69H33.65L0 47.92Z M-25.39 -5.2H25.39L0 24.25Z" stroke="var(--y-b,#B28B4E)" vector-effect="non-scaling-stroke"/>
+<path d="M-97.02 24.25H97.02L0 -100Z M-51.28 70.04H51.28L0 -26.79Z M-71.74 47.92H71.74L0 -71.9Z M-35.05 10.66H35.05L0 -46.88Z" stroke="var(--y-a,#D4BE94)" vector-effect="non-scaling-stroke"/>
+</g><circle r="2.6" fill="var(--c7,#8B759F)"/></symbol>
+</defs></svg>
 <nav class="xd-nav">
   <a href="index-en.html" class="nav-logo" aria-label="Xana Dahdal">
     <img src="logo-xana-dahdal.svg" alt="Xana Dahdal" width="580" height="220">
@@ -706,6 +592,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 
 <!-- HERO -->
 <section class="om-hero om-dark" aria-labelledby="om-h1">
+  <svg class="om-yantra" viewBox="0 0 312 312" aria-hidden="true" focusable="false"><use href="#om-yantra-core"/></svg>
   <div class="om-wrap">
     <p class="om-tag">Barcelona · No alcohol, no drugs</p>
     <h1 class="om-h1" id="om-h1"><span class="om-word">OM<span>JOY</span></span><span class="om-sub">Dance Gathering</span></h1>
@@ -732,6 +619,8 @@ a[href*="wa.me"][style*="border-radius:50%"] {
     <aside class="om-not"><h3>What OMJOY is not</h3><ul><li>It is not a yoga class</li><li>It is not a traditional ecstatic dance session</li><li>It is not a conventional party</li></ul></aside>
   </div>
 </section>
+
+<div class="om-div" aria-hidden="true"><svg viewBox="0 0 208 208" focusable="false"><use href="#om-tri"/></svg></div>
 
 <!-- EXPERIENCIA -->
 <section class="om-sec" id="experiencia" aria-labelledby="h-exp" style="padding-top:0">
@@ -789,6 +678,7 @@ Cuando haya datos confirmados, añadir tambien un bloque JSON-LD de tipo Event (
 
 <!-- SOBRE EL PROYECTO -->
 <section class="om-sec om-about" id="proyecto" aria-labelledby="h-proy">
+  <svg class="om-mark" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><use href="#om-yantra"/></svg>
   <div class="om-wrap om-grid2">
     <div>
       <p class="om-k">About the project</p>
@@ -812,6 +702,7 @@ Cuando haya datos confirmados, añadir tambien un bloque JSON-LD de tipo Event (
 
 <!-- CONTACTO -->
 <section class="om-sec om-coral" id="contacto" aria-labelledby="h-cont">
+  <svg class="om-mark" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><use href="#om-yantra"/></svg>
   <div class="om-wrap">
     <p class="om-k">Contact</p>
     <h2 class="om-h2" id="h-cont">Write to me and <em>I will tell you more</em></h2>
