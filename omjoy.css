@@ -219,3 +219,5 @@ main:focus{outline:none}
 /* Numeración decorativa de las tarjetas: tono algo más profundo en 02 y 03 para llegar a 3:1 sobre el marfil */
 .om-c2 .n{color:#947E3E}
 .om-c3 .n{color:#678362}
+/* Menú móvil abierto con el banner de cookies visible: deja espacio para llegar a la última opción */
+html .xd-mobile-menu .xd-mobile-menu-inner{padding-bottom:calc(52px + var(--om-cc-h,0px))!important}
