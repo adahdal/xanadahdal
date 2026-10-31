@@ -333,7 +333,10 @@
     if (a.closest('nav, .xd-nav, .xd-mobile-menu')) { return 'nav'; }
     if (a.closest('footer')) { return 'footer'; }
     if (a.closest('form, .form-wrap, .formulario')) { return 'form'; }
-    if (a.closest('.hero, .hero-texto, .hero-btns')) { return 'hero'; }
+    if (a.closest('.hero, .hero-texto, .hero-btns, .om-hero')) { return 'hero'; }
+    /* OMJOY: separa los contactos de encuentros de los de eventos privados (solo existen en las paginas de OMJOY) */
+    if (a.closest('#proximos-encuentros')) { return 'omjoy_upcoming'; }
+    if (a.closest('#eventos-privados')) { return 'omjoy_private_events'; }
     if (a.closest('.cta-bloque, .cta-strip, .cta-final')) { return 'cta_section'; }
     if (a.closest('#contacto, .contact')) { return 'contact_section'; }
     return 'body';

@@ -52,7 +52,7 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
 
 /* líneas de sonido: delgadas, con siete trazos en los colores minerales */
 .om-eq{display:flex;align-items:flex-end;justify-content:space-between;height:76px;margin:0 -24px;padding:0 24px}
-.om-eq i{flex:0 0 2px;height:100%;background:rgba(212,190,148,.34);transform-origin:bottom;transform:scaleY(.5);animation:om-eq 1.4s ease-in-out infinite alternate;animation-delay:calc(var(--i)*-.19s)}
+.om-eq i{--s:calc(.62 + .3*sin(var(--i)*1.7));flex:0 0 2px;height:100%;background:rgba(212,190,148,.34);transform-origin:bottom;transform:scaleY(var(--s,.5));animation:om-eq 1.4s ease-in-out 3 both;animation-delay:calc(var(--i)*.026s)}
 .om-eq i:nth-child(4n+1){background:var(--c1)}
 .om-eq i:nth-child(4n+1):nth-child(n+5){background:var(--c2)}
 .om-eq i:nth-child(4n+1):nth-child(n+9){background:var(--c3)}
@@ -60,14 +60,14 @@ a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var
 .om-eq i:nth-child(4n+1):nth-child(n+17){background:var(--c5)}
 .om-eq i:nth-child(4n+1):nth-child(n+21){background:var(--c6)}
 .om-eq i:nth-child(4n+1):nth-child(n+25){background:var(--c7)}
-@keyframes om-eq{from{transform:scaleY(.16)}to{transform:scaleY(1)}}
+@keyframes om-eq{0%,100%{transform:scaleY(var(--s,.5))}50%{transform:scaleY(calc(1.1 - var(--s,.5)))}}
 
 /* ---------- BANDA ---------- */
 .om-band{background:var(--sand);color:var(--coal);overflow:hidden;white-space:nowrap}
-.om-band-track{display:inline-flex;animation:om-marq 46s linear infinite}
+.om-band-track{display:inline-flex;animation:om-marq 4.8s cubic-bezier(.25,.6,.3,1) 1 forwards}
 .om-band span{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.2rem,2.6vw,1.55rem);padding:13px 26px}
 .om-band span::after{content:"";display:inline-block;width:6px;height:6px;border:1px solid var(--earth);transform:rotate(45deg);margin-left:52px;vertical-align:middle}
-@keyframes om-marq{to{transform:translateX(-50%)}}
+@keyframes om-marq{to{transform:translateX(-7%)}}
 
 /* ---------- SECCIONES ---------- */
 .om-sec{padding:96px 24px}
@@ -187,5 +187,35 @@ footer{background:var(--coal);border-top:1px solid rgba(212,190,148,.2);padding:
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
  .om-band-track,.om-eq i{animation:none}
- .om-eq i{transform:scaleY(.6)}
+ .om-eq i{transform:scaleY(var(--s,.6))}
 }
+
+/* === Revisión de calidad: foco, contraste, contactos flotantes y banner de cookies === */
+html{scroll-padding-top:124px;scroll-padding-bottom:var(--om-cc-h,0px)}
+body{padding-bottom:var(--om-cc-h,0px)}
+/* Contraste: texto oscuro sobre el dorado de los botones (blanco sobre dorado daba 3,1:1) */
+html .xd-mobile-menu-inner a.xd-book,html .xd-mobile-menu-inner a.xd-book:hover{color:var(--coal)!important}
+html .xd-mobile-menu .xd-mobile-langs a,html .xd-mobile-menu .xd-mobile-langs a[aria-current]{color:var(--earth)!important}
+#xd-cc-banner .xd-cc-btn.xd-fill,#xd-cc-banner .xd-cc-btn:hover,#xd-cc-modal .xd-cc-btn.xd-fill,#xd-cc-modal .xd-cc-btn:hover{color:#1e1c18!important}
+html .xd-nav .xd-cta,html .xd-nav .xd-cta:hover{color:var(--coal)!important}
+.om-coral .om-p{color:var(--ivory)}
+/* El botón de preferencias de cookies del pie heredaba el color del fondo y no se veía */
+footer .xd-cc-foot{font-family:var(--sans);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(242,233,216,.72);opacity:1}
+footer .xd-cc-foot:hover{color:var(--sand)}
+footer .xd-cc-foot:focus-visible{outline:2px solid var(--sand);outline-offset:4px}
+/* Contactos flotantes: solo donde caben en el margen sin tapar texto (≥1280px). En pantallas menores
+   los mismos contactos están en la portada, en próximos encuentros, en eventos privados y en contacto. */
+.om-float{display:none}
+@media(min-width:1280px){
+ .om-float{position:fixed;right:24px;bottom:calc(32px + var(--om-cc-h,0px));z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center}
+ .om-float a{width:48px;height:48px;border-radius:50%;background:var(--gold);color:var(--coal);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+ .om-float a:hover{background:var(--sand)}
+ .om-float a:focus-visible{outline:2px solid var(--coal);outline-offset:3px}
+ .om-float svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+ footer{padding-right:112px}
+}
+
+main:focus{outline:none}
+/* Numeración decorativa de las tarjetas: tono algo más profundo en 02 y 03 para llegar a 3:1 sobre el marfil */
+.om-c2 .n{color:#947E3E}
+.om-c3 .n{color:#678362}

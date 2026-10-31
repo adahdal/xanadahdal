@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OMJOY Dance Gathering | Sober party and free dancing in Barcelona</title>
-  <meta name="description" content="Music that moves you, free dancing and real encounters in Barcelona. A sober party where you do not need to know how to dance. Private and corporate events." />
+  <title>OMJOY Dance Gathering | Sober party and free-form dancing in Barcelona</title>
+  <meta name="description" content="Music that moves you, free-form dancing and real encounters in Barcelona. A sober party, no dancing skills needed. Private and corporate events." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#30291F" />
   <link rel="canonical" href="https://xanadahdal.com/omjoy-en.html" />
@@ -13,23 +13,26 @@
   <link rel="alternate" hreflang="x-default" href="https://xanadahdal.com/omjoy.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Xana Dahdal" />
-  <meta property="og:title" content="OMJOY Dance Gathering | Sober party and free dancing in Barcelona" />
-  <meta property="og:description" content="A party that fills you with life: music that moves you, free dancing and gatherings that feel real, in Barcelona." />
+  <meta property="og:title" content="OMJOY Dance Gathering | Sober party and free-form dancing in Barcelona" />
+  <meta property="og:description" content="A party that fills you with life: music that moves you, free-form dancing and gatherings that feel real, in Barcelona." />
   <meta property="og:url" content="https://xanadahdal.com/omjoy-en.html" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:locale:alternate" content="es_ES" />
-  <meta property="og:image" content="https://xanadahdal.com/omjoy-dance-gathering-barcelona-en.jpg" />
+  <meta property="og:image" content="https://xanadahdal.com/omjoy-og-en.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="OMJOY Dance Gathering: Dance. Connect. Celebrate." />
+  <meta property="og:image:alt" content="OMJOY Dance Gathering on a dark background with a golden Sri Yantra: Dance. Connect. Celebrate." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="OMJOY Dance Gathering | Sober party and free dancing in Barcelona" />
-  <meta name="twitter:description" content="A party that fills you with life: music that moves you, free dancing and gatherings that feel real, in Barcelona." />
-  <meta name="twitter:image" content="https://xanadahdal.com/omjoy-dance-gathering-barcelona-en.jpg" />
+  <meta name="twitter:title" content="OMJOY Dance Gathering | Sober party and free-form dancing in Barcelona" />
+  <meta name="twitter:description" content="A party that fills you with life: music that moves you, free-form dancing and gatherings that feel real, in Barcelona." />
+  <meta name="twitter:image" content="https://xanadahdal.com/omjoy-og-en.jpg" />
+  <meta name="twitter:image:alt" content="OMJOY Dance Gathering on a dark background with a golden Sri Yantra: Dance. Connect. Celebrate." />
   <link rel="preload" href="cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="omjoy.css?v=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="omjoy.css?v=2" />
   <style>
 /* === Xana unified logo + navigation fix === */
 .xd-nav {
@@ -128,14 +131,14 @@
 
 .xd-lang-switcher a.active,
 .xd-mobile-langs a.active {
-  color: var(--gold, #b8945a) !important;
+  color: var(--earth, #79614D) !important;
   border-bottom: 1px solid var(--gold, #b8945a) !important;
 }
 
 .xd-cta,
 .nav-cta {
   background: var(--gold, #b8945a) !important;
-  color: #fff !important;
+  color: var(--coal, #30291F) !important;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -209,12 +212,7 @@
 .xd-mobile-langs a {
   border-bottom: 0 !important;
   padding: 0 !important;
-  color: var(--gold, #b8945a) !important;
-}
-
-/* Floating contact buttons: keep contact visible but in brand palette, not blue/green */
-a[href*="wa.me"][style*="border-radius:50%"] {
-  background: var(--gold, #b8945a) !important;
+  color: var(--earth, #79614D) !important;
 }
 
 @media (max-width: 1180px) {
@@ -284,99 +282,6 @@ a[href*="wa.me"][style*="border-radius:50%"] {
     width: 205px !important;
   }
 }
-
-
-
-/* FIX RETIROS GALLERY — keeps header/logo/menu unchanged */
-.fotos {
-  padding: 0 48px 96px;
-}
-
-.fotos-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  grid-auto-flow: dense;
-  gap: 6px !important;
-  align-items: stretch;
-}
-
-.fotos-grid img {
-  width: 100% !important;
-  height: 100% !important;
-  display: block !important;
-  object-fit: cover !important;
-  background: var(--sand-dark);
-}
-
-.fotos-grid img.wide {
-  grid-column: span 2;
-  aspect-ratio: 16 / 9 !important;
-}
-
-.fotos-grid img.portrait {
-  aspect-ratio: 3 / 4 !important;
-}
-
-.fotos-grid img.landscape {
-  aspect-ratio: 4 / 3 !important;
-}
-
-.fotos-grid img.square {
-  aspect-ratio: 1 / 1 !important;
-}
-
-@media (max-width: 900px) {
-  .fotos {
-    padding: 0 24px 72px !important;
-  }
-
-  .fotos-grid {
-    grid-template-columns: 1fr 1fr !important;
-  }
-
-  .fotos-grid img.wide {
-    grid-column: 1 / -1 !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .fotos-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .fotos-grid img,
-  .fotos-grid img.wide,
-  .fotos-grid img.portrait,
-  .fotos-grid img.landscape,
-  .fotos-grid img.square {
-    grid-column: 1 / -1 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .fotos-grid img.wide,
-  .fotos-grid img.landscape {
-    aspect-ratio: 4 / 3 !important;
-  }
-
-  .fotos-grid img.portrait {
-    aspect-ratio: 3 / 4 !important;
-  }
-}
-
-
-
-
-
-    /* CLASES PARTICULARES */
-    .modos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .modo { border-top: 1px solid rgba(184,148,90,0.45); padding-top: 22px; }
-    .modo h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 400; color: #fff; margin-bottom: 12px; line-height: 1.3; }
-    .modo p { font-size: 14.5px; line-height: 1.85; color: rgba(255,255,255,0.5); }
-    .adapta { max-width: 860px; margin: 0 auto; padding: 80px 48px 20px; }
-    .adapta p { font-size: 15px; line-height: 1.9; color: var(--muted); margin-bottom: 16px; }
-    .adapta .invitada-list { margin-top: 20px; }
-    @media(max-width:900px) { .modos-grid { grid-template-columns: 1fr; gap: 28px; } .adapta { padding: 56px 24px 8px; } }
 </style>
   <script type="application/ld+json">
 {
@@ -384,8 +289,8 @@ a[href*="wa.me"][style*="border-radius:50%"] {
  "@type": "WebPage",
  "@id": "https://xanadahdal.com/omjoy-en.html#webpage",
  "url": "https://xanadahdal.com/omjoy-en.html",
- "name": "OMJOY Dance Gathering | Sober party and free dancing in Barcelona",
- "description": "Music that moves you, free dancing and real encounters in Barcelona. A sober party where you do not need to know how to dance. Private and corporate events.",
+ "name": "OMJOY Dance Gathering | Sober party and free-form dancing in Barcelona",
+ "description": "Music that moves you, free-form dancing and real encounters in Barcelona. A sober party, no dancing skills needed. Private and corporate events.",
  "inLanguage": "en",
  "isPartOf": {
   "@type": "WebSite",
@@ -395,7 +300,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
  "about": {
   "@type": "Thing",
   "name": "OMJOY Dance Gathering",
-  "description": "A party that fills you with life: music that moves you, free dancing and gatherings that feel real, in Barcelona."
+  "description": "A party that fills you with life: music that moves you, free-form dancing and gatherings that feel real, in Barcelona."
  },
  "author": {
   "@type": "Person",
@@ -449,7 +354,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
    "name": "Do I need to know how to dance?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "No. There are no steps, no levels and no choreography. Everyone moves how they like, and you can also stay chatting or resting."
+    "text": "No. There are no steps, no levels and no choreography. Everyone moves however they like, and you can also stay chatting or resting."
    }
   },
   {
@@ -465,7 +370,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
    "name": "Is it a class or a spiritual activity?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "It is a party, with DJ sets and free dancing. It is not a yoga class or a traditional ecstatic dance session."
+    "text": "It is a party, with DJ sets and free-form dancing. It is not a yoga class or a traditional ecstatic dance session."
    }
   },
   {
@@ -481,7 +386,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
    "name": "Can I talk during the event?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes. There are no rules about silence. Talking, laughing and meeting people is part of the experience."
+    "text": "Yes. There are no rules about silence. Talking, laughing and meeting people are part of the experience."
    }
   },
   {
@@ -489,7 +394,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
    "name": "What kind of music will I hear?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Music in different styles, with DJ sets. When each gathering is announced, I will publish which styles are playing and who is on the decks."
+    "text": "Music in a range of styles, with DJ sets. When each gathering is announced, I will publish which styles are playing and who is on the decks."
    }
   },
   {
@@ -510,7 +415,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   },
   {
    "@type": "Question",
-   "name": "Can you organise private parties or events for companies?",
+   "name": "Can you organise private parties or corporate events?",
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Yes. I organise private sober parties, celebrations, community gatherings and corporate events, including team building with music and dancing. Tell me what you have in mind by WhatsApp or email."
@@ -541,11 +446,11 @@ a[href*="wa.me"][style*="border-radius:50%"] {
  }
 }
   </script>
-  <script src="consent.js?v=2" defer></script>
+  <script src="consent.js?v=3" defer></script>
 <link rel="stylesheet" href="nav.css?v=2">
 </head>
 <body>
-<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:#fff;padding:8px 16px;z-index:9999;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--gold);color:var(--coal);padding:8px 16px;z-index:10001;font-size:13px;text-decoration:none;transition:top 0.2s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
 <defs>
 <symbol id="om-tri" viewBox="-104 -104 208 208"><g fill="none" stroke-linejoin="miter" vector-effect="non-scaling-stroke"><path d="M-96.34 -26.79H96.34L0 100Z M-59.51 -71.9H59.51L0 10.66Z M-69.02 -46.88H69.02L0 70.04Z M-33.65 -15.69H33.65L0 47.92Z M-25.39 -5.2H25.39L0 24.25Z" stroke="var(--y-b,#B28B4E)" vector-effect="non-scaling-stroke"/><path d="M-97.02 24.25H97.02L0 -100Z M-51.28 70.04H51.28L0 -26.79Z M-71.74 47.92H71.74L0 -71.9Z M-35.05 10.66H35.05L0 -46.88Z" stroke="var(--y-a,#D4BE94)" vector-effect="non-scaling-stroke"/><circle r="100" stroke="var(--y-c,#55638F)" vector-effect="non-scaling-stroke"/></g><circle r="2.4" fill="var(--y-p,#8B759F)"/></symbol>
@@ -571,7 +476,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 <path d="M-97.02 24.25H97.02L0 -100Z M-51.28 70.04H51.28L0 -26.79Z M-71.74 47.92H71.74L0 -71.9Z M-35.05 10.66H35.05L0 -46.88Z" stroke="var(--y-a,#D4BE94)" vector-effect="non-scaling-stroke"/>
 </g><circle r="2.6" fill="var(--c7,#8B759F)"/></symbol>
 </defs></svg>
-<nav class="xd-nav">
+<nav class="xd-nav" aria-label="Main">
   <a href="index-en.html" class="nav-logo" aria-label="Xana Dahdal">
     <img src="logo-xana-dahdal.svg" alt="Xana Dahdal" width="580" height="220">
   </a>
@@ -581,10 +486,10 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   </div>
 
   <div class="xd-nav-actions">
-    <div class="xd-lang-switcher" aria-label="Language switcher">
-      <a href="omjoy.html" class="">ES</a>
+    <div class="xd-lang-switcher" role="group" aria-label="Language">
+      <a href="omjoy.html" class="" lang="es" hreflang="es">ES</a>
       <span>/</span>
-      <a href="omjoy-en.html" class="active">EN</a>
+      <a href="omjoy-en.html" class="active" lang="en" hreflang="en" aria-current="page">EN</a>
     </div>
     <a href="classes-en.html#apuntarse" class="nav-cta xd-cta">BOOK A CLASS</a>
     <button class="hamburger xd-hamburger" type="button" aria-label="Open menu" aria-controls="xd-mobile-menu" aria-expanded="false">
@@ -597,40 +502,40 @@ a[href*="wa.me"][style*="border-radius:50%"] {
   <div class="xd-mobile-menu-inner">
     <div class="xd-mitem"><button type="button" class="xd-sub-toggle" aria-expanded="false" aria-controls="xd-m-1">TRAININGS</button><ul class="xd-msub" id="xd-m-1"><li><a href="ytt-en.html">200-hour Yoga Teacher Training</a></li><li><a href="prenatal-en.html">Prenatal, Postpartum and Mums &amp; Babies Yoga Teacher Training</a></li></ul></div><div class="xd-mitem"><button type="button" class="xd-sub-toggle" aria-expanded="false" aria-controls="xd-m-2">YOGA CLASSES</button><ul class="xd-msub" id="xd-m-2"><li><a href="index-en.html#classes">Yoga Styles</a></li><li><a href="private-yoga-classes-barcelona.html">Private Yoga Classes</a></li><li><a href="private-yoga-classes-barcelona.html#online">Online Yoga Classes</a></li><li><a href="classes-en.html">Schedule &amp; Booking</a></li></ul></div><div class="xd-mitem"><a href="corporate-en.html">CORPORATE YOGA</a></div><div class="xd-mitem"><a href="retreats-en.html">RETREATS</a></div><div class="xd-mitem"><a href="events-en.html">EVENTS</a></div><div class="xd-mitem"><button type="button" class="xd-sub-toggle" aria-expanded="false" aria-controls="xd-m-3">ABOUT ME</button><ul class="xd-msub" id="xd-m-3"><li><a href="index-en.html#about">My Background</a></li><li><a href="index-en.html#testimonials">Testimonials &amp; Results</a></li></ul></div><div class="xd-mitem"><a href="index-en.html#contact">CONTACT</a></div><a href="classes-en.html#apuntarse" class="xd-book">BOOK A CLASS</a>
     <div class="xd-mobile-langs">
-      <a href="omjoy.html" class="">ES</a>
-      <a href="omjoy-en.html" class="active">EN</a>
+      <a href="omjoy.html" class="" lang="es" hreflang="es">ES</a>
+      <a href="omjoy-en.html" class="active" lang="en" hreflang="en" aria-current="page">EN</a>
     </div>
   </div>
 </div>
 
 <!-- HERO -->
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 
 <!-- HERO -->
 <section class="om-hero om-dark" aria-labelledby="om-h1">
   <svg class="om-yantra" viewBox="0 0 312 312" aria-hidden="true" focusable="false"><use href="#om-yantra-core"/></svg>
   <div class="om-wrap">
     <p class="om-tag">Barcelona · Sober party</p>
-    <h1 class="om-h1" id="om-h1"><span class="om-word">OM<span>JOY</span></span><span class="om-sub">Dance Gathering</span></h1>
+    <h1 class="om-h1" id="om-h1"><span class="om-word">OM<span>JOY</span></span> <span class="om-sub">Dance Gathering</span></h1>
     <p class="om-motto"><span class="a">Dance.</span><span class="b">Connect.</span><span class="c">Celebrate.</span></p>
-    <p class="om-lead">A party that fills you with life. Music that moves you, free dancing and gatherings that feel real. A different way to celebrate in Barcelona.</p>
+    <p class="om-lead">A party that fills you with life. Music that moves you, free-form dancing and gatherings that feel real. A different way to celebrate in Barcelona, without alcohol or drugs.</p>
     <div class="om-cta">
-      <a class="om-btn om-btn-sun" href="https://wa.me/34697774602?text=Hi%20Xana%2C%20I%20would%20like%20to%20know%20when%20the%20next%20OMJOY%20gathering%20is.">I want to know when the next gathering is</a>
+      <a class="om-btn om-btn-sun" href="https://wa.me/34697774602?text=Hi%20Xana%2C%20please%20let%20me%20know%20when%20there%20is%20a%20date%20for%20the%20first%20OMJOY%20gathering.">Let me know about the first gathering</a>
       <a class="om-btn om-btn-line" href="#eventos-privados">Organise your event with OMJOY</a>
     </div>
   </div>
   <div class="om-eq" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i><i style="--i:20"></i><i style="--i:21"></i><i style="--i:22"></i><i style="--i:23"></i><i style="--i:24"></i><i style="--i:25"></i><i style="--i:26"></i><i style="--i:27"></i></div>
 </section>
 
-<div class="om-band" aria-hidden="true"><div class="om-band-track"><span>Music</span><span>Free dancing</span><span>Conversation</span><span>Laughter</span><span>Community</span><span>No alcohol or drugs</span><span>Music</span><span>Free dancing</span><span>Conversation</span><span>Laughter</span><span>Community</span><span>No alcohol or drugs</span><span>Music</span><span>Free dancing</span><span>Conversation</span><span>Laughter</span><span>Community</span><span>No alcohol or drugs</span><span>Music</span><span>Free dancing</span><span>Conversation</span><span>Laughter</span><span>Community</span><span>No alcohol or drugs</span></div></div>
+<div class="om-band" aria-hidden="true"><div class="om-band-track"><span>Music</span><span>Free-form dancing</span><span>Conversation</span><span>Laughter</span><span>Community</span><span>No alcohol or drugs</span><span>Music</span><span>Free-form dancing</span><span>Conversation</span><span>Laughter</span><span>Community</span><span>No alcohol or drugs</span><span>Music</span><span>Free-form dancing</span><span>Conversation</span><span>Laughter</span><span>Community</span><span>No alcohol or drugs</span><span>Music</span><span>Free-form dancing</span><span>Conversation</span><span>Laughter</span><span>Community</span><span>No alcohol or drugs</span></div></div>
 
 <section class="om-sec" id="que-es" aria-labelledby="h-que-es">
   <div class="om-wrap">
     <p class="om-k">What is OMJOY</p>
     <h2 class="om-h2" id="h-que-es">Back to the rhythm. <em>Back to feeling</em></h2>
     <p class="om-p">In many cultures and many eras, music and dance have been at the heart of celebration. A rhythm that repeats, a body that answers, and other people moving nearby, each in their own way. It is one of the simplest ways we have of being together.</p>
-    <p class="om-p">OMJOY takes that idea into a party of today, with DJ sets across different styles. It is an invitation to listen to what is playing, notice how your body responds and be present for a while, unhurried.</p>
-    <p class="om-p">It is a sober party: no alcohol and no drugs, with the energy coming from the music, the movement and the people who show up. It is a gathering for adults, open to everyone, whether you come alone, as a couple or with friends.</p>
+    <p class="om-p">OMJOY takes that idea to the dance floor, with DJ sets in a range of styles. It is an invitation to listen to the music, notice how your body responds and be present for a while, without hurry.</p>
+    <p class="om-p">It is a sober party: no alcohol and no drugs. The energy comes from the music, the movement and the people who turn up. It is a gathering for adults, open to everyone, whether you come alone, as a couple or with friends.</p>
   </div>
 </section>
 
@@ -641,7 +546,7 @@ a[href*="wa.me"][style*="border-radius:50%"] {
       <p class="om-k">For everyone</p>
       <h2 class="om-h2" id="h-baile">You do not need to <em>know how to dance</em></h2>
       <p class="om-p">If you love music but think you cannot dance, this party is for you. Nobody here teaches steps or judges anyone: there are no levels, no choreography and no right way to move.</p>
-      <p class="om-p">You can dance with your whole body or barely move, close your eyes, watch, laugh, chat, sit down and come back to the floor whenever you feel like it. You have nothing to prove to anyone. All you need is to like how it sounds.</p>
+      <p class="om-p">You can dance with your whole body or barely move, close your eyes, watch, laugh, chat, sit down and come back to the floor whenever you feel like it. You have nothing to prove to anyone. All you need is to enjoy the music.</p>
     </div>
     <aside class="om-not"><h3>You will not find</h3><ul><li>Steps to learn</li><li>Levels</li><li>Choreography</li><li>A right way to move</li></ul></aside>
   </div>
@@ -653,8 +558,8 @@ a[href*="wa.me"][style*="border-radius:50%"] {
 <section class="om-sec" id="experiencia" aria-labelledby="h-exp" style="padding-top:0">
   <div class="om-wrap">
     <p class="om-k">The experience</p>
-    <h2 class="om-h2" id="h-exp">What you will <em>get</em></h2>
-    <ul class="om-cards" style="list-style:none"><li class="om-card om-c1"><p class="n" aria-hidden="true">01</p><h3>Music and free dancing</h3><p>DJ sets across different genres. You dance your own way, with no steps to learn and nobody judging.</p></li><li class="om-card om-c2"><p class="n" aria-hidden="true">02</p><h3>Connection and community</h3><p>You meet new people or catch up with your own. Talking and laughing are part of the party.</p></li><li class="om-card om-c3"><p class="n" aria-hidden="true">03</p><h3>Energy of its own</h3><p>Energy that comes from the music and the people, with no alcohol or drugs.</p></li><li class="om-card om-c4"><p class="n" aria-hidden="true">04</p><h3>Freedom to talk, dance and share</h3><p>No rules about silence and no compulsory choreography. Everyone decides how and how much to take part.</p></li></ul>
+    <h2 class="om-h2" id="h-exp">What to <em>expect</em></h2>
+    <ul class="om-cards" style="list-style:none"><li class="om-card om-c1"><p class="n" aria-hidden="true">01</p><h3>Music and free-form dancing</h3><p>DJ sets in different styles. You dance your own way, with no steps to learn and nobody judging you.</p></li><li class="om-card om-c2"><p class="n" aria-hidden="true">02</p><h3>Connection and community</h3><p>You meet new people or catch up with friends. Talking and laughing are part of the party.</p></li><li class="om-card om-c3"><p class="n" aria-hidden="true">03</p><h3>Energy of its own</h3><p>Energy that comes from the music and the people, with no alcohol or drugs.</p></li><li class="om-card om-c4"><p class="n" aria-hidden="true">04</p><h3>Freedom to talk, dance and share</h3><p>No rules about silence and no compulsory choreography. Everyone decides how, and how much, to join in.</p></li></ul>
   </div>
 </section>
 
@@ -665,8 +570,8 @@ a[href*="wa.me"][style*="border-radius:50%"] {
     <h2 class="om-h2" id="h-prox">Upcoming <em>gatherings</em></h2>
     <div id="om-eventos">
       <div class="om-soon">
-        <h3>I am getting the first gathering ready</h3>
-        <p>There is no confirmed date or venue yet. Write to me and I will let you know when there is.</p>
+        <h3>I am planning the first gathering</h3>
+        <p>There is no confirmed date or venue yet. Write to me and I will let you know as soon as there is.</p>
         <div class="om-cta" style="margin-bottom:0">
           <a class="om-btn om-btn-sun" href="https://wa.me/34697774602?text=Hi%20Xana%2C%20please%20let%20me%20know%20when%20there%20is%20a%20date%20for%20the%20first%20OMJOY%20gathering.">Let me know when there is a date</a>
           <a class="om-btn om-btn-line" href="mailto:alexandradahdal@gmail.com?subject=Let%20me%20know%20about%20OMJOY&body=Hi%20Xana%2C%20please%20let%20me%20know%20when%20there%20is%20a%20date%20for%20the%20first%20OMJOY%20gathering.">Send an email</a>
@@ -691,7 +596,7 @@ Cuando haya datos confirmados, añadir tambien un bloque JSON-LD de tipo Event (
 <!-- EVENTOS PRIVADOS Y EMPRESAS -->
 <section class="om-sec" id="eventos-privados" aria-labelledby="h-priv">
   <div class="om-wrap">
-    <p class="om-k">Private events and companies</p>
+    <p class="om-k">Private and corporate events</p>
     <h2 class="om-h2" id="h-priv">OMJOY for <em>your own events</em></h2>
     <p class="om-p">If you would like to bring this energy to your celebration, your community or your company, we can design a gathering around you, in an urban space or out in nature.</p>
     <ul class="om-list"><li>Private sober parties</li><li>Parties and celebrations</li><li>Community gatherings</li><li>Corporate events</li><li>Team building with music and dancing</li><li>Tailor-made experiences</li></ul>
@@ -723,7 +628,7 @@ Cuando haya datos confirmados, añadir tambien un bloque JSON-LD de tipo Event (
   <div class="om-wrap om-faq">
     <p class="om-k">Frequently asked questions</p>
     <h2 class="om-h2" id="h-faq">Frequently asked <em>questions</em></h2>
-    <details><summary>Do I need to know how to dance?</summary><div class="ans"><p>No. There are no steps, no levels and no choreography. Everyone moves how they like, and you can also stay chatting or resting.</p></div></details><details><summary>What is a sober party?</summary><div class="ans"><p>A party where nobody drinks alcohol or takes drugs. The energy comes from the music, the dancing and the people. At OMJOY you dance, you chat and you celebrate.</p></div></details><details><summary>Is it a class or a spiritual activity?</summary><div class="ans"><p>It is a party, with DJ sets and free dancing. It is not a yoga class or a traditional ecstatic dance session.</p></div></details><details><summary>Do I have to take part in everything?</summary><div class="ans"><p>No. Everyone decides how and how much to take part.</p></div></details><details><summary>Can I talk during the event?</summary><div class="ans"><p>Yes. There are no rules about silence. Talking, laughing and meeting people is part of the experience.</p></div></details><details><summary>What kind of music will I hear?</summary><div class="ans"><p>Music in different styles, with DJ sets. When each gathering is announced, I will publish which styles are playing and who is on the decks.</p></div></details><details><summary>Is alcohol served?</summary><div class="ans"><p>No. OMJOY is a gathering with no alcohol and no drugs.</p></div></details><details><summary>Can I come without knowing anyone?</summary><div class="ans"><p>Yes, you can come on your own. The idea is an open atmosphere, with room to chat and meet people at your own pace.</p></div></details><details><summary>Can you organise private parties or events for companies?</summary><div class="ans"><p>Yes. I organise private sober parties, celebrations, community gatherings and corporate events, including team building with music and dancing. Tell me what you have in mind by WhatsApp or email.</p></div></details>
+    <details><summary>Do I need to know how to dance?</summary><div class="ans"><p>No. There are no steps, no levels and no choreography. Everyone moves however they like, and you can also stay chatting or resting.</p></div></details><details><summary>What is a sober party?</summary><div class="ans"><p>A party where nobody drinks alcohol or takes drugs. The energy comes from the music, the dancing and the people. At OMJOY you dance, you chat and you celebrate.</p></div></details><details><summary>Is it a class or a spiritual activity?</summary><div class="ans"><p>It is a party, with DJ sets and free-form dancing. It is not a yoga class or a traditional ecstatic dance session.</p></div></details><details><summary>Do I have to take part in everything?</summary><div class="ans"><p>No. Everyone decides how and how much to take part.</p></div></details><details><summary>Can I talk during the event?</summary><div class="ans"><p>Yes. There are no rules about silence. Talking, laughing and meeting people are part of the experience.</p></div></details><details><summary>What kind of music will I hear?</summary><div class="ans"><p>Music in a range of styles, with DJ sets. When each gathering is announced, I will publish which styles are playing and who is on the decks.</p></div></details><details><summary>Is alcohol served?</summary><div class="ans"><p>No. OMJOY is a gathering with no alcohol and no drugs.</p></div></details><details><summary>Can I come without knowing anyone?</summary><div class="ans"><p>Yes, you can come on your own. The idea is an open atmosphere, with room to chat and meet people at your own pace.</p></div></details><details><summary>Can you organise private parties or corporate events?</summary><div class="ans"><p>Yes. I organise private sober parties, celebrations, community gatherings and corporate events, including team building with music and dancing. Tell me what you have in mind by WhatsApp or email.</p></div></details>
   </div>
 </section>
 
@@ -733,7 +638,7 @@ Cuando haya datos confirmados, añadir tambien un bloque JSON-LD de tipo Event (
   <div class="om-wrap">
     <p class="om-k">Contact</p>
     <h2 class="om-h2" id="h-cont">Write to me and <em>I will tell you more</em></h2>
-    <p class="om-p">To find out when the next gathering is, suggest a collaboration or plan your own event, write to me on WhatsApp or by email.</p>
+    <p class="om-p">Write to me on WhatsApp or by email to hear when the next gathering is, to suggest a collaboration or to plan your own event.</p>
     <div class="om-cta" style="margin-bottom:0">
       <a class="om-btn om-btn-ink" href="https://wa.me/34697774602?text=Hi%20Xana%2C%20I%20would%20like%20to%20know%20more%20about%20OMJOY.">WhatsApp</a>
       <a class="om-btn om-btn-inkline" href="mailto:alexandradahdal@gmail.com?subject=Information%20about%20OMJOY&body=Hi%20Xana%2C%20I%20would%20like%20to%20know%20more%20about%20OMJOY.">Send an email</a>
@@ -753,10 +658,10 @@ Cuando haya datos confirmados, añadir tambien un bloque JSON-LD de tipo Event (
   </div>
 </footer>
 
-<!-- CTA FLOTANTE -->
-<div style="position:fixed;bottom:32px;right:24px;z-index:9998;display:flex;flex-direction:column;gap:12px;align-items:center;">
-  <a href="https://wa.me/34697774602" target="_blank" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:26px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="WhatsApp" aria-label="Contact via WhatsApp">💬</a>
-  <a href="mailto:alexandradahdal@gmail.com" style="background:#b8945a;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 4px 20px rgba(0,0,0,0.25);" title="Email" aria-label="Contact via Email">✉</a>
+<!-- CTA FLOTANTE (solo escritorio ancho, ver omjoy.css) -->
+<div class="om-float xd-float">
+  <a href="https://wa.me/34697774602" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="Contact via WhatsApp (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.2A8.4 8.4 0 1 1 21 11.5z"/></svg></a>
+  <a href="mailto:alexandradahdal@gmail.com" title="Email" aria-label="Contact via email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
 </div>
 
 
@@ -799,5 +704,6 @@ Cuando haya datos confirmados, añadir tambien un bloque JSON-LD de tipo Event (
 </script>
 
 <script src="nav.js?v=2" defer></script>
+<script src="omjoy.js?v=1" defer></script>
 </body>
 </html>
