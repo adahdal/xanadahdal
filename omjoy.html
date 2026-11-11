@@ -446,6 +446,37 @@
  }
 }
   </script>
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Event",
+ "name": "OMJOY Dance Gathering, primer encuentro",
+ "description": "Sober party con sesiones de DJ de distintos estilos y baile libre, sin alcohol ni drogas, en Bodhi Yoga Barcelona.",
+ "startDate": "2026-11-14T17:00:00+01:00",
+ "endDate": "2026-11-14T20:00:00+01:00",
+ "eventStatus": "https://schema.org/EventScheduled",
+ "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+ "inLanguage": "es",
+ "url": "https://xanadahdal.com/omjoy.html#proximos-encuentros",
+ "image": "https://xanadahdal.com/omjoy-og-es.jpg",
+ "location": {
+  "@type": "Place",
+  "name": "Bodhi Yoga Barcelona",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Carrer del Comte d'Urgell 96-98, entresuelo 1.ª",
+   "postalCode": "08011",
+   "addressLocality": "Barcelona",
+   "addressCountry": "ES"
+  }
+ },
+ "organizer": {
+  "@type": "Person",
+  "name": "Xana Dahdal",
+  "url": "https://xanadahdal.com/"
+ }
+}
+  </script>
   <script src="consent.js?v=3" defer></script>
 <link rel="stylesheet" href="nav.css?v=2">
 </head>
@@ -520,7 +551,7 @@
     <p class="om-motto"><span class="a">Baila.</span><span class="b">Conecta.</span><span class="c">Celebra.</span></p>
     <p class="om-lead">Una fiesta que te llena de vida. Música que te mueve, baile libre y encuentros que se sienten de verdad. Una manera diferente de celebrar en Barcelona, sin alcohol ni drogas.</p>
     <div class="om-cta">
-      <a class="om-btn om-btn-sun" href="https://wa.me/34697774602?text=Hola%20Xana%2C%20av%C3%ADsame%20cuando%20haya%20fecha%20para%20el%20primer%20encuentro%20de%20OMJOY.">Avísame del primer encuentro</a>
+      <a class="om-btn om-btn-sun" href="#proximos-encuentros">Ver el primer encuentro</a>
       <a class="om-btn om-btn-line" href="#eventos-privados">Organiza tu evento con OMJOY</a>
     </div>
   </div>
@@ -570,14 +601,15 @@
     <p class="om-k">Próximos encuentros</p>
     <h2 class="om-h2" id="h-prox">Próximos <em>encuentros</em></h2>
     <div id="om-eventos">
-      <div class="om-soon">
-        <h3>Estoy preparando el primer encuentro</h3>
-        <p>Todavía no hay fecha ni lugar confirmados. Escríbeme y te aviso cuando los haya.</p>
-        <div class="om-cta" style="margin-bottom:0">
-          <a class="om-btn om-btn-sun" href="https://wa.me/34697774602?text=Hola%20Xana%2C%20av%C3%ADsame%20cuando%20haya%20fecha%20para%20el%20primer%20encuentro%20de%20OMJOY.">Avísame cuando haya fecha</a>
-          <a class="om-btn om-btn-line" href="mailto:alexandradahdal@gmail.com?subject=Av%C3%ADsame%20de%20OMJOY&body=Hola%20Xana%2C%20av%C3%ADsame%20cuando%20haya%20fecha%20para%20el%20primer%20encuentro%20de%20OMJOY.">Escribir por email</a>
+      <article class="om-event" style="grid-template-columns:1fr">
+        <div>
+          <p class="om-date">SÁBADO 14 DE NOVIEMBRE</p>
+          <h3>OMJOY Dance Gathering, primer encuentro</h3>
+          <p>Sober party con sesiones de DJ de distintos estilos, baile libre y espacio para charlar, sin alcohol ni drogas. Para público adulto. No hace falta saber bailar.</p>
+          <dl><dt>Horario</dt><dd>17:00 a 20:00</dd><dt>Lugar</dt><dd>Bodhi Yoga Barcelona, Carrer del Comte d'Urgell 96-98, entresuelo 1.ª, 08011 Barcelona</dd><dt>Plazas</dt><dd>Limitadas</dd></dl>
+          <a class="om-btn om-btn-ink" href="https://wa.me/34697774602?text=Hola%20Xana%2C%20quiero%20reservar%20una%20plaza%20para%20la%20sober%20party%20de%20OMJOY%20del%20s%C3%A1bado%2014%20de%20noviembre.">Reservar mi plaza por WhatsApp</a>
         </div>
-      </div>
+      </article>
       <!-- PLANTILLA DE EVENTO (copiar dentro de #om-eventos y quitar el bloque .om-soon cuando haya un evento real)
 <article class="om-event">
   <img src="IMAGEN-DEL-EVENTO.jpg" alt="Descripcion de la imagen" width="800" height="600" loading="lazy" decoding="async">
