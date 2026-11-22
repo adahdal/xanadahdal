@@ -240,6 +240,13 @@
       "sourceType": "github",
       "skillPath": "skills/video/SKILL.md",
       "computedHash": "8286d39be8d86f9fc1c39b3c340cdebcf9a490f7606ffde566572baa163b1fe7"
+    },
+    "remove-ai-marks": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/remove-ai-marks/SKILL.md",
+      "target": "claude-code",
+      "computedHash": "82a7ce7e4cd62d941e0998083202359350b2e69a64ab83e68d2759d8df3a94d1"
     }
   }
 }
