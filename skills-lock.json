@@ -245,8 +245,16 @@
       "source": "local",
       "sourceType": "local",
       "skillPath": ".agents/skills/remove-ai-marks/SKILL.md",
-      "target": "claude-code",
+      "target": "codex-project",
+      "projectDir": "/home/user/xanadahdal",
       "computedHash": "82a7ce7e4cd62d941e0998083202359350b2e69a64ab83e68d2759d8df3a94d1"
+    },
+    "clean-user-facing-text": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": ".agents/skills/clean-user-facing-text/SKILL.md",
+      "target": "codex",
+      "computedHash": "3232a6f2dd711c20f48f7ad58d3325869dda342af5a86834a2bc7e011c17e40a"
     }
   }
 }
