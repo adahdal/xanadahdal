@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/user/xanadahdal/scripts/setup_service.sh 2>/dev/null || true",
+            "timeout": 90
+          }
+        ]
+      }
+    ]
+  }
+}
